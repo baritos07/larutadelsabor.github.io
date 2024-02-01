@@ -251,7 +251,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
 	pulpo.onmouseover = function() {
-		textoCambiante.innerHTML = "Seños Pulpon<br><br>!!!Sushi, Ramen y Yakimeshi!!!<br><br>Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 10 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio"
+		textoCambiante.innerHTML = "Señor Pulpon<br><br>!!!Sushi, Ramen y Yakimeshi!!!<br><br>Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 10 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio"
 		cambiarImagen("Pozolitos","./ComidaOpt/Pulpo 1.png","50px","50px");
 		cambiarImagen("Pizzas","./ComidaOpt/Pulpo 2.png","500px","500px");
 		cambiarImagen("Enchi","./ComidaOpt/Pulpo 3.png","200px","200px");
@@ -273,7 +273,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
 		pulpo.addEventListener("touchstart", function(){
-			textoCambiante.innerHTML = "Seños Pulpon<br><br>!!!Sushi, Ramen y Yakimeshi!!!<br><br>Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 10 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio"
+			textoCambiante.innerHTML = "Señor Pulpon<br><br>!!!Sushi, Ramen y Yakimeshi!!!<br><br>Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 10 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio"
 			gridPizzas.style.display = "none";
 			gridRock.style.display = "none";
 			gridSushi.style.display = "none";
