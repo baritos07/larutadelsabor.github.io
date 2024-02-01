@@ -537,5 +537,12 @@ document.addEventListener("DOMContentLoaded", function() {
 		nuevaImagen.height = nuevoAlto;
 	}
 
+		document.getElementById("pag_ord_1").addEventListener("click", function() {
+		window.open("https://menu.fu.do/larutadelsabor","_blank");
+	});
+
+	document.getElementById("pag_ord_2").addEventListener("click", function() {
+		window.open("https://menu.fu.do/larutadelsabor","_blank");
+	});
 
 });
