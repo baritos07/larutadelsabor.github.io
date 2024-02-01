@@ -1,5 +1,3 @@
-
-
 body {
 	background: #567
 }
@@ -148,6 +146,30 @@ p {
 	display: none;
 }
 
+.grid-imagenes-pozolitos {
+	display: none;
+}
+
+.grid-imagenes-sabores {
+	display: none;
+}
+
+.grid-imagenes-hija {
+	display: none;
+}
+
+.grid-imagenes-birria {
+	display: none;
+}
+
+.grid-imagenes-cabana {
+	display: none;
+}
+
+.grid-imagenes-enchi {
+	display: none;
+}
+
 .grid-imagenes-rock {
 	display: none;
 }
@@ -166,7 +188,7 @@ p {
 
 .grid-imagenes-cafe {
 	display: none;
-}
+}	
 
 .grid-item {	
 	width: 100%;
@@ -184,8 +206,8 @@ p {
 
 .img-left-pizzas {
 	display: grid;
-	max-width: 120px;
-	max-height: 120px;
+	max-width: 110px;
+	max-height: 110px;
 	min-width: 85px;
 	width: 100%;
 	height: auto;
@@ -264,8 +286,8 @@ p {
 
 .img-right-cafe {
 	display: grid;
-	max-width: 120px;
-	max-height: 120px;
+	max-width: 110px;
+	max-height: 110px;
 	min-width: 85px;
 	width: 100%;
 	height: auto;
@@ -279,8 +301,8 @@ p {
 
 .img-left-enchi {
 	display: grid;
-	max-width: 120px;
-	max-height: 120px;
+	max-width: 110px;
+	max-height: 110px;
 	min-width: 85px;
 	width: 100%;
 	height: auto;
@@ -294,8 +316,8 @@ p {
 
 .img-right-cochi {
 	display: grid;
-	max-width: 120px;
-	max-height: 120px;
+	max-width: 110px;
+	max-height: 110px;
 	min-width: 85px;
 	width: 100%;
 	height: auto;
@@ -310,8 +332,8 @@ p {
 
 .img-left-birria {
 	display: grid;
-	max-width: 120px;
-	max-height: 120px;
+	max-width: 110px;
+	max-height: 110px;
 	min-width: 85px;
 	width: 100%;
 	height: auto;
@@ -325,8 +347,8 @@ p {
 
 .img-right-cabana {
 	display: grid;
-	max-width: 120px;
-	max-height: 120px;
+	max-width: 110px;
+	max-height: 110px;
 	min-width: 85px;
 	width: 100%;
 	height: auto;
@@ -340,8 +362,8 @@ p {
 
 .img-left-hija {
 	display: grid;
-	max-width: 120px;
-	max-height: 120px;
+	max-width: 110px;
+	max-height: 110px;
 	min-width: 85px;
 	width: 100%;
 	height: auto;
@@ -355,8 +377,8 @@ p {
 
 .img-right-papi {
 	display: grid;
-	max-width: 120px;
-	max-height: 120px;
+	max-width: 110px;
+	max-height: 110px;
 	min-width: 85px;
 	width: 100%;
 	height: auto;
@@ -370,8 +392,8 @@ p {
 
 .img-left-rock {
 	display: grid;
-	max-width: 120px;
-	max-height: 120px;
+	max-width: 110px;
+	max-height: 110px;
 	min-width: 85px;
 	width: 90%;
 	height: auto;
@@ -385,8 +407,8 @@ p {
 
 .img-right-sabores {
 	display: grid;
-	max-width: 120px;
-	max-height: 120px;
+	max-width: 110px;
+	max-height: 110px;
 	min-width: 85px;
 	width: 100%;
 	height: auto;
@@ -400,8 +422,8 @@ p {
 
 .img-left-pulpo {
 	display: grid;
-	max-width: 120px;
-	max-height: 120px;
+	max-width: 110px;
+	max-height: 110px;
 	min-width: 85px;
 	width: 100%;
 	height: auto;
@@ -415,8 +437,8 @@ p {
 
 .img-right-sushi {
 	display: grid;
-	max-width: 120px;
-	max-height: 120px;
+	max-width: 110px;
+	max-height: 110px;
 	min-width: 85px;
 	width: 100%;
 	height: auto;
@@ -430,8 +452,8 @@ p {
 
 .img-left-pozolitos {
 	display: grid;
-	max-width: 120px;
-	max-height: 120px;
+	max-width: 110px;
+	max-height: 110px;
 	min-width: 85px;
 	width: 100%;
 	height: auto;
@@ -444,8 +466,8 @@ p {
 }
 .img-right-chapatas {
 	display: grid;
-	max-width: 120px;
-	max-height: 120px;
+	max-width: 110px;
+	max-height: 110px;
 	min-width: 85px;
 	width: 100%;
 	height: auto;
@@ -656,11 +678,35 @@ p {
 	display: none;
 }
 
+.grid-imagenes-sabores {
+	display: none;
+}
+
+.grid-imagenes-hija {
+	display: none;
+}
+
+.grid-imagenes-birria {
+	display: none;
+}
+
+.grid-imagenes-pozolitos {
+	display: none;
+}
+
+.grid-imagenes-cabana {
+	display: none;
+}
+
 .grid-imagenes-rock {
 	display: none;
 }
 
 .grid-imagenes-cochi {
+	display: none;
+}
+
+.grid-imagenes-enchi {
 	display: none;
 }
 
@@ -1166,6 +1212,96 @@ p {
 	align-items: center;
 }
 
+.grid-imagenes-hija {
+	display: none;
+	background: lightblue;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 50px);
+	border-left: 3px solid darkgoldenrod;
+	border-right: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.grid-imagenes-cabana {
+	display: none;
+	background: lightblue;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 50px);
+	border-left: 3px solid darkgoldenrod;
+	border-right: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.grid-imagenes-enchi {
+	display: none;
+	background: lightblue;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 50px);
+	border-left: 3px solid darkgoldenrod;
+	border-right: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.grid-imagenes-birria {
+	display: none;
+	background: lightblue;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 50px);
+	border-left: 3px solid darkgoldenrod;
+	border-right: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.grid-imagenes-sabores {
+	display: none;
+	background: lightblue;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 50px);
+	border-left: 3px solid darkgoldenrod;
+	border-right: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.grid-imagenes-pozolitos {
+	display: none;
+	background: lightblue;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 50px);
+	border-left: 3px solid darkgoldenrod;
+	border-right: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
 .grid-imagenes-rock {
 	display: none;
 	background: lightblue;
@@ -1257,8 +1393,8 @@ p {
 
 .img-left-pizzas {
 	display: grid;
-	width: 60px;
-	height: 40px;
+	width: 50px;
+	height: 50px;
 	margin-top: 5px;
 	align-self: center;
 	justify-self: center;
@@ -1270,7 +1406,7 @@ p {
 .img-right-cafe {
 	display: grid;
 	width: 50px;
-	height: 60px;
+	height: 50px;
 	margin-top: 5px;
 	align-self: center;
 	justify-self: center;
@@ -1280,8 +1416,8 @@ p {
 
 .img-left-enchi {
 	display: grid;
-	width: 60px;
-	height: 40px;
+	width: 50px;
+	height: 50px;
 	margin-top: 5px;
 	align-self: center;
 	justify-self: center;
@@ -1291,7 +1427,7 @@ p {
 
 .img-right-cochi {
 	display: grid;
-	width: 45px;
+	width: 50px;
 	height: 50px;
 	margin-top: 5px;
 	align-self: center;
@@ -1304,7 +1440,7 @@ p {
 .img-left-birria {
 	display: grid;
 	width: 50px;
-	height: 40px;
+	height: 50px;
 	margin-top: 5px;
 	align-self: center;
 	justify-self: center;
@@ -1315,7 +1451,7 @@ p {
 .img-right-cabana {
 	display: grid;
 	width: 50px;
-	height: auto;
+	height: 50px;
 	margin-top: 5px;
 	align-self: center;
 	justify-self: center;
@@ -1337,7 +1473,7 @@ p {
 .img-right-papi {
 	display: grid;
 	width: 50px;
-	height: 60px;
+	height: 50px;
 	align-self: center;
 	justify-self: center;
 	grid-area: papi;
@@ -1390,7 +1526,7 @@ p {
 .img-left-pozolitos {
 	display: grid;
 	width: 50px;
-	height: 40px;
+	height: 50px;
 	margin-top: 5px;
 	align-self: center;
 	justify-self: center;
@@ -1399,7 +1535,7 @@ p {
 }
 .img-right-chapatas {
 	display: grid;
-	width: 60px;
+	width: 50px;
 	height: 50px;
 	align-self: center;
 	justify-self: center;
