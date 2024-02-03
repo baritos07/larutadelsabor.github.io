@@ -538,11 +538,11 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 
 		document.getElementById("pag_ord_1").addEventListener("click", function() {
-		window.open("https://menu.fu.do/larutadelsabor","_blank");
+		window.open("https://www.foodbooking.com/api/fb/jb_v_q5","_blank");
 	});
 
 	document.getElementById("pag_ord_2").addEventListener("click", function() {
-		window.open("https://menu.fu.do/larutadelsabor","_blank");
+		window.open("https://www.foodbooking.com/api/fb/jb_v_q5","_blank");
 	});
 
 });
