@@ -434,7 +434,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			gridPulpo.style.display = "none";
 			gridHija.style.display = "none";
 			gridCabana.style.display = "none";
-			gridSabores.style.display = "grid";
+			gridSabores.style.display = "none";
 			gridBirria.style.display = "none";
 			gridEnchi.style.display = "none";
 			gridPozolitos.style.display = "none";
@@ -553,7 +553,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			gridCochi.style.display = "none";
 			gridPulpo.style.display = "none";
 			gridHija.style.display = "none";
-			gridCabana.style.display = "grid";
+			gridCabana.style.display = "none";
 			gridSabores.style.display = "none";
 			gridBirria.style.display = "none";
 			gridEnchi.style.display = "none";
