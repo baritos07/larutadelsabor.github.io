@@ -29,13 +29,17 @@ document.addEventListener("DOMContentLoaded", function() {
 	const gridEnchi = document.getElementById("gridEnchi");
 	const gridPozolitos = document.getElementById("gridPozolitos");
 	const ruta = document.getElementById("ruta1");
+	const th2 = document.getElementById("textoH2");
+	const th2org = document.getElementById("textoH2").innerHTML;
 
 	let resolucion = window.innerWidth;
 	let userAgent = navigator.userAgent;
 
 	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
 	pizzas.onmouseover = function() {
-		textoCambiante.innerHTML = "AJ Pizzas al Forno<br><br>!!!Pizzas, Pastas y Ensaladas!!!<br><br>Martes, Miercoles y Domingo 2 p.m. a 10 p.m.<br><br>Jueves, Viernes y Sabado 2 p.m. a 10 p.m.<br><br>Servicio a domicilio";
+		th2.innerHTML = "AJ Pizzas al Forno<br>!!! Pizzas Pastas y Ensaladas !!!";
+		textoCambiante.innerHTML = "Martes, Miercoles y Domingo 2 p.m. a 10 p.m.<br><br>Jueves, Viernes y Sabado 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago";
+		textoCambiante.style.fontStyle = "italic";
 		cambiarImagen("Cafe","./ComidaOpt/Pizzas 1.png");
 		cambiarImagen("Rock","./ComidaOpt/Pizzas 2.png");
 		cambiarImagen("Enchi","./ComidaOpt/Pizzas 3.png");
@@ -52,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 
 	pizzas.onmouseout = function() {
+		th2.innerHTML = th2org;
 		textoCambiante.innerHTML = miTexto;
 		cambiarImagen("Cafe","./LogosOpt/Cafe.png");
 		cambiarImagen("Rock","./LogosOpt/Rock.png");
@@ -63,14 +68,17 @@ document.addEventListener("DOMContentLoaded", function() {
 		cambiarImagen("Sabores","./LogosOpt/Sabores.png");
 		cambiarImagen("Sushi","./LogosOpt/Sushi.png");
 		cambiarImagen("Chapatas","./LogosOpt/Chapatas.png");
-		cambiarImagen("Papi","./LogosOpt/Papi.png");
+		cambiarImagen("Papi","./LogosOpt/Papidrinks_2.png	");
 		cambiarImagen("Cochi","./LogosOpt/Cochinita_2.png");
 		cambiarImagen("Cabana","./LogosOpt/Cabana.png");
 	}
 	}
 	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
 		pizzas.addEventListener("touchstart", function(){
-			textoCambiante.innerHTML = "AJ Pizzas al Forno<br><br>!!!Pizzas, Pastas y Ensaladas!!!<br><br>Martes, Miercoles y Domingo 2 p.m. a 10 p.m.<br><br>Jueves, Viernes y Sabado 2 p.m. a 10 p.m.<br><br>Servicio a domicilio";
+			th2.innerHTML = "AJ Pizzas al Forno<br>!!! Pizzas, Pastas y Ensaladas !!!"
+			textoCambiante.innerHTML = "Martes, Miercoles y Domingo 2 p.m. a 10 p.m.<br><br>Jueves, Viernes y Sabado 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago";
+			textoCambiante.style.fontStyle = "italic";
+			textoCambiante.style.fontSize = "15px";
 			gridPizzas.style.display = "grid";
 			gridRock.style.display = "none";
 			gridSushi.style.display = "none";
@@ -88,12 +96,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
 	birria.onmouseover = function() {
-		textoCambiante.innerHTML = "La Birrieria<br><br>!!!Birria, Tacos y Quesabirrias!!!<br><br>Domingo, Lunes, Miercoles y Jueves 8 a.m. a 9 p.m.<br><br>Viernes y Sabado 8 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 9 p.m."
+		th2.innerHTML = "La Birrieria<br>!!! Birria, Tacos y Quesabirrias !!!"
+		textoCambiante.innerHTML = "Domingo, Lunes, Miercoles y Jueves 8 a.m. a 9 p.m.<br><br>Martes 2 p.m. a 9 p.m., Viernes y Sabado 8 a.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago";
+		textoCambiante.style.fontStyle = "italic";
 		cambiarImagen("Pizzas","./ComidaOpt/Birria 1.png","500px","500px");
 		cambiarImagen("Enchi","./ComidaOpt/Birria 2.png","200px","200px");
 		}
 
 	birria.onmouseout = function() {
+		th2.innerHTML = th2org;
 		textoCambiante.innerHTML = miTexto;
 		cambiarImagen("Pizzas","./LogosOpt/Pizzas.png");
 		cambiarImagen("Enchi","./LogosOpt/Enchilandia.png");
@@ -101,7 +112,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
 		birria.addEventListener("touchstart", function(){
-			textoCambiante.innerHTML = "La Birrieria<br><br>!!!Birria, Tacos y Quesabirrias!!!<br><br>Domingo, Lunes, Miercoles y Jueves 8 a.m. a 9 p.m.<br><br>Viernes y Sabado 8 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 9 p.m.<br><br>Servicio a domicilio"
+			th2.innerHTML = "La Birrieria<br>!!! Birria, Tacos y Quesabirrias !!!"
+			textoCambiante.innerHTML = "Domingo, Lunes, Miercoles y Jueves 8 a.m. a 9 p.m.<br><br>Martes 2 p.m. a 9 p.m., Viernes y Sabado 8 a.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
+			textoCambiante.style.fontStyle = "italic";
 			gridPizzas.style.display = "none";
 			gridRock.style.display = "none";
 			gridSushi.style.display = "none";
@@ -119,6 +132,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)) {
 		ruta.addEventListener("touchstart", function(){
+			th2.innerHTML = th2org;
 			textoCambiante.innerHTML = miTexto;
 			gridPizzas.style.display = "none";
 			gridRock.style.display = "none";
@@ -131,19 +145,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
 	enchi.onmouseover = function() {
-		textoCambiante.innerHTML = "Enchilandia<br><br>!!!Enchiladas, Tacos Dorados y Malteadas!!!<br><br>Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 10 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio"
+		th2.innerHTML = "Enchilandia<br>!!! Enchiladas y Tacos Dorados !!!"
+		textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 10 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
+		textoCambiante.style.fontStyle = "italic";
 		cambiarImagen("Pizzas","./ComidaOpt/Enchilandia 1.png","500px","500px");
 		
 		}
 
 	enchi.onmouseout = function() {
+		th2.innerHTML = th2org;
 		textoCambiante.innerHTML = miTexto;
 		cambiarImagen("Pizzas","./LogosOpt/Pizzas.png");
 	}
 	}
 	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
 		enchi.addEventListener("touchstart", function(){
-			textoCambiante.innerHTML = "Enchilandia<br><br>!!!Enchiladas, Tacos Dorados y Malteadas!!!<br><br>Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 10 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio"
+			th2.innerHTML = "Enchilandia<br>!!! Enchiladas y Tacos Dorados !!!"
+			textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 10 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
+			textoCambiante.style.fontStyle = "italic";
 			gridPizzas.style.display = "none";
 			gridRock.style.display = "none";
 			gridSushi.style.display = "none";
@@ -161,7 +180,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
 	hija.onmouseover = function() {
-		textoCambiante.innerHTML = "La Hija de la Tostada<br><br>!!!Quesadillas, Huaraches y Pambazos!!!<br><br>Domingo, Lunes, Miercoles y Jueves 8 a.m. a 9 p.m.<br><br>Viernes y Sabado 8 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 9 p.m."
+		th2.innerHTML = "La Hija de la Tostada<br>!!! Quesadillas, Huaraches y Pambazos !!!"
+		textoCambiante.innerHTML = "Domingo, Lunes, Miercoles y Jueves 8 a.m. a 9 p.m.<br><br>Martes 2 p.m. a 9 p.m., Viernes y Sabado 8 a.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
+		textoCambiante.style.fontStyle = "italic";
 		cambiarImagen("Pizzas","./ComidaOpt/Hija 1.png","500px","500px");
 		cambiarImagen("Birria","./ComidaOpt/Hija 2.png","500px","500px");
 		cambiarImagen("Enchi","./ComidaOpt/Hija 3.png","500px","500px");
@@ -170,6 +191,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 
 	hija.onmouseout = function() {
+		th2.innerHTML = th2org;
 		textoCambiante.innerHTML = miTexto;
 		cambiarImagen("Pizzas","./LogosOpt/Pizzas.png");
 		cambiarImagen("Enchi","./LogosOpt/Enchilandia.png");
@@ -180,7 +202,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
 		hija.addEventListener("touchstart", function(){
-			textoCambiante.innerHTML = "La Hija de la Tostada<br><br>!!!Quesadillas, Huaraches y Pambazos!!!<br><br>Domingo, Lunes, Miercoles y Jueves 8 a.m. a 9 p.m.<br><br>Viernes y Sabado 8 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 9 p.m.<br><br>Servicio a domicilio"
+			th2.innerHTML = "La Hija de la Tostada<br>!!! Quesadillas, Huaraches y Pambazos !!!"
+			textoCambiante.innerHTML = "Domingo, Lunes, Miercoles y Jueves 8 a.m. a 9 p.m.<br><br>Martes 2 p.m. a 9 p.m., Viernes y Sabado 8 a.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
+			textoCambiante.style.fontStyle = "italic";
 			gridPizzas.style.display = "none";
 			gridRock.style.display = "none";
 			gridSushi.style.display = "none";
@@ -198,7 +222,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
 	rock.onmouseover = function() {
-		textoCambiante.innerHTML = "Rock Burger<br><br>!!!Hamburguesas, Alitas y Snacks!!!<br><br>Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 9 a.m. a 10 p.m.<br><br>Martes 1 p.m. a 10 p.m.<br><br>Servicio a domicilio"
+		th2.innerHTML = "Rock Burger<br>!!! Hamburguesas, Alitas y Snacks !!!"
+		textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 9 a.m. a 10 p.m.<br><br>Martes 1 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
+		textoCambiante.style.fontStyle = "italic";
 		cambiarImagen("Cafe","./ComidaOpt/Papas.png","50px","50px");
 		cambiarImagen("Pizzas","./ComidaOpt/Choriburger.png","500px","500px");
 		cambiarImagen("Enchi","./ComidaOpt/HamburguesaConPapas.png","200px","200px");
@@ -215,6 +241,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 
 	rock.onmouseout = function() {
+		th2.innerHTML = th2org;
 		textoCambiante.innerHTML = miTexto;
 		cambiarImagen("Cafe","./LogosOpt/Cafe.png");
 		cambiarImagen("Pizzas","./LogosOpt/Pizzas.png");
@@ -226,14 +253,16 @@ document.addEventListener("DOMContentLoaded", function() {
 		cambiarImagen("Sabores","./LogosOpt/Sabores.png");
 		cambiarImagen("Sushi","./LogosOpt/Sushi.png");
 		cambiarImagen("Chapatas","./LogosOpt/Chapatas.png");
-		cambiarImagen("Papi","./LogosOpt/Papi.png");
+		cambiarImagen("Papi","./LogosOpt/Papidrinks_2.png	");
 		cambiarImagen("Cochi","./LogosOpt/Cochinita_2.png");
 		cambiarImagen("Cabana","./LogosOpt/Cabana.png");
 	}
 	}
 	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
 		rock.addEventListener("touchstart", function(){
-			textoCambiante.innerHTML = "Rock Burger<br><br>!!!Hamburguesas, Alitas y Snacks!!!<br><br>Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 9 a.m. a 10 p.m.<br><br>Martes 1 p.m. a 10 p.m.<br><br>Servicio a domicilio"
+			th2.innerHTML = "Rock Burger<br>!!! Hamburguesas, Alitas y Snacks !!!"
+			textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 9 a.m. a 10 p.m.<br><br>Martes 1 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
+			textoCambiante.style.fontStyle = "italic";
 			gridPizzas.style.display = "none";
 			gridRock.style.display = "grid";
 			gridSushi.style.display = "none";
@@ -251,7 +280,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
 	pulpo.onmouseover = function() {
-		textoCambiante.innerHTML = "Señor Pulpon<br><br>!!!Sushi, Ramen y Yakimeshi!!!<br><br>Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 10 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio"
+		th2.innerHTML = "Señor Pulpon<br>!!! Mariscos, Empanadas y Pescaditos !!!"
+		textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 10 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
+		textoCambiante.style.fontStyle = "italic";
 		cambiarImagen("Pozolitos","./ComidaOpt/Pulpo 1.png","50px","50px");
 		cambiarImagen("Pizzas","./ComidaOpt/Pulpo 2.png","500px","500px");
 		cambiarImagen("Enchi","./ComidaOpt/Pulpo 3.png","200px","200px");
@@ -261,6 +292,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 
 	pulpo.onmouseout = function() {
+		th2.innerHTML = th2org;
 		textoCambiante.innerHTML = miTexto;
 		cambiarImagen("Pizzas","./LogosOpt/Pizzas.png");
 		cambiarImagen("Enchi","./LogosOpt/Enchilandia.png");
@@ -273,7 +305,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
 		pulpo.addEventListener("touchstart", function(){
-			textoCambiante.innerHTML = "Señor Pulpon<br><br>!!!Sushi, Ramen y Yakimeshi!!!<br><br>Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 10 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio"
+			th2.innerHTML = "Señor Pulpon<br>!!! Mariscos, Empanadas y Pescaditos !!!"
+			textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 10 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
+			textoCambiante.style.fontStyle = "italic";
 			gridPizzas.style.display = "none";
 			gridRock.style.display = "none";
 			gridSushi.style.display = "none";
@@ -291,18 +325,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
 	pozolitos.onmouseover = function() {
-		textoCambiante.innerHTML = "La Pozolitos<br><br>!!!Pozole Blanco, Verde y Rojo!!!<br><br>Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 10 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio"
+		th2.innerHTML = "La Pozolitos<br>!!! Pozole Blanco, Verde y Rojo !!!"
+		textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 10 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
+		textoCambiante.style.fontStyle = "italic";
 		cambiarImagen("Pizzas","./ComidaOpt/Pozolitos 1.png","50px","50px");
 		}
 
 	pozolitos.onmouseout = function() {
+		th2.innerHTML = th2org;
 		textoCambiante.innerHTML = miTexto;
 		cambiarImagen("Pizzas","./LogosOpt/Pizzas.png");
 	}
 	}
 	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
 		pozolitos.addEventListener("touchstart", function(){
-			textoCambiante.innerHTML = "La Pozolitos<br><br>!!!Pozole Blanco, Verde y Rojo!!!<br><br>Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 10 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio"
+			th2.innerHTML = "La Pozolitos<br>!!! Pozole Blanco, Verde y Rojo !!!"
+			textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 10 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
+			textoCambiante.style.fontStyle = "italic";
 			gridPizzas.style.display = "none";
 			gridRock.style.display = "none";
 			gridSushi.style.display = "none";
@@ -320,7 +359,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
 	sabores.onmouseover = function() {
-		textoCambiante.innerHTML = "Sabores de la Tierra<br><br>!!!Ensaladas, Sandwiches y Jugoterapia!!!<br><br>Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 7:30 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio"
+		th2.innerHTML = "Sabores de la Tierra<br>!!! Ensaladas, Sandwiches y Jugos !!!"
+		textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 7:30 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
+		textoCambiante.style.fontStyle = "italic";
 		cambiarImagen("Pizzas","./ComidaOpt/Sabores 1.png","50px","50px");
 		cambiarImagen("Rock","./ComidaOpt/Sabores 2.png","500px","500px");
 		cambiarImagen("Enchi","./ComidaOpt/Sabores 3.png","200px","200px");
@@ -334,6 +375,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 
 	sabores.onmouseout = function() {
+		th2.innerHTML = th2org;
 		textoCambiante.innerHTML = miTexto;
 		cambiarImagen("Rock","./LogosOpt/Rock.png");
 		cambiarImagen("Pizzas","./LogosOpt/Pizzas.png");
@@ -344,12 +386,47 @@ document.addEventListener("DOMContentLoaded", function() {
 		cambiarImagen("Pozolitos","./LogosOpt/Pozolitos.png");
 		cambiarImagen("Sushi","./LogosOpt/Sushi.png");
 		cambiarImagen("Chapatas","./LogosOpt/Chapatas.png");
-		cambiarImagen("Papi","./LogosOpt/Papi.png");
+		cambiarImagen("Papi","./LogosOpt/Papidrinks_2.png	");
 	}
 	}
 	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
 		sabores.addEventListener("touchstart", function(){
-			textoCambiante.innerHTML = "Sabores de la Tierra<br><br>!!!Ensaladas, Sandwiches y Jugoterapia!!!<br><br>Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 7:30 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio"
+			th2.innerHTML = "Sabores de la Tierra<br>!!! Ensaladas, Sandwiches y Jugos !!!"
+			textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 7:30 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
+			textoCambiante.style.fontStyle = "italic";
+			gridPizzas.style.display = "none";
+			gridRock.style.display = "none";
+			gridSushi.style.display = "none";
+			gridCochi.style.display = "none";
+			gridPulpo.style.display = "none";
+			gridHija.style.display = "none";
+			gridCabana.style.display = "none";
+			gridSabores.style.display = "grid";
+			gridBirria.style.display = "none";
+			gridEnchi.style.display = "none";
+			gridPozolitos.style.display = "none";
+			gridCafe.style.display = "none";
+		});
+	}
+
+	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
+	chapatas.onmouseover = function() {
+		th2.innerHTML = "Pietro Chapatas<br>!!! Chapatas y Sandwiches !!!"
+		textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 7:30 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
+		textoCambiante.style.fontStyle = "italic";
+		}
+
+	chapatas.onmouseout = function() {
+		th2.innerHTML = th2org;
+		textoCambiante.innerHTML = miTexto;
+		
+	}
+	}
+	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
+		chapatas.addEventListener("touchstart", function(){
+			th2.innerHTML = "Pietro Chapatas<br>!!! Chapatas y Sandwiches !!!"
+			textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 7:30 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
+			textoCambiante.style.fontStyle = "italic";
 			gridPizzas.style.display = "none";
 			gridRock.style.display = "none";
 			gridSushi.style.display = "none";
@@ -367,7 +444,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
 	sushi.onmouseover = function() {
-		textoCambiante.innerHTML = "Sushi el de la Bici<br><br>!!!Sushi, Ramen y Yakimeshi!!!<br><br>Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 10 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio"
+		th2.innerHTML = "Sushi el de la Bici<br>!!! Sushi, Ramen y Yakimeshi !!!"
+		textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 10 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
+		textoCambiante.style.fontStyle = "italic";
 		cambiarImagen("Cafe","./ComidaOpt/Sushi 1.png","50px","50px");
 		cambiarImagen("Pizzas","./ComidaOpt/Sushi 2.png","500px","500px");
 		cambiarImagen("Enchi","./ComidaOpt/Sushi 3.png","200px","200px");
@@ -381,6 +460,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 
 	sushi.onmouseout = function() {
+		th2.innerHTML = th2org;
 		textoCambiante.innerHTML = miTexto;
 		cambiarImagen("Cafe","./LogosOpt/Cafe.png");
 		cambiarImagen("Pizzas","./LogosOpt/Pizzas.png");
@@ -397,7 +477,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
 		sushi.addEventListener("touchstart", function(){
-			textoCambiante.innerHTML = "Sushi el de la Bici<br><br>!!!Sushi, Ramen y Yakimeshi!!!<br><br>Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 10 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio"
+			th2.innerHTML = "Sushi el de la Bici<br>!!! Sushi, Ramen y Yakimeshi !!!"
+			textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 10 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
+			textoCambiante.style.fontStyle = "italic";
 			gridPizzas.style.display = "none";
 			gridRock.style.display = "none";
 			gridSushi.style.display = "grid";
@@ -415,18 +497,56 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {	
 	cabana.onmouseover = function() {
-		textoCambiante.innerHTML = "La Cabaña de Colinas<br><br>!!!Tortas, Tacos y Burritos!!!<br><br>Domingo, Lunes y Miercoles 10 a.m. a 9 p.m.<br><br>Jueves, Viernes y Sabado 10 a.m. a 10 p.m.<br><br>Servicio a domicilio"
+		th2.innerHTML = "La Cabaña de Colinas<br>!!! Tortas, Tacos y Burritos !!!"
+		textoCambiante.innerHTML = "Domingo, Lunes y Miercoles 10 a.m. a 9 p.m.<br><br>Jueves, Viernes y Sabado 10 a.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
+		textoCambiante.style.fontStyle = "italic";
 		cambiarImagen("Pizzas","./ComidaOpt/Cabana 1.png","500px","500px");
 		}
 
 	cabana.onmouseout = function() {
+		th2.innerHTML = th2org;
 		textoCambiante.innerHTML = miTexto;
 		cambiarImagen("Pizzas","./LogosOpt/Pizzas.png");
 	}
 	}
 	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
 		cabana.addEventListener("touchstart", function(){
-			textoCambiante.innerHTML = "La Cabaña de Colinas<br><br>!!!Tortas, Tacos y Burritos!!!<br><br>Domingo, Lunes y Miercoles 10 a.m. a 9 p.m.<br><br>Jueves, Viernes y Sabado 10 a.m. a 10 p.m.<br><br>Servicio a domicilio"
+			th2.innerHTML = "La Cabaña de Colinas<br>!!! Tortas, Tacos y Burritos !!!"
+			textoCambiante.innerHTML = "Domingo, Lunes y Miercoles 10 a.m. a 9 p.m.<br><br>Jueves, Viernes y Sabado 10 a.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
+			textoCambiante.style.fontStyle = "italic";
+			gridPizzas.style.display = "none";
+			gridRock.style.display = "none";
+			gridSushi.style.display = "none";
+			gridCochi.style.display = "none";
+			gridPulpo.style.display = "none";
+			gridHija.style.display = "none";
+			gridCabana.style.display = "grid";
+			gridSabores.style.display = "none";
+			gridBirria.style.display = "none";
+			gridEnchi.style.display = "none";
+			gridPozolitos.style.display = "none";
+			gridCafe.style.display = "none";
+		});
+	}
+
+	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {	
+	papi.onmouseover = function() {
+		th2.innerHTML = "Papidrinks<br>!!! Cocteleria y bebidas !!!";
+		textoCambiante.innerHTML = "Miercoles, Jueves, Viernes y Sabado 2 p.m. a 10 p.m.<br><br>Domingo 2 p.m. a 9 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago";
+		textoCambiante.style.fontStyle = "italic";
+		}
+
+	papi.onmouseout = function() {
+		th2.innerHTML = th2org;
+		textoCambiante.innerHTML = miTexto;
+		
+	}
+	}
+	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
+		papi.addEventListener("touchstart", function(){
+			th2.innerHTML = "Papidrinks<br>!!! Cocteleria y bebidas !!!";
+			textoCambiante.innerHTML = "Miercoles, Jueves, Viernes y Sabado 2 p.m. a 10 p.m.<br><br>Domingo 2 p.m. a 9 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago";
+			textoCambiante.style.fontStyle = "italic";
 			gridPizzas.style.display = "none";
 			gridRock.style.display = "none";
 			gridSushi.style.display = "none";
@@ -444,7 +564,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
 	cochi.onmouseover = function() {
-		textoCambiante.innerHTML = "Hijos de la... Cochinta Ahogada<br><br>!!!Cochinita, Tacos y Tortas!!!<br><br>Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 9 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio"
+		th2.innerHTML = "Hijos de la... Cochinta Ahogada<br>!!! Cochinita, Tacos y Tortas !!!"
+		textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 9 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
+		textoCambiante.style.fontStyle = "italic";
 		cambiarImagen("Birria","./ComidaOpt/Cochinita 1.png","50px","50px");
 		cambiarImagen("Pizzas","./ComidaOpt/Cochinita 2.png","500px","500px");
 		cambiarImagen("Enchi","./ComidaOpt/Cochinita 3.png","200px","200px");
@@ -452,6 +574,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 
 	cochi.onmouseout = function() {
+		th2.innerHTML = th2org;
 		textoCambiante.innerHTML = miTexto;
 		cambiarImagen("Pizzas","./LogosOpt/Pizzas.png");
 		cambiarImagen("Enchi","./LogosOpt/Enchilandia.png");
@@ -462,7 +585,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
 		cochi.addEventListener("touchstart", function(){
-			textoCambiante.innerHTML = "Hijos de la... Cochinta Ahogada<br><br>!!!Cochinita, Tacos y Tortas!!!<br><br>Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 9 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio"
+			th2.innerHTML = "Hijos de la... Cochinta Ahogada<br>!!! Cochinita, Tacos y Tortas !!!"
+			textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 9 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
+			textoCambiante.style.fontStyle = "italic";
 			gridPizzas.style.display = "none";
 			gridRock.style.display = "none";
 			gridSushi.style.display = "none";
@@ -480,7 +605,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
 	cafe.onmouseover = function() {
-		textoCambiante.innerHTML = "Veintidos Cafe<br><br>!!!Café, Crepas y Waffles!!!<br><br>Lunes, Martes, Jueves, Viernes 3 p.m. a 10 p.m.<br><br>Sabado y Domingo 2 p.m. a 10 p.m.<br><br>Servicio a domicilio"
+		th2.innerHTML = "Veintidos Cafe<br>!!! Café, Crepas y Waffles !!!"
+		textoCambiante.innerHTML = "Lunes, Martes, Jueves, Viernes 3 p.m. a 10 p.m.<br><br>Sabado y Domingo 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
+		textoCambiante.style.fontStyle = "italic";
 		cambiarImagen("Rock","./ComidaOpt/Cafe 1.png","50px","50px");
 		cambiarImagen("Pizzas","./ComidaOpt/Cafe 2.png","500px","500px");
 		cambiarImagen("Enchi","./ComidaOpt/Cafe 3.png","200px","200px");
@@ -497,6 +624,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 
 	cafe.onmouseout = function() {
+		th2.innerHTML = th2org;
 		textoCambiante.innerHTML = miTexto;
 		cambiarImagen("Rock","./LogosOpt/Rock.png");
 		cambiarImagen("Pizzas","./LogosOpt/Pizzas.png");
@@ -508,14 +636,16 @@ document.addEventListener("DOMContentLoaded", function() {
 		cambiarImagen("Sabores","./LogosOpt/Sabores.png");
 		cambiarImagen("Sushi","./LogosOpt/Sushi.png");
 		cambiarImagen("Chapatas","./LogosOpt/Chapatas.png");
-		cambiarImagen("Papi","./LogosOpt/Papi.png");
+		cambiarImagen("Papi","./LogosOpt/Papidrinks_2.png	");
 		cambiarImagen("Cochi","./LogosOpt/Cochinita_2.png");
 		cambiarImagen("Cabana","./LogosOpt/Cabana.png");
 	}
 	}
 	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
 		cafe.addEventListener("touchstart", function(){
-			textoCambiante.innerHTML = "Veintidos Cafe<br><br>!!!Café, Crepas y Waffles!!!<br><br>Lunes, Martes, Jueves, Viernes 3 p.m. a 10 p.m.<br><br>Sabado y Domingo 2 p.m. a 10 p.m.<br><br>Servicio a domicilio"
+			th2.innerHTML = "Veintidos Cafe<br>!!! Café, Crepas y Waffles !!!"
+			textoCambiante.innerHTML = "Lunes, Martes, Jueves, Viernes 3 p.m. a 10 p.m.<br><br>Sabado y Domingo 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
+			textoCambiante.style.fontStyle = "italic";
 			gridPizzas.style.display = "none";
 			gridRock.style.display = "none";
 			gridSushi.style.display = "none";
@@ -537,7 +667,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		nuevaImagen.height = nuevoAlto;
 	}
 
-		document.getElementById("pag_ord_1").addEventListener("click", function() {
+	document.getElementById("pag_ord_1").addEventListener("click", function() {
 		window.open("https://www.foodbooking.com/api/fb/jb_v_q5","_blank");
 	});
 
