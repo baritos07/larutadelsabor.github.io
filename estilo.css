@@ -1,3 +1,5 @@
+
+
 body {
 	background: #567
 }
@@ -7,14 +9,31 @@ h1 {
 	font-size: 40px;
 	font-style: bold;
 	
+	display: none;
+	
 }
 
 h2 {
 	font-size: 30px;
+	margin-top: 20px;
 }
 
 h3 {
+	font-size: 25px;
+	font-weight: normal;
+	font-style: italic;	
+}
+
+h4 {
+	font-size: 25px;
+	font-weight: normal;
+	font-style: italic;
+}
+
+h5 {
 	font-size: 30px;
+	font-style: italic;
+	margin: 2px;
 }
 
 p {
@@ -41,6 +60,12 @@ p {
 	"ordena1 logo1 letras logo2 ordena2";
 	}
 
+.sectionHs {
+	justify-items: center;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+}
 
 .grid-img-png {
 	width: 100%;
@@ -200,6 +225,7 @@ p {
 	font-size: 25px;
 	background: lightyellow;
 	border: 3px solid #000;
+	padding-bottom: 25px;
 	
 
 }
@@ -556,7 +582,7 @@ p {
 @media screen and (min-width: 575px) and (max-width: 874px) {
 h1 {
 	font-size: 30px;
-	
+	display: none;
 }
 
 h2 {
@@ -564,6 +590,14 @@ h2 {
 }
 
 h3 {
+	font-size: 15px;
+}
+
+h4 {
+	font-size: 15px;
+}
+
+h5 {
 	font-size: 15px;
 }
 
@@ -736,6 +770,13 @@ p {
 	background: lightyellow;
 	border: 3px solid #000;
 	
+}
+
+.sectionHs {
+	justify-items: center;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
 }
 
 .gridtextohid {
@@ -1106,14 +1147,31 @@ p {
 
 h1 {
 	font-size: 25px;
+	display: none;
 }
 
 h2 {
-	font-size: 15px;
+	font-size: 25px;
+	margin-top: 5px;
+	margin-bottom: 20px;
 }
 
 h3 {
 	font-size: 15px;
+	font-weight: normal;
+	font-style: italic;
+}
+
+h4 {
+	font-size: 15px;
+	font-weight: normal;
+	font-style: italic;
+}
+
+h5 {
+	font-size: 15px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 p {
@@ -1389,6 +1447,13 @@ p {
 	border-top: 3px solid darkgoldenrod;
 	text-align: center;
 	text-justify: center;
+}
+
+.sectionHs {
+	justify-items: center;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
 }
 
 .img-left-pizzas {
