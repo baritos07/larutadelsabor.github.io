@@ -618,7 +618,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
 	cafe.onmouseover = function() {
-		th2.innerHTML = "Veintidos Cafe<br>!!! Café, Crepas y Waffles !!!"
+		th2.innerHTML = "Veintidos Café<br>!!! Café, Crepas y Waffles !!!"
 		textoCambiante.innerHTML = "Lunes, Martes, Jueves, Viernes 3 p.m. a 10 p.m.<br><br>Sabado y Domingo 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
 		textoCambiante.style.fontStyle = "italic";
 		cambiarImagen("Rock","./ComidaOpt/Cafe 1.png","50px","50px");
@@ -656,7 +656,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
 		cafe.addEventListener("touchstart", function(){
-			th2.innerHTML = "Veintidos Cafe<br><br>!!! Café, Crepas y Waffles !!!"
+			th2.innerHTML = "Veintidos Café<br><br>!!! Café, Crepas y Waffles !!!"
 			textoCambiante.innerHTML = "Lunes, Martes, Jueves, Viernes 3 p.m. a 10 p.m.<br><br>Sabado y Domingo 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
 			textoCambiante.style.fontStyle = "italic";
 			textoCambiante.style.fontSize = "15px";
