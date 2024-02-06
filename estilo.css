@@ -1,5 +1,3 @@
-
-
 body {
 	background: #567
 }
@@ -212,6 +210,10 @@ p {
 }
 
 .grid-imagenes-hija {
+	display: none;
+}
+
+.grid-imagenes-papi {
 	display: none;
 }
 
@@ -769,6 +771,10 @@ p {
 }
 
 .grid-imagenes-cochi {
+	display: none;
+}
+
+.grid-imagenes-papi {
 	display: none;
 }
 
@@ -1351,6 +1357,21 @@ p {
 	align-items: center;
 }
 
+.grid-imagenes-papi {
+	display: none;
+	background: lightblue;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 50px);
+	border-left: 3px solid darkgoldenrod;
+	border-right: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
 .grid-imagenes-birria {
 	display: none;
 	background: lightblue;
@@ -1727,7 +1748,7 @@ p {
 
 .contact {
 	
-	font-size: 17px;
+	font-size: 14px;
 	font-weight: bold;
 	color: white;
 	
