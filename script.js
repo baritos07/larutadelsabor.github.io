@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
 	pizzas.onmouseover = function() {
 		th2.innerHTML = "AJ Pizzas al Forno<br>!!! Pizzas Pastas y Ensaladas !!!";
-		textoCambiante.innerHTML = "Martes, Miercoles y Domingo 2 p.m. a 10 p.m.<br><br>Jueves, Viernes y Sabado 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago";
+		textoCambiante.innerHTML = "Martes, Miercoles y Domingo 2 p.m. a 9 p.m.<br><br>Jueves, Viernes y Sabado 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago";
 		textoCambiante.style.fontStyle = "italic";
 		cambiarImagen("Cafe","./ComidaOpt/Pizzas 1.png");
 		cambiarImagen("Rock","./ComidaOpt/Pizzas 2.png");
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
 		pizzas.addEventListener("touchstart", function(){
 			th2.innerHTML = "AJ Pizzas al Forno<br><br>!!! Pizzas, Pastas y Ensaladas !!!"
-			textoCambiante.innerHTML = "Martes, Miercoles y Domingo 2 p.m. a 10 p.m.<br><br>Jueves, Viernes y Sabado 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago";
+			textoCambiante.innerHTML = "Martes, Miercoles y Domingo 2 p.m. a 9 p.m.<br><br>Jueves, Viernes y Sabado 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago";
 			textoCambiante.style.fontStyle = "italic";
 			textoCambiante.style.fontSize = "15px";
 			gridPizzas.style.display = "grid";
@@ -131,15 +131,22 @@ document.addEventListener("DOMContentLoaded", function() {
 		});
 	}
 
-	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)) {
+	if (resolucion < 500 && (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
 		ruta.addEventListener("touchstart", function(){
 			th2.innerHTML = th2org;
 			textoCambiante.innerHTML = miTexto;
 			gridPizzas.style.display = "none";
 			gridRock.style.display = "none";
-			gridCafe.style.display = "none";
+			gridSushi.style.display = "none";
 			gridCochi.style.display = "none";
 			gridPulpo.style.display = "none";
+			gridHija.style.display = "none";
+			gridCabana.style.display = "none";
+			gridSabores.style.display = "none";
+			gridBirria.style.display = "none";
+			gridEnchi.style.display = "none";
+			gridPozolitos.style.display = "none";
+			gridCafe.style.display = "none";
 			gridTextoHid.style.display = "grid";
 		});
 	}
