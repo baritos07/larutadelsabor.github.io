@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	const gridCabana = document.getElementById("gridCabana");
 	const gridEnchi = document.getElementById("gridEnchi");
 	const gridPozolitos = document.getElementById("gridPozolitos");
+	const gridPapi = document.getElementById("gridPapi");
 	const ruta = document.getElementById("ruta1");
 	const th2 = document.getElementById("textoH2");
 	const th2org = document.getElementById("textoH2").innerHTML;
@@ -91,6 +92,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			gridEnchi.style.display = "none";
 			gridPozolitos.style.display = "none";
 			gridCafe.style.display = "none";
+			gridPapi.style.display = "none";
 		});
 	}
 
@@ -128,6 +130,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			gridEnchi.style.display = "none";
 			gridPozolitos.style.display = "none";
 			gridCafe.style.display = "none";
+			gridPapi.style.display = "none";
 		});
 	}
 
@@ -148,6 +151,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			gridPozolitos.style.display = "none";
 			gridCafe.style.display = "none";
 			gridTextoHid.style.display = "grid";
+			gridPapi.style.display = "none";
 		});
 	}
 
@@ -184,6 +188,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			gridEnchi.style.display = "grid";
 			gridPozolitos.style.display = "none";
 			gridCafe.style.display = "none";
+			gridPapi.style.display = "none";
 		});
 	}
 
@@ -227,6 +232,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			gridEnchi.style.display = "none";
 			gridPozolitos.style.display = "none";
 			gridCafe.style.display = "none";
+			gridPapi.style.display = "none";
 		});
 	}
 
@@ -286,6 +292,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			gridEnchi.style.display = "none";
 			gridPozolitos.style.display = "none";
 			gridCafe.style.display = "none";
+			gridPapi.style.display = "none";
 		});
 	}
 
@@ -332,6 +339,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			gridEnchi.style.display = "none";
 			gridPozolitos.style.display = "none";
 			gridCafe.style.display = "none";
+			gridPapi.style.display = "none";
 		});
 	}
 
@@ -367,6 +375,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			gridEnchi.style.display = "none";
 			gridPozolitos.style.display = "grid";
 			gridCafe.style.display = "none";
+			gridPapi.style.display = "none";
 		});
 	}
 
@@ -420,6 +429,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			gridEnchi.style.display = "none";
 			gridPozolitos.style.display = "none";
 			gridCafe.style.display = "none";
+			gridPapi.style.display = "none";
 		});
 	}
 
@@ -455,6 +465,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			gridEnchi.style.display = "none";
 			gridPozolitos.style.display = "none";
 			gridCafe.style.display = "none";
+			gridPapi.style.display = "none";
 		});
 	}
 
@@ -509,6 +520,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			gridEnchi.style.display = "none";
 			gridPozolitos.style.display = "none";
 			gridCafe.style.display = "none";
+			gridPapi.style.display = "none";
 		});
 	}
 
@@ -544,6 +556,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			gridEnchi.style.display = "none";
 			gridPozolitos.style.display = "none";
 			gridCafe.style.display = "none";
+			gridPapi.style.display = "none";
 		});
 	}
 
@@ -552,13 +565,38 @@ document.addEventListener("DOMContentLoaded", function() {
 		th2.innerHTML = "Papidrinks<br>!!! Cocteleria y bebidas !!!";
 		textoCambiante.innerHTML = "Miercoles, Jueves, Viernes y Sabado 2 p.m. a 10 p.m.<br><br>Domingo 2 p.m. a 9 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago";
 		textoCambiante.style.fontStyle = "italic";
+		cambiarImagen("Cafe","./ComidaOpt/Papidrinks 1.png");
+		cambiarImagen("Rock","./ComidaOpt/Papidrinks 2.png");
+		cambiarImagen("Enchi","./ComidaOpt/Papidrinks 3.png");
+		cambiarImagen("Hija","./ComidaOpt/Papidrinks 4.png");
+		cambiarImagen("Birria","./ComidaOpt/Papidrinks 5.png");
+		cambiarImagen("Pulpo","./ComidaOpt/Papidrinks 6.png");
+		cambiarImagen("Pozolitos","./ComidaOpt/Papidrinks 7.png");
+		cambiarImagen("Sabores","./ComidaOpt/Papidrinks 8.png");
+		cambiarImagen("Sushi","./ComidaOpt/Papidrinks 9.png");
+		cambiarImagen("Chapatas","./ComidaOpt/Papidrinks 10.png");
+		cambiarImagen("Pizzas","./ComidaOpt/Papidrinks 11.png");
+		cambiarImagen("Cabana","./ComidaOpt/Papidrinks 12.png");
+		cambiarImagen("Cochi","./ComidaOpt/Papidrinks 13.png");
 		}
 
 	papi.onmouseout = function() {
 		th2.innerHTML = th2org;
 		textoCambiante.innerHTML = miTexto;
-		
-	}
+		cambiarImagen("Cafe","./LogosOpt/Cafe.png");
+		cambiarImagen("Rock","./LogosOpt/Rock.png");
+		cambiarImagen("Enchi","./LogosOpt/Enchilandia.png");
+		cambiarImagen("Birria","./LogosOpt/Birrieria.png");
+		cambiarImagen("Hija","./LogosOpt/Hija.png");
+		cambiarImagen("Pulpo","./LogosOpt/Pulpo.png");
+		cambiarImagen("Pozolitos","./LogosOpt/Pozolitos.png");
+		cambiarImagen("Sabores","./LogosOpt/Sabores.png");
+		cambiarImagen("Sushi","./LogosOpt/Sushi.png");
+		cambiarImagen("Chapatas","./LogosOpt/Chapatas.png");
+		cambiarImagen("Pizzas","./LogosOpt/Pizzas.png	");
+		cambiarImagen("Cochi","./LogosOpt/Cochinita_2.png");
+		cambiarImagen("Cabana","./LogosOpt/Cabana.png");
+		}
 	}
 	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
 		papi.addEventListener("touchstart", function(){
@@ -578,6 +616,8 @@ document.addEventListener("DOMContentLoaded", function() {
 			gridEnchi.style.display = "none";
 			gridPozolitos.style.display = "none";
 			gridCafe.style.display = "none";
+			gridPapi.style.display = "grid";
+
 		});
 	}
 
@@ -620,6 +660,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			gridEnchi.style.display = "none";
 			gridPozolitos.style.display = "none";
 			gridCafe.style.display = "none";
+			gridPapi.style.display = "none";
 		});
 	}
 
@@ -679,6 +720,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			gridEnchi.style.display = "none";
 			gridPozolitos.style.display = "none";
 			gridCafe.style.display = "grid";
+			gridPapi.style.display = "none";
 		});
 	}
 
