@@ -40,8 +40,36 @@ p {
 	font-size: 30px;
 }
 
+.contact {
+	display: flex;
+	font-size: 40px;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+}
+
 .foot {
 	font-size: 40px;
+}
+
+.footer-contacts {
+	margin-top: 10px;
+	display: grid;
+	grid-template-areas: 
+	"face whats"
+
+}
+
+.face {
+	justify-self: start;
+	align-self: start;
+	grid-area: face;
+}
+
+.whats {
+	justify-self: end;
+	align-self: end;
+	grid-area: whats;
 }
 
 .grid-container {
@@ -148,6 +176,10 @@ p {
 	"hija rock pulpo pozolitos sabores sushi chapatas papi";
 	
 
+}
+
+.parrafo-hid {
+	display: none;
 }
 
 .gridtextohid {
@@ -770,6 +802,10 @@ p {
 	background: lightyellow;
 	border: 3px solid #000;
 	
+}
+
+.parrafo-hid {
+	display: none;
 }
 
 .sectionHs {
@@ -1688,5 +1724,39 @@ p {
 .foot {
 	font-size: 15px;
 }
+
+.contact {
+	
+	font-size: 17px;
+	font-weight: bold;
+	color: white;
+	
+}
+
+.parrafo-hid {
+	display: none;
+}
+
+
+.footer-contacts {
+	margin-top: 5px;
+	display: grid;
+	grid-template-areas: 
+	"face whats"
+
+}
+
+.face {
+	justify-self: start;
+	align-self: start;
+	grid-area: face;
+}
+
+.whats {
+	justify-self: end;
+	align-self: end;
+	grid-area: whats;
+}
+
 
 }
