@@ -1,741 +1,1785 @@
-document.addEventListener("DOMContentLoaded", function() {
-	const pizzas = document.getElementById("Pizzas");
-	const rock = document.getElementById("Rock");
-	const cafe = document.getElementById("Cafe");
-	const enchi = document.getElementById("Enchi");
-	const cochi = document.getElementById("Cochi");
-	const cabana = document.getElementById("Cabana");
-	const hija = document.getElementById("Hija");
-	const papi = document.getElementById("Papi");
-	const sabores = document.getElementById("Sabores");
-	const pulpo = document.getElementById("Pulpo");
-	const sushi = document.getElementById("Sushi");
-	const pozolitos = document.getElementById("Pozolitos");
-	const chapatas = document.getElementById("Chapatas");
-	const birria = document.getElementById("Birria");
-	const textoCambiante = document.getElementById("textoCambiante");
-	const miTexto = document.getElementById("textoCambiante").innerHTML;
-	const gridPizzas = document.getElementById("gridPizzas");
-	const gridRock = document.getElementById("gridRock");
-	const gridCafe = document.getElementById("gridCafe");
-	const gridSushi = document.getElementById("gridSushi");
-	const gridCochi = document.getElementById("gridCochi");
-	const gridPulpo = document.getElementById("gridPulpo");
-	const gridTextoHid = document.getElementById("gridTextoHid");
-	const gridHija = document.getElementById("gridHija");
-	const gridSabores = document.getElementById("gridSabores");
-	const gridBirria = document.getElementById("gridBirria");
-	const gridCabana = document.getElementById("gridCabana");
-	const gridEnchi = document.getElementById("gridEnchi");
-	const gridPozolitos = document.getElementById("gridPozolitos");
-	const gridPapi = document.getElementById("gridPapi");
-	const ruta = document.getElementById("ruta1");
-	const th2 = document.getElementById("textoH2");
-	const th2org = document.getElementById("textoH2").innerHTML;
+body {
+	background: #567
+}
 
-	let resolucion = window.innerWidth;
-	let userAgent = navigator.userAgent;
+@media screen and (min-width: 875px) {
+h1 {
+	font-size: 40px;
+	font-style: bold;
+	
+	display: none;
+	
+}
 
-	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
-	pizzas.onmouseover = function() {
-		th2.innerHTML = "AJ Pizzas al Forno<br>!!! Pizzas Pastas y Ensaladas !!!";
-		textoCambiante.innerHTML = "Martes, Miercoles y Domingo 2 p.m. a 9 p.m.<br><br>Jueves, Viernes y Sabado 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago";
-		textoCambiante.style.fontStyle = "italic";
-		cambiarImagen("Cafe","./ComidaOpt/Pizzas 1.png");
-		cambiarImagen("Rock","./ComidaOpt/Pizzas 2.png");
-		cambiarImagen("Enchi","./ComidaOpt/Pizzas 3.png");
-		cambiarImagen("Hija","./ComidaOpt/Pizzas 4.png");
-		cambiarImagen("Birria","./ComidaOpt/Pizzas 5.png");
-		cambiarImagen("Pulpo","./ComidaOpt/Pizzas 6.png");
-		cambiarImagen("Pozolitos","./ComidaOpt/Pizzas 7.png");
-		cambiarImagen("Sabores","./ComidaOpt/Pizzas 8.png");
-		cambiarImagen("Sushi","./ComidaOpt/Pizzas 9.png");
-		cambiarImagen("Chapatas","./ComidaOpt/Pizzas 10.png");
-		cambiarImagen("Papi","./ComidaOpt/Pizzas 11.png");
-		cambiarImagen("Cabana","./ComidaOpt/Pizzas 12.png");
-		cambiarImagen("Cochi","./ComidaOpt/Pizzas 13.png");
-		}
+h2 {
+	font-size: 30px;
+	margin-top: 20px;
+}
 
-	pizzas.onmouseout = function() {
-		th2.innerHTML = th2org;
-		textoCambiante.innerHTML = miTexto;
-		cambiarImagen("Cafe","./LogosOpt/Cafe.png");
-		cambiarImagen("Rock","./LogosOpt/Rock.png");
-		cambiarImagen("Enchi","./LogosOpt/Enchilandia.png");
-		cambiarImagen("Birria","./LogosOpt/Birrieria.png");
-		cambiarImagen("Hija","./LogosOpt/Hija.png");
-		cambiarImagen("Pulpo","./LogosOpt/Pulpo.png");
-		cambiarImagen("Pozolitos","./LogosOpt/Pozolitos.png");
-		cambiarImagen("Sabores","./LogosOpt/Sabores.png");
-		cambiarImagen("Sushi","./LogosOpt/Sushi.png");
-		cambiarImagen("Chapatas","./LogosOpt/Chapatas.png");
-		cambiarImagen("Papi","./LogosOpt/Papidrinks_2.png	");
-		cambiarImagen("Cochi","./LogosOpt/Cochinita_2.png");
-		cambiarImagen("Cabana","./LogosOpt/Cabana.png");
-	}
-	}
-	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
-		pizzas.addEventListener("touchstart", function(){
-			th2.innerHTML = "AJ Pizzas al Forno<br><br>!!! Pizzas, Pastas y Ensaladas !!!"
-			textoCambiante.innerHTML = "Martes, Miercoles y Domingo 2 p.m. a 9 p.m.<br><br>Jueves, Viernes y Sabado 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago";
-			textoCambiante.style.fontStyle = "italic";
-			textoCambiante.style.fontSize = "15px";
-			gridPizzas.style.display = "grid";
-			gridRock.style.display = "none";
-			gridSushi.style.display = "none";
-			gridCochi.style.display = "none";
-			gridPulpo.style.display = "none";
-			gridHija.style.display = "none";
-			gridCabana.style.display = "none";
-			gridSabores.style.display = "none";
-			gridBirria.style.display = "none";
-			gridEnchi.style.display = "none";
-			gridPozolitos.style.display = "none";
-			gridCafe.style.display = "none";
-			gridPapi.style.display = "none";
-		});
+h3 {
+	font-size: 25px;
+	font-weight: normal;
+	font-style: italic;	
+}
+
+h4 {
+	font-size: 25px;
+	font-weight: normal;
+	font-style: italic;
+}
+
+h5 {
+	font-size: 30px;
+	font-style: italic;
+	margin: 2px;
+}
+
+p {
+	font-size: 30px;
+}
+
+.contact {
+	display: flex;
+	font-size: 40px;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+}
+
+.foot {
+	font-size: 40px;
+}
+
+.footer-contacts {
+	margin-top: 10px;
+	display: grid;
+	grid-template-areas: 
+	"face whats"
+
+}
+
+.face {
+	justify-self: start;
+	align-self: start;
+	grid-area: face;
+}
+
+.whats {
+	justify-self: end;
+	align-self: end;
+	grid-area: whats;
+}
+
+.grid-container {
+	background: lightblue;
+	display: grid;
+	text-align:  center;
+	align-items: center;
+	justify-items: center;
+	
+	grid-template-rows: 120px;
+	grid-auto-flow: dense;
+	border-top: 3px solid #000;
+	border-left: 3px solid #000;
+	border-right: 3px solid #000;
+	grid-template-areas: 
+	"ordena1 logo1 letras logo2 ordena2";
 	}
 
-	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
-	birria.onmouseover = function() {
-		th2.innerHTML = "La Birrieria<br>!!! Birria, Tacos y Quesabirrias !!!"
-		textoCambiante.innerHTML = "Domingo, Lunes, Miercoles y Jueves 8 a.m. a 9 p.m.<br><br>Martes 2 p.m. a 9 p.m., Viernes y Sabado 8 a.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago";
-		textoCambiante.style.fontStyle = "italic";
-		cambiarImagen("Pizzas","./ComidaOpt/Birria 1.png","500px","500px");
-		cambiarImagen("Enchi","./ComidaOpt/Birria 2.png","200px","200px");
-		}
+.sectionHs {
+	justify-items: center;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+}
 
-	birria.onmouseout = function() {
-		th2.innerHTML = th2org;
-		textoCambiante.innerHTML = miTexto;
-		cambiarImagen("Pizzas","./LogosOpt/Pizzas.png");
-		cambiarImagen("Enchi","./LogosOpt/Enchilandia.png");
-	}
-	}
-	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
-		birria.addEventListener("touchstart", function(){
-			th2.innerHTML = "La Birrieria<br><br>!!! Birria, Tacos y Quesabirrias !!!"
-			textoCambiante.innerHTML = "Domingo, Lunes, Miercoles y Jueves 8 a.m. a 9 p.m.<br><br>Martes 2 p.m. a 9 p.m., Viernes y Sabado 8 a.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
-			textoCambiante.style.fontStyle = "italic";
-			textoCambiante.style.fontSize = "15px";
-			gridPizzas.style.display = "none";
-			gridRock.style.display = "none";
-			gridSushi.style.display = "none";
-			gridCochi.style.display = "none";
-			gridPulpo.style.display = "none";
-			gridHija.style.display = "none";
-			gridCabana.style.display = "none";
-			gridSabores.style.display = "none";
-			gridBirria.style.display = "grid";
-			gridEnchi.style.display = "none";
-			gridPozolitos.style.display = "none";
-			gridCafe.style.display = "none";
-			gridPapi.style.display = "none";
-		});
-	}
+.grid-img-png {
+	width: 100%;
+	max-width: 500px;
+	min-width: 300px;
+	height: auto;
+	padding-left: 5px;
+	padding-top: 5px;
+	align-items: center;
+	justify-items: center;
+	grid-area: letras;
+}
 
-	if (resolucion < 500 && (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
-		ruta.addEventListener("touchstart", function(){
-			th2.innerHTML = th2org;
-			textoCambiante.innerHTML = miTexto;
-			gridPizzas.style.display = "none";
-			gridRock.style.display = "none";
-			gridSushi.style.display = "none";
-			gridCochi.style.display = "none";
-			gridPulpo.style.display = "none";
-			gridHija.style.display = "none";
-			gridCabana.style.display = "none";
-			gridSabores.style.display = "none";
-			gridBirria.style.display = "none";
-			gridEnchi.style.display = "none";
-			gridPozolitos.style.display = "none";
-			gridCafe.style.display = "none";
-			gridTextoHid.style.display = "grid";
-			gridPapi.style.display = "none";
-		});
-	}
+.grid-img-left {
+	width: 100%;
+	max-width: 110px;
+	min-width: 75px;
+	height: auto;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	align-items: center;
+	justify-self: right;
+	grid-area: logo1;
+}
 
-	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
-	enchi.onmouseover = function() {
-		th2.innerHTML = "Enchilandia<br>!!! Enchiladas y Tacos Dorados !!!"
-		textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 10 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
-		textoCambiante.style.fontStyle = "italic";
-		cambiarImagen("Pizzas","./ComidaOpt/Enchilandia 1.png","500px","500px");
-		
-		}
+.grid-img-right {
+	width: 100%;
+	max-width: 110px;
+	min-width: 75px;
+	height: auto;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	align-items: center;
+	justify-self: left;
+	grid-area: logo2;
+}
 
-	enchi.onmouseout = function() {
-		th2.innerHTML = th2org;
-		textoCambiante.innerHTML = miTexto;
-		cambiarImagen("Pizzas","./LogosOpt/Pizzas.png");
-	}
-	}
-	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
-		enchi.addEventListener("touchstart", function(){
-			th2.innerHTML = "Enchilandia<br><br>!!! Enchiladas y Tacos Dorados !!!"
-			textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 10 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
-			textoCambiante.style.fontStyle = "italic";
-			textoCambiante.style.fontSize = "15px";
-			gridPizzas.style.display = "none";
-			gridRock.style.display = "none";
-			gridSushi.style.display = "none";
-			gridCochi.style.display = "none";
-			gridPulpo.style.display = "none";
-			gridHija.style.display = "none";
-			gridCabana.style.display = "none";
-			gridSabores.style.display = "none";
-			gridBirria.style.display = "none";
-			gridEnchi.style.display = "grid";
-			gridPozolitos.style.display = "none";
-			gridCafe.style.display = "none";
-			gridPapi.style.display = "none";
-		});
-	}
+.ordenar1 {
+	width: 100%;
+	max-width: 160px;
+	min-width: 75px;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	align-items: center;
+	justify-self: center;
+	grid-area: ordena1;
 
-	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
-	hija.onmouseover = function() {
-		th2.innerHTML = "La Hija de la Tostada<br>!!! Antojitos mexicanos !!!"
-		textoCambiante.innerHTML = "Domingo, Lunes, Miercoles y Jueves 8 a.m. a 9 p.m.<br><br>Martes 2 p.m. a 9 p.m., Viernes y Sabado 8 a.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
-		textoCambiante.style.fontStyle = "italic";
-		cambiarImagen("Pizzas","./ComidaOpt/Hija 1.png","500px","500px");
-		cambiarImagen("Birria","./ComidaOpt/Hija 2.png","500px","500px");
-		cambiarImagen("Enchi","./ComidaOpt/Hija 3.png","500px","500px");
-		cambiarImagen("Rock","./ComidaOpt/Hija 4.png","500px","500px");
-		cambiarImagen("Pulpo","./ComidaOpt/Hija 5.png","500px","500px");
-		}
+}
 
-	hija.onmouseout = function() {
-		th2.innerHTML = th2org;
-		textoCambiante.innerHTML = miTexto;
-		cambiarImagen("Pizzas","./LogosOpt/Pizzas.png");
-		cambiarImagen("Enchi","./LogosOpt/Enchilandia.png");
-		cambiarImagen("Birria","./LogosOpt/Birrieria.png");
-		cambiarImagen("Rock","./LogosOpt/Rock.png");
-		cambiarImagen("Pulpo","./LogosOpt/Pulpo.png");
-	}
-	}
-	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
-		hija.addEventListener("touchstart", function(){
-			th2.innerHTML = "La Hija de la Tostada<br><br>!!! Antojitos mexicanos !!!"
-			textoCambiante.innerHTML = "Domingo, Lunes, Miercoles y Jueves 8 a.m. a 9 p.m.<br><br>Martes 2 p.m. a 9 p.m., Viernes y Sabado 8 a.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
-			textoCambiante.style.fontStyle = "italic";
-			textoCambiante.style.fontSize = "15px";
-			gridPizzas.style.display = "none";
-			gridRock.style.display = "none";
-			gridSushi.style.display = "none";
-			gridCochi.style.display = "none";
-			gridPulpo.style.display = "none";
-			gridHija.style.display = "grid";
-			gridCabana.style.display = "none";
-			gridSabores.style.display = "none";
-			gridBirria.style.display = "none";
-			gridEnchi.style.display = "none";
-			gridPozolitos.style.display = "none";
-			gridCafe.style.display = "none";
-			gridPapi.style.display = "none";
-		});
-	}
+.ordenar2 {
+	width: 100%;
+	max-width: 160px;
+	min-width: 75px;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	align-items: center;
+	justify-self: center;
+	grid-area: ordena2;
 
-	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
-	rock.onmouseover = function() {
-		th2.innerHTML = "Rock Burger<br>!!! Hamburguesas, Alitas y Snacks !!!"
-		textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 9 a.m. a 10 p.m.<br><br>Martes 1 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
-		textoCambiante.style.fontStyle = "italic";
-		cambiarImagen("Cafe","./ComidaOpt/Papas.png","50px","50px");
-		cambiarImagen("Pizzas","./ComidaOpt/Choriburger.png","500px","500px");
-		cambiarImagen("Enchi","./ComidaOpt/HamburguesaConPapas.png","200px","200px");
-		cambiarImagen("Hija","./ComidaOpt/HotDogsHawaianos.png","200px","200px");
-		cambiarImagen("Birria","./ComidaOpt/Palomitas.png","200px","200px");
-		cambiarImagen("Pulpo","./ComidaOpt/HamburguesaSencilla.png","200px","200px");
-		cambiarImagen("Pozolitos","./ComidaOpt/HamburguesaEspecial.png","200px","200px");
-		cambiarImagen("Sabores","./ComidaOpt/PapasGajo.png","200px","200px");
-		cambiarImagen("Sushi","./ComidaOpt/HamburguesaPollo.png","200px","200px");
-		cambiarImagen("Chapatas","./ComidaOpt/Alitas.png","200px","200px");
-		cambiarImagen("Papi","./ComidaOpt/HotDogSencillo.png","200px","200px");
-		cambiarImagen("Cabana","./ComidaOpt/PapasPeperoni.png","200px","200px");
-		cambiarImagen("Cochi","./ComidaOpt/Platanos.png","200px","200px");
-		}
+}
 
-	rock.onmouseout = function() {
-		th2.innerHTML = th2org;
-		textoCambiante.innerHTML = miTexto;
-		cambiarImagen("Cafe","./LogosOpt/Cafe.png");
-		cambiarImagen("Pizzas","./LogosOpt/Pizzas.png");
-		cambiarImagen("Enchi","./LogosOpt/Enchilandia.png");
-		cambiarImagen("Birria","./LogosOpt/Birrieria.png");
-		cambiarImagen("Hija","./LogosOpt/Hija.png");
-		cambiarImagen("Pulpo","./LogosOpt/Pulpo.png");
-		cambiarImagen("Pozolitos","./LogosOpt/Pozolitos.png");
-		cambiarImagen("Sabores","./LogosOpt/Sabores.png");
-		cambiarImagen("Sushi","./LogosOpt/Sushi.png");
-		cambiarImagen("Chapatas","./LogosOpt/Chapatas.png");
-		cambiarImagen("Papi","./LogosOpt/Papidrinks_2.png	");
-		cambiarImagen("Cochi","./LogosOpt/Cochinita_2.png");
-		cambiarImagen("Cabana","./LogosOpt/Cabana.png");
-	}
-	}
-	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
-		rock.addEventListener("touchstart", function(){
-			th2.innerHTML = "Rock Burger<br><br>!!! Hamburguesas, Alitas y Snacks !!!"
-			textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 9 a.m. a 10 p.m.<br><br>Martes 1 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
-			textoCambiante.style.fontStyle = "italic";
-			textoCambiante.style.fontSize = "15px";
-			gridPizzas.style.display = "none";
-			gridRock.style.display = "grid";
-			gridSushi.style.display = "none";
-			gridCochi.style.display = "none";
-			gridPulpo.style.display = "none";
-			gridHija.style.display = "none";
-			gridCabana.style.display = "none";
-			gridSabores.style.display = "none";
-			gridBirria.style.display = "none";
-			gridEnchi.style.display = "none";
-			gridPozolitos.style.display = "none";
-			gridCafe.style.display = "none";
-			gridPapi.style.display = "none";
-		});
-	}
+.imagenes-izquierda {
+	background: lightblue;
+	text-align: center;
+	text-justify: initial;
+	display: grid;
+	border-left: 3px solid #000;
+	border-right: 3px solid #000;
+	border-bottom: 3px solid #000;
 
-	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
-	pulpo.onmouseover = function() {
-		th2.innerHTML = "Señor Pulpon<br>!!! Pescados y Mariscos !!!"
-		textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 10 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
-		textoCambiante.style.fontStyle = "italic";
-		cambiarImagen("Pozolitos","./ComidaOpt/Pulpo 1.png","50px","50px");
-		cambiarImagen("Pizzas","./ComidaOpt/Pulpo 2.png","500px","500px");
-		cambiarImagen("Enchi","./ComidaOpt/Pulpo 3.png","200px","200px");
-		cambiarImagen("Hija","./ComidaOpt/Pulpo 4.png","200px","200px");
-		cambiarImagen("Birria","./ComidaOpt/Pulpo 5.png","200px","200px");
-		cambiarImagen("Rock","./ComidaOpt/Pulpo 6.png","200px","200px");
-		}
+	grid-auto-flow: dense;
+	grid-template-areas: 
+	"pizzas texto texto texto texto texto texto cafe" 
+	"birria texto texto texto texto texto texto cochi"
+	"enchi texto texto texto texto texto texto cabana"
+	"hija rock pulpo pozolitos sabores sushi chapatas papi";
+	
 
-	pulpo.onmouseout = function() {
-		th2.innerHTML = th2org;
-		textoCambiante.innerHTML = miTexto;
-		cambiarImagen("Pizzas","./LogosOpt/Pizzas.png");
-		cambiarImagen("Enchi","./LogosOpt/Enchilandia.png");
-		cambiarImagen("Birria","./LogosOpt/Birrieria.png");
-		cambiarImagen("Hija","./LogosOpt/Hija.png");
-		cambiarImagen("Rock","./LogosOpt/Rock.png");
-		cambiarImagen("Pozolitos","./LogosOpt/Pozolitos.png");
-		
-	}
-	}
-	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
-		pulpo.addEventListener("touchstart", function(){
-			th2.innerHTML = "Señor Pulpon<br><br>!!! Pescados y Mariscos !!!"
-			textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 10 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
-			textoCambiante.style.fontStyle = "italic";
-			textoCambiante.style.fontSize = "15px";
-			gridPizzas.style.display = "none";
-			gridRock.style.display = "none";
-			gridSushi.style.display = "none";
-			gridCochi.style.display = "none";
-			gridPulpo.style.display = "grid";
-			gridHija.style.display = "none";
-			gridCabana.style.display = "none";
-			gridSabores.style.display = "none";
-			gridBirria.style.display = "none";
-			gridEnchi.style.display = "none";
-			gridPozolitos.style.display = "none";
-			gridCafe.style.display = "none";
-			gridPapi.style.display = "none";
-		});
-	}
+}
 
-	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
-	pozolitos.onmouseover = function() {
-		th2.innerHTML = "La Pozolitos<br>!!! Pozole Blanco, Verde y Rojo !!!"
-		textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 10 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
-		textoCambiante.style.fontStyle = "italic";
-		cambiarImagen("Pizzas","./ComidaOpt/Pozolitos 1.png","50px","50px");
-		}
+.parrafo-hid {
+	display: none;
+}
 
-	pozolitos.onmouseout = function() {
-		th2.innerHTML = th2org;
-		textoCambiante.innerHTML = miTexto;
-		cambiarImagen("Pizzas","./LogosOpt/Pizzas.png");
-	}
-	}
-	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
-		pozolitos.addEventListener("touchstart", function(){
-			th2.innerHTML = "La Pozolitos<br><br>!!! Pozole Blanco, Verde y Rojo !!!"
-			textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 10 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
-			textoCambiante.style.fontStyle = "italic";
-			textoCambiante.style.fontSize = "15px";
-			gridPizzas.style.display = "none";
-			gridRock.style.display = "none";
-			gridSushi.style.display = "none";
-			gridCochi.style.display = "none";
-			gridPulpo.style.display = "none";
-			gridHija.style.display = "none";
-			gridCabana.style.display = "none";
-			gridSabores.style.display = "none";
-			gridBirria.style.display = "none";
-			gridEnchi.style.display = "none";
-			gridPozolitos.style.display = "grid";
-			gridCafe.style.display = "none";
-			gridPapi.style.display = "none";
-		});
-	}
+.gridtextohid {
+	display: none;
+	background: lightyellow;
+	border-left: 3px solid darkgoldenrod;
+	
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
 
-	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
-	sabores.onmouseover = function() {
-		th2.innerHTML = "Sabores de la Tierra<br>!!! Ensaladas y Jugos !!!"
-		textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 7:30 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
-		textoCambiante.style.fontStyle = "italic";
-		cambiarImagen("Pizzas","./ComidaOpt/Sabores 1.png","50px","50px");
-		cambiarImagen("Rock","./ComidaOpt/Sabores 2.png","500px","500px");
-		cambiarImagen("Enchi","./ComidaOpt/Sabores 3.png","200px","200px");
-		cambiarImagen("Hija","./ComidaOpt/Sabores 4.png","200px","200px");
-		cambiarImagen("Birria","./ComidaOpt/Sabores 5.png","200px","200px");
-		cambiarImagen("Pulpo","./ComidaOpt/Sabores 6.png","200px","200px");
-		cambiarImagen("Pozolitos","./ComidaOpt/Sabores 7.png","200px","200px");
-		cambiarImagen("Papi","./ComidaOpt/Sabores 8.png","200px","200px");
-		cambiarImagen("Sushi","./ComidaOpt/Sabores 9.png","200px","200px");
-		cambiarImagen("Chapatas","./ComidaOpt/Sabores 10.png","200px","200px");
-		}
+.grid-imagenes {
+	display:none;
+}
 
-	sabores.onmouseout = function() {
-		th2.innerHTML = th2org;
-		textoCambiante.innerHTML = miTexto;
-		cambiarImagen("Rock","./LogosOpt/Rock.png");
-		cambiarImagen("Pizzas","./LogosOpt/Pizzas.png");
-		cambiarImagen("Enchi","./LogosOpt/Enchilandia.png");
-		cambiarImagen("Birria","./LogosOpt/Birrieria.png");
-		cambiarImagen("Hija","./LogosOpt/Hija.png");
-		cambiarImagen("Pulpo","./LogosOpt/Pulpo.png");
-		cambiarImagen("Pozolitos","./LogosOpt/Pozolitos.png");
-		cambiarImagen("Sushi","./LogosOpt/Sushi.png");
-		cambiarImagen("Chapatas","./LogosOpt/Chapatas.png");
-		cambiarImagen("Papi","./LogosOpt/Papidrinks_2.png	");
-	}
-	}
-	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
-		sabores.addEventListener("touchstart", function(){
-			th2.innerHTML = "Sabores de la Tierra<br><br>!!! Ensaladas y Jugos !!!"
-			textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 7:30 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
-			textoCambiante.style.fontStyle = "italic";
-			textoCambiante.style.fontSize = "15px";
-			gridPizzas.style.display = "none";
-			gridRock.style.display = "none";
-			gridSushi.style.display = "none";
-			gridCochi.style.display = "none";
-			gridPulpo.style.display = "none";
-			gridHija.style.display = "none";
-			gridCabana.style.display = "none";
-			gridSabores.style.display = "grid";
-			gridBirria.style.display = "none";
-			gridEnchi.style.display = "none";
-			gridPozolitos.style.display = "none";
-			gridCafe.style.display = "none";
-			gridPapi.style.display = "none";
-		});
-	}
+.grid-imagenes-pizzas {
+	display: none;
+}
 
-	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
-	chapatas.onmouseover = function() {
-		th2.innerHTML = "Pietro Chapatas<br> !!! Chapatas y  Sandwiches !!!"
-		textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 7:30 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
-		textoCambiante.style.fontStyle = "italic";
-		}
+.grid-imagenes-pozolitos {
+	display: none;
+}
 
-	chapatas.onmouseout = function() {
-		th2.innerHTML = th2org;
-		textoCambiante.innerHTML = miTexto;
-		
-	}
-	}
-	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
-		chapatas.addEventListener("touchstart", function(){
-			th2.innerHTML = "Pietro Chapatas<br><br>!!!Chapatas y Sandwiches!!!"
-			textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 7:30 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
-			textoCambiante.style.fontStyle = "italic";
-			textoCambiante.style.fontSize = "15px";
-			textoCambiante.style.fontSize = "15px";
-			gridPizzas.style.display = "none";
-			gridRock.style.display = "none";
-			gridSushi.style.display = "none";
-			gridCochi.style.display = "none";
-			gridPulpo.style.display = "none";
-			gridHija.style.display = "none";
-			gridCabana.style.display = "none";
-			gridSabores.style.display = "none";
-			gridBirria.style.display = "none";
-			gridEnchi.style.display = "none";
-			gridPozolitos.style.display = "none";
-			gridCafe.style.display = "none";
-			gridPapi.style.display = "none";
-		});
-	}
+.grid-imagenes-sabores {
+	display: none;
+}
 
-	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
-	sushi.onmouseover = function() {
-		th2.innerHTML = "Sushi el de la Bici<br>!!! Sushi, Ramen y Yakimeshi !!!"
-		textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 10 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
-		textoCambiante.style.fontStyle = "italic";
-		cambiarImagen("Cafe","./ComidaOpt/Sushi 1.png","50px","50px");
-		cambiarImagen("Pizzas","./ComidaOpt/Sushi 2.png","500px","500px");
-		cambiarImagen("Enchi","./ComidaOpt/Sushi 3.png","200px","200px");
-		cambiarImagen("Hija","./ComidaOpt/Sushi 4.png","200px","200px");
-		cambiarImagen("Birria","./ComidaOpt/Sushi 5.png","200px","200px");
-		cambiarImagen("Rock","./ComidaOpt/Sushi 6.png","200px","200px");
-		cambiarImagen("Pozolitos","./ComidaOpt/Sushi 7.png","200px","200px");
-		cambiarImagen("Sabores","./ComidaOpt/Sushi 8.png","200px","200px");
-		cambiarImagen("Pulpo","./ComidaOpt/Sushi 9.png","200px","200px");
-		cambiarImagen("Chapatas","./ComidaOpt/Sushi 10.png","200px","200px");
-		}
+.grid-imagenes-hija {
+	display: none;
+}
 
-	sushi.onmouseout = function() {
-		th2.innerHTML = th2org;
-		textoCambiante.innerHTML = miTexto;
-		cambiarImagen("Cafe","./LogosOpt/Cafe.png");
-		cambiarImagen("Pizzas","./LogosOpt/Pizzas.png");
-		cambiarImagen("Enchi","./LogosOpt/Enchilandia.png");
-		cambiarImagen("Birria","./LogosOpt/Birrieria.png");
-		cambiarImagen("Hija","./LogosOpt/Hija.png");
-		cambiarImagen("Rock","./LogosOpt/Rock.png");
-		cambiarImagen("Pozolitos","./LogosOpt/Pozolitos.png");
-		cambiarImagen("Sabores","./LogosOpt/Sabores.png");
-		cambiarImagen("Pulpo","./LogosOpt/Pulpo.png");
-		cambiarImagen("Chapatas","./LogosOpt/Chapatas.png");
-		
-	}
-	}
-	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
-		sushi.addEventListener("touchstart", function(){
-			th2.innerHTML = "Sushi el de la Bici<br><br>!!! Sushi, Ramen y Yakimeshi !!!"
-			textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 10 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
-			textoCambiante.style.fontStyle = "italic";
-			textoCambiante.style.fontSize = "15px";
-			gridPizzas.style.display = "none";
-			gridRock.style.display = "none";
-			gridSushi.style.display = "grid";
-			gridCochi.style.display = "none";
-			gridPulpo.style.display = "none";
-			gridHija.style.display = "none";
-			gridCabana.style.display = "none";
-			gridSabores.style.display = "none";
-			gridBirria.style.display = "none";
-			gridEnchi.style.display = "none";
-			gridPozolitos.style.display = "none";
-			gridCafe.style.display = "none";
-			gridPapi.style.display = "none";
-		});
-	}
+.grid-imagenes-papi {
+	display: none;
+}
 
-	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {	
-	cabana.onmouseover = function() {
-		th2.innerHTML = "La Cabaña de Colinas<br>!!! Tortas, Parrilladas y Burritos !!!"
-		textoCambiante.innerHTML = "Domingo, Lunes y Miercoles 10 a.m. a 9 p.m.<br><br>Jueves, Viernes y Sabado 10 a.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
-		textoCambiante.style.fontStyle = "italic";
-		cambiarImagen("Pizzas","./ComidaOpt/Cabana 1.png","500px","500px");
-		}
+.grid-imagenes-birria {
+	display: none;
+}
 
-	cabana.onmouseout = function() {
-		th2.innerHTML = th2org;
-		textoCambiante.innerHTML = miTexto;
-		cambiarImagen("Pizzas","./LogosOpt/Pizzas.png");
-	}
-	}
-	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
-		cabana.addEventListener("touchstart", function(){
-			th2.innerHTML = "La Cabaña de Colinas<br><br>!!! Tortas, Parrilladas y Burritos !!!"
-			textoCambiante.innerHTML = "Domingo, Lunes y Miercoles 10 a.m. a 9 p.m.<br><br>Jueves, Viernes y Sabado 10 a.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
-			textoCambiante.style.fontStyle = "italic";
-			textoCambiante.style.fontSize = "15px";
-			gridPizzas.style.display = "none";
-			gridRock.style.display = "none";
-			gridSushi.style.display = "none";
-			gridCochi.style.display = "none";
-			gridPulpo.style.display = "none";
-			gridHija.style.display = "none";
-			gridCabana.style.display = "grid";
-			gridSabores.style.display = "none";
-			gridBirria.style.display = "none";
-			gridEnchi.style.display = "none";
-			gridPozolitos.style.display = "none";
-			gridCafe.style.display = "none";
-			gridPapi.style.display = "none";
-		});
-	}
+.grid-imagenes-cabana {
+	display: none;
+}
 
-	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {	
-	papi.onmouseover = function() {
-		th2.innerHTML = "Papidrinks<br>!!! Cocteleria y bebidas !!!";
-		textoCambiante.innerHTML = "Miercoles, Jueves, Viernes y Sabado 2 p.m. a 10 p.m.<br><br>Domingo 2 p.m. a 9 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago";
-		textoCambiante.style.fontStyle = "italic";
-		cambiarImagen("Cafe","./ComidaOpt/Papidrinks 1.png");
-		cambiarImagen("Rock","./ComidaOpt/Papidrinks 2.png");
-		cambiarImagen("Enchi","./ComidaOpt/Papidrinks 3.png");
-		cambiarImagen("Hija","./ComidaOpt/Papidrinks 4.png");
-		cambiarImagen("Birria","./ComidaOpt/Papidrinks 5.png");
-		cambiarImagen("Pulpo","./ComidaOpt/Papidrinks 6.png");
-		cambiarImagen("Pozolitos","./ComidaOpt/Papidrinks 7.png");
-		cambiarImagen("Sabores","./ComidaOpt/Papidrinks 8.png");
-		cambiarImagen("Sushi","./ComidaOpt/Papidrinks 9.png");
-		cambiarImagen("Chapatas","./ComidaOpt/Papidrinks 10.png");
-		cambiarImagen("Pizzas","./ComidaOpt/Papidrinks 11.png");
-		cambiarImagen("Cabana","./ComidaOpt/Papidrinks 12.png");
-		cambiarImagen("Cochi","./ComidaOpt/Papidrinks 13.png");
-		}
+.grid-imagenes-enchi {
+	display: none;
+}
 
-	papi.onmouseout = function() {
-		th2.innerHTML = th2org;
-		textoCambiante.innerHTML = miTexto;
-		cambiarImagen("Cafe","./LogosOpt/Cafe.png");
-		cambiarImagen("Rock","./LogosOpt/Rock.png");
-		cambiarImagen("Enchi","./LogosOpt/Enchilandia.png");
-		cambiarImagen("Birria","./LogosOpt/Birrieria.png");
-		cambiarImagen("Hija","./LogosOpt/Hija.png");
-		cambiarImagen("Pulpo","./LogosOpt/Pulpo.png");
-		cambiarImagen("Pozolitos","./LogosOpt/Pozolitos.png");
-		cambiarImagen("Sabores","./LogosOpt/Sabores.png");
-		cambiarImagen("Sushi","./LogosOpt/Sushi.png");
-		cambiarImagen("Chapatas","./LogosOpt/Chapatas.png");
-		cambiarImagen("Pizzas","./LogosOpt/Pizzas.png	");
-		cambiarImagen("Cochi","./LogosOpt/Cochinita_2.png");
-		cambiarImagen("Cabana","./LogosOpt/Cabana.png");
-		}
-	}
-	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
-		papi.addEventListener("touchstart", function(){
-			th2.innerHTML = "Papidrinks<br><br>!!! Cocteleria y bebidas !!!";
-			textoCambiante.innerHTML = "Miercoles, Jueves, Viernes y Sabado 2 p.m. a 10 p.m.<br><br>Domingo 2 p.m. a 9 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago";
-			textoCambiante.style.fontStyle = "italic";
-			textoCambiante.style.fontSize = "15px";
-			gridPizzas.style.display = "none";
-			gridRock.style.display = "none";
-			gridSushi.style.display = "none";
-			gridCochi.style.display = "none";
-			gridPulpo.style.display = "none";
-			gridHija.style.display = "none";
-			gridCabana.style.display = "none";
-			gridSabores.style.display = "none";
-			gridBirria.style.display = "none";
-			gridEnchi.style.display = "none";
-			gridPozolitos.style.display = "none";
-			gridCafe.style.display = "none";
-			gridPapi.style.display = "grid";
+.grid-imagenes-rock {
+	display: none;
+}
 
-		});
-	}
+.grid-imagenes-cochi {
+	display: none;
+}
 
-	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
-	cochi.onmouseover = function() {
-		th2.innerHTML = "Hijos de la... Cochinta Ahogada<br>!!! Tacos y Tortas !!!"
-		textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 9 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
-		textoCambiante.style.fontStyle = "italic";
-		cambiarImagen("Birria","./ComidaOpt/Cochinita 1.png","50px","50px");
-		cambiarImagen("Pizzas","./ComidaOpt/Cochinita 2.png","500px","500px");
-		cambiarImagen("Enchi","./ComidaOpt/Cochinita 3.png","200px","200px");
-		cambiarImagen("Hija","./ComidaOpt/Cochinita 4.png","200px","200px");
-		}
+.grid-imagenes-sushi {
+	display: none;
+}
 
-	cochi.onmouseout = function() {
-		th2.innerHTML = th2org;
-		textoCambiante.innerHTML = miTexto;
-		cambiarImagen("Pizzas","./LogosOpt/Pizzas.png");
-		cambiarImagen("Enchi","./LogosOpt/Enchilandia.png");
-		cambiarImagen("Birria","./LogosOpt/Birrieria.png");
-		cambiarImagen("Hija","./LogosOpt/Hija.png");
-		
-	}
-	}
-	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
-		cochi.addEventListener("touchstart", function(){
-			th2.innerHTML = "Hijos de la... Cochinta Ahogada<br><br>!!! Tacos y Tortas !!!"
-			textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 9 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
-			textoCambiante.style.fontStyle = "italic";
-			textoCambiante.style.fontSize = "15px";
-			gridPizzas.style.display = "none";
-			gridRock.style.display = "none";
-			gridSushi.style.display = "none";
-			gridCochi.style.display = "grid";
-			gridPulpo.style.display = "none";
-			gridHija.style.display = "none";
-			gridCabana.style.display = "none";
-			gridSabores.style.display = "none";
-			gridBirria.style.display = "none";
-			gridEnchi.style.display = "none";
-			gridPozolitos.style.display = "none";
-			gridCafe.style.display = "none";
-			gridPapi.style.display = "none";
-		});
-	}
+.grid-imagenes-pulpo {
+	display: none;
+}
 
-	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
-	cafe.onmouseover = function() {
-		th2.innerHTML = "Veintidos Café<br>!!! Café, Crepas, Waffles y Postres !!!"
-		textoCambiante.innerHTML = "Lunes, Martes, Jueves, Viernes 3 p.m. a 10 p.m.<br><br>Sabado y Domingo 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
-		textoCambiante.style.fontStyle = "italic";
-		cambiarImagen("Rock","./ComidaOpt/Cafe 1.png","50px","50px");
-		cambiarImagen("Pizzas","./ComidaOpt/Cafe 2.png","500px","500px");
-		cambiarImagen("Enchi","./ComidaOpt/Cafe 3.png","200px","200px");
-		cambiarImagen("Hija","./ComidaOpt/Cafe 4.png","200px","200px");
-		cambiarImagen("Birria","./ComidaOpt/Cafe 5.png","200px","200px");
-		cambiarImagen("Pulpo","./ComidaOpt/Cafe 6.png","200px","200px");
-		cambiarImagen("Pozolitos","./ComidaOpt/Cafe 7.png","200px","200px");
-		cambiarImagen("Sabores","./ComidaOpt/Cafe 8.png","200px","200px");
-		cambiarImagen("Sushi","./ComidaOpt/Cafe 9.png","200px","200px");
-		cambiarImagen("Chapatas","./ComidaOpt/Cafe 10.png","200px","200px");
-		cambiarImagen("Papi","./ComidaOpt/Cafe 11.png","200px","200px");
-		cambiarImagen("Cabana","./ComidaOpt/Cafe 12.png","200px","200px");
-		cambiarImagen("Cochi","./ComidaOpt/Cafe 13.png","200px","200px");
-		}
+.grid-imagenes-cafe {
+	display: none;
+}	
 
-	cafe.onmouseout = function() {
-		th2.innerHTML = th2org;
-		textoCambiante.innerHTML = miTexto;
-		cambiarImagen("Rock","./LogosOpt/Rock.png");
-		cambiarImagen("Pizzas","./LogosOpt/Pizzas.png");
-		cambiarImagen("Enchi","./LogosOpt/Enchilandia.png");
-		cambiarImagen("Birria","./LogosOpt/Birrieria.png");
-		cambiarImagen("Hija","./LogosOpt/Hija.png");
-		cambiarImagen("Pulpo","./LogosOpt/Pulpo.png");
-		cambiarImagen("Pozolitos","./LogosOpt/Pozolitos.png");
-		cambiarImagen("Sabores","./LogosOpt/Sabores.png");
-		cambiarImagen("Sushi","./LogosOpt/Sushi.png");
-		cambiarImagen("Chapatas","./LogosOpt/Chapatas.png");
-		cambiarImagen("Papi","./LogosOpt/Papidrinks_2.png	");
-		cambiarImagen("Cochi","./LogosOpt/Cochinita_2.png");
-		cambiarImagen("Cabana","./LogosOpt/Cabana.png");
-	}
-	}
-	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
-		cafe.addEventListener("touchstart", function(){
-			th2.innerHTML = "Veintidos Café<br><br>!!! Café, Crepas, Waffles y Postres !!!"
-			textoCambiante.innerHTML = "Lunes, Martes, Jueves, Viernes 3 p.m. a 10 p.m.<br><br>Sabado y Domingo 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
-			textoCambiante.style.fontStyle = "italic";
-			textoCambiante.style.fontSize = "15px";
-			gridPizzas.style.display = "none";
-			gridRock.style.display = "none";
-			gridSushi.style.display = "none";
-			gridCochi.style.display = "none";
-			gridPulpo.style.display = "none";
-			gridHija.style.display = "none";
-			gridCabana.style.display = "none";
-			gridSabores.style.display = "none";
-			gridBirria.style.display = "none";
-			gridEnchi.style.display = "none";
-			gridPozolitos.style.display = "none";
-			gridCafe.style.display = "grid";
-			gridPapi.style.display = "none";
-		});
+.grid-item {	
+	width: 100%;
+	max-width: 1200px;
+	max-height: 60vw;
+	display: grid;
+	grid-area: texto;
+	margin-top: 5px;
+	font-size: 25px;
+	background: lightyellow;
+	border: 3px solid #000;
+	padding-bottom: 25px;
+	
+
+}
+
+.img-left-pizzas {
+	display: grid;
+	max-width: 110px;
+	max-height: 110px;
+	min-width: 85px;
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	overflow: hidden;
+	align-self: center;
+	justify-self: center;
+	grid-area: pizzas;
+	transition: transform 0.3s ease;
+}
+
+.ordenar1:hover {
+	transform: scale(1.2);
+}
+
+.ordenar2:hover {
+	transform: scale(1.2);
+}
+
+.img-left-pizzas:hover {
+	transform: scale(1.2);
+}
+
+.img-left-rock:hover {
+	transform: scale(1.1);
+}
+
+.img-left-hija:hover {
+	transform: scale(1.2);
+}
+
+.img-left-enchi:hover {
+	transform: scale(1.2);
+}
+
+.img-left-pulpo:hover {
+	transform: scale(1.2);
+}
+
+.img-left-birria:hover {
+	transform: scale(1.2);
+}
+
+.img-left-pozolitos:hover {
+	transform: scale(1.2);
+}
+
+.img-right-papi:hover {
+	transform: scale(1.2);
+}
+
+.img-right-cochi:hover {
+	transform: scale(1.2);
+}
+
+.img-right-cabana:hover {
+	transform: scale(1.2);
+}
+
+.img-right-sushi:hover {
+	transform: scale(1.2);
+}
+
+.img-right-sabores:hover {
+	transform: scale(1.2);
+}
+
+.img-right-chapatas:hover {
+	transform: scale(1.2);
+}
+
+.img-right-cafe:hover {
+	transform: scale(1.2);
+}
+
+
+.img-right-cafe {
+	display: grid;
+	max-width: 110px;
+	max-height: 110px;
+	min-width: 85px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	object-fit: contain;
+	align-self: center;
+	justify-self: center;
+	grid-area: cafe;
+	
+}
+
+.img-left-enchi {
+	display: grid;
+	max-width: 110px;
+	max-height: 110px;
+	min-width: 85px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	object-fit: contain;
+	align-self: center;
+	justify-self: center;
+	grid-area: enchi;
+	
+}
+
+.img-right-cochi {
+	display: grid;
+	max-width: 110px;
+	max-height: 110px;
+	min-width: 85px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	object-fit: contain;
+	align-self: center;
+	justify-self: center;
+	grid-area: cochi;
+	
+}
+
+
+.img-left-birria {
+	display: grid;
+	max-width: 110px;
+	max-height: 110px;
+	min-width: 85px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	object-fit: contain;
+	align-self: center;
+	justify-self: center;
+	grid-area: birria;
+	
+}
+
+.img-right-cabana {
+	display: grid;
+	max-width: 110px;
+	max-height: 110px;
+	min-width: 85px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	object-fit: contain;
+	align-self: center;
+	justify-self: center;
+	grid-area: cabana;
+	
+}
+
+.img-left-hija {
+	display: grid;
+	max-width: 110px;
+	max-height: 110px;
+	min-width: 85px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	object-fit: contain;
+	align-self: center;
+	justify-self: center;
+	grid-area: hija;
+	
+}
+
+.img-right-papi {
+	display: grid;
+	max-width: 110px;
+	max-height: 110px;
+	min-width: 85px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	object-fit: contain;
+	align-self: center;
+	justify-self: center;
+	grid-area: papi;
+	
+}
+
+.img-left-rock {
+	display: grid;
+	max-width: 110px;
+	max-height: 110px;
+	min-width: 85px;
+	width: 90%;
+	height: auto;
+	overflow: hidden;
+	object-fit: contain;
+	align-self: center;
+	justify-self: center;
+	grid-area: rock;
+	
+}
+
+.img-right-sabores {
+	display: grid;
+	max-width: 110px;
+	max-height: 110px;
+	min-width: 85px;
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	overflow: hidden;
+	grid-area: sabores;
+	align-self: center;
+	justify-self: center;
+}
+
+
+.img-left-pulpo {
+	display: grid;
+	max-width: 110px;
+	max-height: 110px;
+	min-width: 85px;
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	overflow: hidden;
+	grid-area: pulpo;
+	align-self: center;
+	justify-self: center;
+	
+}
+
+.img-right-sushi {
+	display: grid;
+	max-width: 110px;
+	max-height: 110px;
+	min-width: 85px;
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	overflow: hidden;
+	grid-area: sushi;
+	align-self: center;
+	justify-self: center;
+	
+}
+
+.img-left-pozolitos {
+	display: grid;
+	max-width: 110px;
+	max-height: 110px;
+	min-width: 85px;
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	overflow: hidden;
+	grid-area: pozolitos;
+	align-self: center;
+	justify-self: center;
+	
+}
+.img-right-chapatas {
+	display: grid;
+	max-width: 110px;
+	max-height: 110px;
+	min-width: 85px;
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	overflow: hidden;
+	grid-area: chapatas;
+	align-self: center;
+	justify-self: center;
+
+}
+
+.mapa {
+	display: grid;
+	border-right: 3px solid #000;
+	max-width: 100%;
+	width: 100%;
+	grid-area: mapa;
+}
+
+.img-ruta {
+	display: grid;
+	height: 400px;
+	max-width: 100%;
+	width: 100%;
+	grid-area: ruta;
+
+}
+
+.mapa-ruta{
+	background: #9ee;
+	display: grid;
+	margin-top: 10px;
+	grid-template-columns: 45% 55%;
+	border: 3px solid #000;
+	
+	grid-auto-flow: dense;
+	grid-template-areas: 
+	"mapa ruta"
+}
+
+.grid-bandas {
+	background: #77e;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 50px 1fr;
+	justify-items: center;
+	align-items: center;
+	font-size: 40px;
+	margin-top: 10px;
+	font-family: fantasy;
+	gap: 10px;
+	padding: 10px;
+	border: 3px solid #000;
+	
+}
+
+.banda-jueves {
+	display: grid;
+	width: 100%;
+	max-height: 500px;
+	height: 100%;
+	object-fit: scale-down;
+	overflow: hidden;
+}
+
+.banda-viernes {
+	display: grid;
+	width: 100%;
+	max-height: 500px;
+	height: 100%;
+	object-fit: scale-down;
+	overflow: hidden;
+}
+
+.banda-sabado {
+	display: grid;
+	width: 100%;
+	max-height: 500px;
+	height: 100%;
+	object-fit: scale-down;
+	overflow: hidden;
+}
+	
+}
+
+@media screen and (min-width: 575px) and (max-width: 874px) {
+h1 {
+	font-size: 30px;
+	display: none;
+}
+
+h2 {
+	font-size: 15px;
+}
+
+h3 {
+	font-size: 15px;
+}
+
+h4 {
+	font-size: 15px;
+}
+
+h5 {
+	font-size: 15px;
+}
+
+p {
+	font-size: 15px;
+}
+
+.foot {
+	font-size: 20px;
+}
+
+.grid-container {
+	background: lightblue;
+	display: grid;
+	text-align:  center;
+	align-items: center;
+	justify-items: center;
+	
+	
+	grid-auto-flow: dense;
+	border-top: 3px solid #000;
+	border-left: 3px solid #000;
+	border-right: 3px solid #000;
+	grid-template-areas: 
+	"ordena1 logo1 letras logo2 ordena2";
 	}
 
-	function cambiarImagen(idImagen, nuevaImagen, nuevoAncho, nuevoAlto) {
-		document.getElementById(idImagen).src = nuevaImagen;
-		nuevaImagen.width = nuevoAncho;
-		nuevaImagen.height = nuevoAlto;
+
+.grid-img-png {
+	width: 100%;
+	max-width: 500px;
+	min-width: 100px;
+	height: auto;
+	padding-left: 5px;
+	padding-top: 5px;
+	align-items: center;
+	justify-items: center;
+	grid-area: letras;
+}
+
+.grid-img-left {
+	width: 100%;
+	max-width: 90px;
+	min-width: 40px;
+	height: auto;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	align-items: center;
+	justify-self: center	;
+	grid-area: logo1;
+}
+
+.grid-img-right {
+	width: 100%;
+	max-width: 90px;
+	min-width: 40px;
+	height: auto;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	align-items: center;
+	justify-self: center;
+	grid-area: logo2;
+}
+
+.ordenar1 {
+	width: 100%;
+	max-width: 120px;
+	min-width: 45px;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	align-items: center;
+	justify-self: center;
+	grid-area: ordena1;
+
+}
+
+.ordenar2 {
+	width: 100%;
+	max-width: 120px;
+	min-width: 45px;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	align-items: center;
+	justify-self: center;
+	grid-area: ordena2;
+
+}
+
+.imagenes-izquierda {
+	background: lightblue;
+	text-align: center;
+	text-justify: initial;
+	display: grid;
+	border-left: 3px solid #000;
+	border-right: 3px solid #000;
+	border-bottom: 3px solid #000;
+	max-width: 875px;
+	min-width: 300px;
+	grid-auto-flow: dense;
+	grid-template-areas: 
+	"pizzas texto texto texto texto texto texto cafe" 
+	"birria texto texto texto texto texto texto cochi"
+	"enchi texto texto texto texto texto texto cabana"
+	"hija rock pulpo pozolitos sabores sushi chapatas papi";
+}
+
+.grid-imagenes-pizzas {
+	display: none;
+}
+
+.grid-imagenes-sabores {
+	display: none;
+}
+
+.grid-imagenes-hija {
+	display: none;
+}
+
+.grid-imagenes-birria {
+	display: none;
+}
+
+.grid-imagenes-pozolitos {
+	display: none;
+}
+
+.grid-imagenes-cabana {
+	display: none;
+}
+
+.grid-imagenes-rock {
+	display: none;
+}
+
+.grid-imagenes-cochi {
+	display: none;
+}
+
+.grid-imagenes-papi {
+	display: none;
+}
+
+.grid-imagenes-enchi {
+	display: none;
+}
+
+.grid-imagenes-sushi {
+	display: none;
+}
+
+.grid-imagenes-pulpo {
+	display: none;
+}
+
+.grid-imagenes-cafe {
+	display: none;
+}
+
+.grid-imagenes {
+	display:none;
+}
+
+.grid-item {	
+	width: 100%;
+	max-width: 700px;
+	
+	display: grid;
+	grid-area: texto;
+	
+	background: lightyellow;
+	border: 3px solid #000;
+	
+}
+
+.parrafo-hid {
+	display: none;
+}
+
+.sectionHs {
+	justify-items: center;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+}
+
+.gridtextohid {
+	display: none;
+	background: lightyellow;
+	border-left: 3px solid darkgoldenrod;
+	
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+
+.img-left-pizzas {
+	display: grid;
+	max-width: 80px;
+	max-height: 80px;
+	min-width: 65px;
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	overflow: hidden;
+	align-self: center;
+	justify-self: center;
+	grid-area: pizzas;
+}
+
+.ordenar1:hover {
+	transform: scale(1.2);
+}
+
+.ordenar2:hover {
+	transform: scale(1.2);
+}
+
+.img-left-pizzas:hover {
+	transform: scale(1.2);
+}
+
+.img-left-rock:hover {
+	transform: scale(1.2);
+}
+
+.img-left-hija:hover {
+	transform: scale(1.2);
+}
+
+.img-left-enchi:hover {
+	transform: scale(1.2);
+}
+
+.img-left-pulpo:hover {
+	transform: scale(1.2);
+}
+
+.img-left-birria:hover {
+	transform: scale(1.2);
+}
+
+.img-left-pozolitos:hover {
+	transform: scale(1.2);
+}
+
+.img-right-papi:hover {
+	transform: scale(1.2);
+}
+
+.img-right-cochi:hover {
+	transform: scale(1.2);
+}
+
+.img-right-cabana:hover {
+	transform: scale(1.2);
+}
+
+.img-right-sushi:hover {
+	transform: scale(1.2);
+}
+
+.img-right-sabores:hover {
+	transform: scale(1.2);
+}
+
+.img-right-chapatas:hover {
+	transform: scale(1.2);
+}
+
+.img-right-cafe:hover {
+	transform: scale(1.2);
+}
+
+
+.img-right-cafe {
+	display: grid;
+	max-width: 80px;
+	max-height: 80px;
+	min-width: 65px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	object-fit: contain;
+	align-self: center;
+	justify-self: center;
+	grid-area: cafe;
+	
+}
+
+.img-left-enchi {
+	display: grid;
+	max-width: 80px;
+	max-height: 80px;
+	min-width: 65px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	object-fit: contain;
+	align-self: center;
+	justify-self: center;
+	grid-area: enchi;
+	
+}
+
+.img-right-cochi {
+	display: grid;
+	max-width: 80px;
+	max-height: 80px;
+	min-width: 65px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	object-fit: contain;
+	align-self: center;
+	justify-self: center;
+	grid-area: cochi;
+	
+}
+
+
+.img-left-birria {
+	display: grid;
+	max-width: 80px;
+	max-height: 80px;
+	min-width: 65px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	object-fit: contain;
+	align-self: center;
+	justify-self: center;
+	grid-area: birria;
+	
+}
+
+.img-right-cabana {
+	display: grid;
+	max-width: 80px;
+	max-height: 80px;
+	min-width: 65px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	object-fit: contain;
+	align-self: center;
+	justify-self: center;
+	grid-area: cabana;
+	
+}
+
+.img-left-hija {
+	display: grid;
+	max-width: 80px;
+	max-height: 80px;
+	min-width: 65px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	object-fit: contain;
+	align-self: center;
+	justify-self: center;
+	grid-area: hija;
+	
+}
+
+.img-right-papi {
+	display: grid;
+	max-width: 80px;
+	max-height: 80px;
+	min-width: 65px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	object-fit: contain;
+	align-self: center;
+	justify-self: center;
+	grid-area: papi;
+	
+}
+
+.img-left-rock {
+	display: grid;
+	max-width: 80px;
+	max-height: 80px;
+	min-width: 65px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	object-fit: contain;
+	align-self: center;
+	justify-self: center;
+	grid-area: rock;
+	
+}
+
+.img-right-sabores {
+	display: grid;
+	max-width: 80px;
+	max-height: 80px;
+	min-width: 65px;
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	overflow: hidden;
+	grid-area: sabores;
+	align-self: center;
+	justify-self: center;
+}
+
+
+.img-left-pulpo {
+	display: grid;
+	max-width: 80px;
+	max-height: 80px;
+	min-width: 65px;
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	overflow: hidden;
+	grid-area: pulpo;
+	align-self: center;
+	justify-self: center;
+	
+}
+
+.img-right-sushi {
+	display: grid;
+	max-width: 80px;
+	max-height: 80px;
+	min-width: 65px;
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	overflow: hidden;
+	grid-area: sushi;
+	align-self: center;
+	justify-self: center;
+	
+}
+
+.img-left-pozolitos {
+	display: grid;
+	max-width: 80px;
+	max-height: 80px;
+	min-width: 65px;
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	overflow: hidden;
+	grid-area: pozolitos;
+	align-self: center;
+	justify-self: center;
+	
+}
+.img-right-chapatas {
+	display: grid;
+	max-width: 80px;
+	max-height: 80px;
+	min-width: 65px;
+	width: 100%;
+	
+	height: auto;
+	object-fit: contain;
+	overflow: hidden;
+	grid-area: chapatas;
+	align-self: center;
+	justify-self: center;
+
+}
+
+.mapa {
+	display: grid;
+	border-right: 3px solid #000;
+	max-width: 100%;
+	width: 100%;
+	grid-area: mapa;
+}
+
+.img-ruta {
+	display: grid;
+	height: 300px;
+	max-width: 100%;
+	width: 100%;
+	grid-area: ruta;
+
+}
+
+.mapa-ruta{
+	background: #9ee;
+	display: grid;
+	margin-top: 10px;
+	grid-template-columns: 45% 55%;
+	border: 3px solid #000;
+	
+	grid-auto-flow: dense;
+	grid-template-areas: 
+	"mapa ruta"
+}
+
+.grid-bandas {
+	background: #77e;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 50px 1fr;
+	justify-items: center;
+	align-items: center;
+	font-size: 40px;
+	margin-top: 10px;
+	font-family: fantasy;
+	gap: 10px;
+	padding: 10px;
+	border: 3px solid #000;
+	
+}
+
+.banda-jueves {
+	display: grid;
+	width: 100%;
+	max-height: 500px;
+	height: 100%;
+	object-fit: scale-down;
+	overflow: hidden;
+}
+
+.banda-viernes {
+	display: grid;
+	width: 100%;
+	max-height: 500px;
+	height: 100%;
+	object-fit: scale-down;
+	overflow: hidden;
+}
+
+.banda-sabado {
+	display: grid;
+	width: 100%;
+	max-height: 500px;
+	height: 100%;
+	object-fit: scale-down;
+	overflow: hidden;
+}
+	
+}
+
+
+@media screen and (max-width: 574px) {
+
+h1 {
+	font-size: 23px;
+	display: none;
+}
+
+h2 {
+	font-size: 20px;
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
+
+h3 {
+	font-size: 12px;
+	font-weight: normal;
+	font-style: italic;
+}
+
+h4 {
+	font-size: 12px;
+	font-weight: normal;
+	font-style: italic;
+}
+
+h5 {
+	font-size: 12px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+p {
+	font-size: 13px;
+}
+	.grid-container {
+		background: lightblue;
+		display: grid;
+		grid-template-columns: 1fr 3fr 1fr;
+		grid-template-rows: 60px;
+		grid-auto-flow: dense;
+		border-right: 3px solid darkgoldenrod;
+		border-top: 3px solid darkgoldenrod;	
+		border-left: 3px solid darkgoldenrod;
 	}
 
-	document.getElementById("pag_ord_1").addEventListener("click", function() {
-		window.open("https://www.foodbooking.com/api/fb/jb_v_q5","_blank");
-	});
+	.grid-img-png { 
+	max-width: 215px;
+	height: auto;
+	padding-top: 5px;
+	justify-self: center;
+	align-self: center;
 
-	document.getElementById("pag_ord_2").addEventListener("click", function() {
-		window.open("https://www.foodbooking.com/api/fb/jb_v_q5","_blank");
-	});
+}
 
-});
+.grid-img-left {
+	width: 50px;
+	height: 50px;
+	min-width: 50px;
+	margin-left: 10px;
+	justify-self: center;
+	align-self: center;
+}
+
+.grid-img-right {
+	display: none;
+}
+
+.ordenar1 {
+	display: none;
+}
+
+.ordenar2 {
+	width: 70px;
+	justify-self: center;
+	align-self: center;
+}
+
+.gridtextohid {
+	display: grid;
+	background: lightyellow;
+	border-left: 3px solid darkgoldenrod;
+	
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.imagenes-izquierda {
+	background: lightblue;
+	text-align: center;
+	display: grid;
+	
+	border-left: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	border-right: 3px solid darkgoldenrod;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 50px;
+	grid-template-areas: 
+	"pizzas texto texto texto texto" 
+	"birria texto texto texto texto"
+	"enchi texto texto texto texto"
+	"sushi texto texto texto texto"
+	"hija texto texto texto texto" 
+	"pulpo texto texto texto texto"
+	"cafe img img img img"
+	"pozolitos img img img img"
+	"cochi img img img img"
+	"cabana papi rock sabores chapatas";
+
+}
+
+.grid-imagenes-pizzas {
+	display: none;
+	background: lightblue;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 50px);
+	border-left: 3px solid darkgoldenrod;
+	border-right: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.grid-imagenes-hija {
+	display: none;
+	background: lightblue;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 50px);
+	border-left: 3px solid darkgoldenrod;
+	border-right: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.grid-imagenes-cabana {
+	display: none;
+	background: lightblue;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 50px);
+	border-left: 3px solid darkgoldenrod;
+	border-right: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.grid-imagenes-enchi {
+	display: none;
+	background: lightblue;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 50px);
+	border-left: 3px solid darkgoldenrod;
+	border-right: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.grid-imagenes-papi {
+	display: none;
+	background: lightblue;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 50px);
+	border-left: 3px solid darkgoldenrod;
+	border-right: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.grid-imagenes-birria {
+	display: none;
+	background: lightblue;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 50px);
+	border-left: 3px solid darkgoldenrod;
+	border-right: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.grid-imagenes-sabores {
+	display: none;
+	background: lightblue;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 50px);
+	border-left: 3px solid darkgoldenrod;
+	border-right: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.grid-imagenes-pozolitos {
+	display: none;
+	background: lightblue;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 50px);
+	border-left: 3px solid darkgoldenrod;
+	border-right: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.grid-imagenes-rock {
+	display: none;
+	background: lightblue;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 50px);
+	border-left: 3px solid darkgoldenrod;
+	border-right: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.grid-imagenes-cafe {
+	display: none;
+	background: lightblue;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 50px);
+	border-left: 3px solid darkgoldenrod;
+	border-right: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.grid-imagenes-sushi {
+	display: none;
+	background: lightblue;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 50px);
+	border-left: 3px solid darkgoldenrod;
+	border-right: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.grid-imagenes-cochi {
+	display: none;
+	background: lightblue;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 50px);
+	border-left: 3px solid darkgoldenrod;
+	border-right: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.grid-imagenes-pulpo {
+	display: none;
+	background: lightblue;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 50px);
+	border-left: 3px solid darkgoldenrod;
+	border-right: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.grid-item {
+	display: grid;
+	grid-area: texto;
+	font-size: 5px;
+	background: lightyellow;
+	margin-top: 10px;
+	padding: 20px;
+	border-left: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	border-top: 3px solid darkgoldenrod;
+	text-align: center;
+	text-justify: center;
+}
+
+.sectionHs {
+	justify-items: center;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+}
+
+.img-left-pizzas {
+	display: grid;
+	width: 50px;
+	height: 50px;
+	margin: 5px auto;
+	align-self: center;
+	justify-self: center;
+	grid-area: pizzas;
+}
+
+
+
+.img-right-cafe {
+	display: grid;
+	width: 50px;
+	height: 50px;
+	margin: 5px auto;
+	align-self: center;
+	justify-self: center;
+	grid-area: cafe;
+	
+}
+
+.img-left-enchi {
+	display: grid;
+	width: 50px;
+	height: 50px;
+	
+	align-self: center;
+	justify-self: center;
+	grid-area: enchi;
+	
+}
+
+.img-right-cochi {
+	display: grid;
+	width: 50px;
+	height: 50px;
+	margin: 5px auto;
+	align-self: center;
+	justify-self: center;
+	grid-area: cochi;
+	
+}
+
+
+.img-left-birria {
+	display: grid;
+	width: 50px;
+	height: 50px;
+	margin: 5px auto;
+	align-self: center;
+	justify-self: center;
+	grid-area: birria;
+	
+}
+
+.img-right-cabana {
+	display: grid;
+	width: 50px;
+	height: 50px;
+	margin: 5px auto;
+	align-self: center;
+	justify-self: center;
+	grid-area: cabana;
+	
+}
+
+.img-left-hija {
+	display: grid;
+	width: 50px;
+	height: 50px;
+	margin: 5px auto;
+	align-self: center;
+	justify-self: center;
+	grid-area: hija;
+	
+}
+
+.img-right-papi {
+	display: grid;
+	width: 50px;
+	height: 50px;
+	align-self: center;
+	justify-self: center;
+	grid-area: papi;
+	
+}
+
+.img-left-rock {
+	display: grid;
+	width: 50px;
+	height: 50px;
+	align-self: center;
+	justify-self: center;
+	grid-area: rock;
+	
+}
+
+.img-right-sabores {
+	display: grid;
+	width: 50px;
+	height: 50px;
+	align-self: center;
+	justify-self: center;
+	grid-area: sabores;
+	
+}
+
+
+.img-left-pulpo {
+	display: grid;
+	width: 50px;
+	height: 50px;
+	margin: 5px auto;
+	align-self: center;
+	justify-self: center;
+	grid-area: pulpo;
+	
+}
+
+.img-right-sushi {
+	display: grid;
+	width: 50px;
+	height: 50px;
+	margin: 5px auto;
+	align-self: center;
+	justify-self: center;
+	grid-area: sushi;
+	
+}
+
+.img-left-pozolitos {
+	display: grid;
+	width: 50px;
+	height: 50px;
+	margin: 5px auto;
+	align-self: center;
+	justify-self: center;
+	grid-area: pozolitos;
+	
+}
+.img-right-chapatas {
+	display: grid;
+	width: 50px;
+	height: 50px;
+	align-self: center;
+	justify-self: center;
+	grid-area: chapatas;
+
+}
+
+.mapa {
+	display: grid;
+	width: 100%;
+	max-height: 197px;
+	grid-area: mapa;
+	
+}
+
+.img-ruta {
+	display: grid;
+	width: 100%;
+	max-height: 197px;
+	grid-area: ruta;
+	border-top: 3px solid darkgoldenrod;
+
+}
+
+.mapa-ruta{
+	background: #9ee;
+	display: grid;
+	border: 3px solid darkgoldenrod;
+	grid-template-rows: 200px 200px;
+	margin-top: 10px;
+	grid-template-areas: 
+	"mapa" 
+	"ruta";
+	
+}
+
+.grid-bandas {
+	background: #77e;
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	font-size: 40px;
+	margin-top: 10px;
+	font-family: fantasy;
+	gap: 10px;
+	padding: 10px;
+	border: 3px solid darkgoldenrod;
+	grid-template-areas:  
+	"jueves"
+	"bandaj"
+	"vierens"
+	"bandav"
+	"sabado"
+	"bandas";
+	
+}
+
+.banda-jueves {
+	display: grid;
+	width: 100%;
+	height: auto;
+	object-fit: scale-down;
+	overflow: hidden;
+	grid-area: bandaj;
+}
+
+.banda-viernes {
+	display: grid;
+	width: 100%;
+	height: auto;
+	object-fit: scale-down;
+	overflow: hidden;
+	grid-area: bandav;
+}
+
+.banda-sabado {
+	display: grid;
+	width: 100%;
+	height: auto;
+	object-fit: scale-down;
+	overflow: hidden;
+	grid-area: bandas;
+}
+
+.foot {
+	font-size: 15px;
+}
+
+.contact {
+	
+	font-size: 14px;
+	font-weight: bold;
+	color: white;
+	
+}
+
+.parrafo-hid {
+	display: none;
+}
+
+
+.footer-contacts {
+	margin-top: 5px;
+	display: grid;
+	grid-template-areas: 
+	"face whats"
+
+}
+
+.face {
+	justify-self: start;
+	align-self: start;
+	grid-area: face;
+}
+
+.whats {
+	justify-self: end;
+	align-self: end;
+	grid-area: whats;
+}
+
+
+}
