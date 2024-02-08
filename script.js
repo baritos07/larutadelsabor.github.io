@@ -194,7 +194,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
 	hija.onmouseover = function() {
-		th2.innerHTML = "La Hija de la Tostada<br>!!! Quesadillas, Huaraches y Pambazos !!!"
+		th2.innerHTML = "La Hija de la Tostada<br>!!! Antojitos mexicanos !!!"
 		textoCambiante.innerHTML = "Domingo, Lunes, Miercoles y Jueves 8 a.m. a 9 p.m.<br><br>Martes 2 p.m. a 9 p.m., Viernes y Sabado 8 a.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
 		textoCambiante.style.fontStyle = "italic";
 		cambiarImagen("Pizzas","./ComidaOpt/Hija 1.png","500px","500px");
@@ -216,7 +216,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
 		hija.addEventListener("touchstart", function(){
-			th2.innerHTML = "La Hija de la Tostada<br><br>!!! Quesadillas, Huaraches y Pambazos !!!"
+			th2.innerHTML = "La Hija de la Tostada<br><br>!!! Antojitos mexicanos !!!"
 			textoCambiante.innerHTML = "Domingo, Lunes, Miercoles y Jueves 8 a.m. a 9 p.m.<br><br>Martes 2 p.m. a 9 p.m., Viernes y Sabado 8 a.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
 			textoCambiante.style.fontStyle = "italic";
 			textoCambiante.style.fontSize = "15px";
@@ -298,7 +298,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
 	pulpo.onmouseover = function() {
-		th2.innerHTML = "Señor Pulpon<br>!!! Mariscos, Empanadas y Pescaditos !!!"
+		th2.innerHTML = "Señor Pulpon<br>!!! Pescados y Mariscos !!!"
 		textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 10 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
 		textoCambiante.style.fontStyle = "italic";
 		cambiarImagen("Pozolitos","./ComidaOpt/Pulpo 1.png","50px","50px");
@@ -323,7 +323,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
 		pulpo.addEventListener("touchstart", function(){
-			th2.innerHTML = "Señor Pulpon<br><br>!!! Mariscos, Empanadas y Pescaditos !!!"
+			th2.innerHTML = "Señor Pulpon<br><br>!!! Pescados y Mariscos !!!"
 			textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 10 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
 			textoCambiante.style.fontStyle = "italic";
 			textoCambiante.style.fontSize = "15px";
@@ -381,7 +381,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
 	sabores.onmouseover = function() {
-		th2.innerHTML = "Sabores de la Tierra<br>!!! Ensaladas, Sandwiches y Jugos !!!"
+		th2.innerHTML = "Sabores de la Tierra<br>!!! Ensaladas y Jugos !!!"
 		textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 7:30 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
 		textoCambiante.style.fontStyle = "italic";
 		cambiarImagen("Pizzas","./ComidaOpt/Sabores 1.png","50px","50px");
@@ -413,7 +413,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
 		sabores.addEventListener("touchstart", function(){
-			th2.innerHTML = "Sabores de la Tierra<br><br>!!! Ensaladas, Sandwiches y Jugos !!!"
+			th2.innerHTML = "Sabores de la Tierra<br><br>!!! Ensaladas y Jugos !!!"
 			textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 7:30 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
 			textoCambiante.style.fontStyle = "italic";
 			textoCambiante.style.fontSize = "15px";
@@ -435,7 +435,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
 	chapatas.onmouseover = function() {
-		th2.innerHTML = "Pietro Chapatas<br>!!! Chapatas y Sandwiches !!!"
+		th2.innerHTML = "Pietro Chapatas<br> !!! Chapatas y  Sandwiches !!!"
 		textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 7:30 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
 		textoCambiante.style.fontStyle = "italic";
 		}
@@ -448,7 +448,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
 		chapatas.addEventListener("touchstart", function(){
-			th2.innerHTML = "Pietro Chapatas<br><br>!!! Chapatas y Sandwiches !!!"
+			th2.innerHTML = "Pietro Chapatas<br><br>!!!Chapatas y Sandwiches!!!"
 			textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 7:30 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
 			textoCambiante.style.fontStyle = "italic";
 			textoCambiante.style.fontSize = "15px";
@@ -526,7 +526,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {	
 	cabana.onmouseover = function() {
-		th2.innerHTML = "La Cabaña de Colinas<br>!!! Tortas, Tacos y Burritos !!!"
+		th2.innerHTML = "La Cabaña de Colinas<br>!!! Tortas, Parrilladas y Burritos !!!"
 		textoCambiante.innerHTML = "Domingo, Lunes y Miercoles 10 a.m. a 9 p.m.<br><br>Jueves, Viernes y Sabado 10 a.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
 		textoCambiante.style.fontStyle = "italic";
 		cambiarImagen("Pizzas","./ComidaOpt/Cabana 1.png","500px","500px");
@@ -540,7 +540,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
 		cabana.addEventListener("touchstart", function(){
-			th2.innerHTML = "La Cabaña de Colinas<br><br>!!! Tortas, Tacos y Burritos !!!"
+			th2.innerHTML = "La Cabaña de Colinas<br><br>!!! Tortas, Parrilladas y Burritos !!!"
 			textoCambiante.innerHTML = "Domingo, Lunes y Miercoles 10 a.m. a 9 p.m.<br><br>Jueves, Viernes y Sabado 10 a.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
 			textoCambiante.style.fontStyle = "italic";
 			textoCambiante.style.fontSize = "15px";
@@ -623,7 +623,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
 	cochi.onmouseover = function() {
-		th2.innerHTML = "Hijos de la... Cochinta Ahogada<br>!!! Cochinita, Tacos y Tortas !!!"
+		th2.innerHTML = "Hijos de la... Cochinta Ahogada<br>!!! Tacos y Tortas !!!"
 		textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 9 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
 		textoCambiante.style.fontStyle = "italic";
 		cambiarImagen("Birria","./ComidaOpt/Cochinita 1.png","50px","50px");
@@ -644,7 +644,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
 		cochi.addEventListener("touchstart", function(){
-			th2.innerHTML = "Hijos de la... Cochinta Ahogada<br><br>!!! Cochinita, Tacos y Tortas !!!"
+			th2.innerHTML = "Hijos de la... Cochinta Ahogada<br><br>!!! Tacos y Tortas !!!"
 			textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 9 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
 			textoCambiante.style.fontStyle = "italic";
 			textoCambiante.style.fontSize = "15px";
@@ -666,7 +666,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
 	cafe.onmouseover = function() {
-		th2.innerHTML = "Veintidos Café<br>!!! Café, Crepas y Waffles !!!"
+		th2.innerHTML = "Veintidos Café<br>!!! Café, Crepas, Waffles y Postres !!!"
 		textoCambiante.innerHTML = "Lunes, Martes, Jueves, Viernes 3 p.m. a 10 p.m.<br><br>Sabado y Domingo 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
 		textoCambiante.style.fontStyle = "italic";
 		cambiarImagen("Rock","./ComidaOpt/Cafe 1.png","50px","50px");
@@ -704,7 +704,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
 		cafe.addEventListener("touchstart", function(){
-			th2.innerHTML = "Veintidos Café<br><br>!!! Café, Crepas y Waffles !!!"
+			th2.innerHTML = "Veintidos Café<br><br>!!! Café, Crepas, Waffles y Postres !!!"
 			textoCambiante.innerHTML = "Lunes, Martes, Jueves, Viernes 3 p.m. a 10 p.m.<br><br>Sabado y Domingo 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
 			textoCambiante.style.fontStyle = "italic";
 			textoCambiante.style.fontSize = "15px";
