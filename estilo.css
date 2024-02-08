@@ -1188,36 +1188,36 @@ p {
 @media screen and (max-width: 574px) {
 
 h1 {
-	font-size: 25px;
+	font-size: 20px;
 	display: none;
 }
 
 h2 {
-	font-size: 25px;
+	font-size: 20px;
 	margin-top: 5px;
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 }
 
 h3 {
-	font-size: 15px;
+	font-size: 12px;
 	font-weight: normal;
 	font-style: italic;
 }
 
 h4 {
-	font-size: 15px;
+	font-size: 12px;
 	font-weight: normal;
 	font-style: italic;
 }
 
 h5 {
-	font-size: 15px;
+	font-size: 12px;
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
 
 p {
-	font-size: 15px;
+	font-size: 12px;
 }
 	.grid-container {
 		background: lightblue;
@@ -1279,10 +1279,12 @@ p {
 	background: lightblue;
 	text-align: center;
 	display: grid;
+	
 	border-left: 3px solid darkgoldenrod;
 	border-bottom: 3px solid darkgoldenrod;
 	border-right: 3px solid darkgoldenrod;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 50px;
 	grid-template-areas: 
 	"pizzas texto texto texto texto" 
 	"birria texto texto texto texto"
@@ -1517,7 +1519,7 @@ p {
 	display: grid;
 	width: 50px;
 	height: 50px;
-	margin-top: 5px;
+	margin: 5px auto;
 	align-self: center;
 	justify-self: center;
 	grid-area: pizzas;
@@ -1529,7 +1531,7 @@ p {
 	display: grid;
 	width: 50px;
 	height: 50px;
-	margin-top: 5px;
+	margin: 5px auto;
 	align-self: center;
 	justify-self: center;
 	grid-area: cafe;
@@ -1540,7 +1542,7 @@ p {
 	display: grid;
 	width: 50px;
 	height: 50px;
-	margin-top: 5px;
+	
 	align-self: center;
 	justify-self: center;
 	grid-area: enchi;
@@ -1551,7 +1553,7 @@ p {
 	display: grid;
 	width: 50px;
 	height: 50px;
-	margin-top: 5px;
+	margin: 5px auto;
 	align-self: center;
 	justify-self: center;
 	grid-area: cochi;
@@ -1563,7 +1565,7 @@ p {
 	display: grid;
 	width: 50px;
 	height: 50px;
-	margin-top: 5px;
+	margin: 5px auto;
 	align-self: center;
 	justify-self: center;
 	grid-area: birria;
@@ -1574,7 +1576,7 @@ p {
 	display: grid;
 	width: 50px;
 	height: 50px;
-	margin-top: 5px;
+	margin: 5px auto;
 	align-self: center;
 	justify-self: center;
 	grid-area: cabana;
@@ -1585,7 +1587,7 @@ p {
 	display: grid;
 	width: 50px;
 	height: 50px;
-	margin-top: 5px;
+	margin: 5px auto;
 	align-self: center;
 	justify-self: center;
 	grid-area: hija;
@@ -1627,7 +1629,7 @@ p {
 	display: grid;
 	width: 50px;
 	height: 50px;
-	margin-top: 5px;
+	margin: 5px auto;
 	align-self: center;
 	justify-self: center;
 	grid-area: pulpo;
@@ -1638,7 +1640,7 @@ p {
 	display: grid;
 	width: 50px;
 	height: 50px;
-	margin-top: 5px;
+	margin: 5px auto;
 	align-self: center;
 	justify-self: center;
 	grid-area: sushi;
@@ -1649,7 +1651,7 @@ p {
 	display: grid;
 	width: 50px;
 	height: 50px;
-	margin-top: 5px;
+	margin: 5px auto;
 	align-self: center;
 	justify-self: center;
 	grid-area: pozolitos;
