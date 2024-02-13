@@ -1335,8 +1335,9 @@ p {
 	display: none;
 }
 .footer2 {
+	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 35px;
+	grid-template-rows: 70px;
 	grid-template-areas: 
 	"boton1 boton2";
 	position: sticky;
@@ -1355,11 +1356,11 @@ p {
 	justify-self: center;
 	color: white;
 	font-weight: bold;
-	font-size: 25px;
+	font-size: 22px;
 	text-align: center;
 	padding-top: 8px;
-	width: 75%;
-	height: 40px;
+	width: 80%;
+	height: 55px;
 	border-radius: 28px;
 	box-shadow: 0px 15px 26px 0px rgba(0,0,0,1.5);
 	grid-area: boton1;
@@ -1373,11 +1374,11 @@ p {
 	background-color: #0000BB;
 	color: white;
 	font-weight: bold;
-	font-size: 25px;
+	font-size: 22px;
 	padding-top: 8px;
 	text-align: center;
-	width: 75%;
-	height: 40px;
+	width: 80%;
+	height: 55px;
 	border-radius: 28px;
 	box-shadow: 0px 15px 26px 0px rgba(0,0,0,1.5);
 	grid-area: boton2;
