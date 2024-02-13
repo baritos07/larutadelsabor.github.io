@@ -1336,26 +1336,35 @@ p {
 }
 .footer2 {
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 50px;
+	grid-template-rows: 35px;
 	grid-template-areas: 
 	"boton1 boton2";
 	position: sticky;
 	bottom: 0;
 	border-radius: 20px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+	justify-content: center;
+
+	
+	
 }
 .glf-button1c {
 	display: grid;
 	word-wrap: break-word;
 	background-color: darkgreen;
+	justify-self: center;
 	color: white;
 	font-weight: bold;
 	font-size: 25px;
 	text-align: center;
-	width: 100%;
-	border-radius: 20px;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+	padding-top: 8px;
+	width: 75%;
+	height: 40px;
+	border-radius: 28px;
+	box-shadow: 0px 15px 26px 0px rgba(0,0,0,1.5);
 	grid-area: boton1;
+	justify-self: center;
+	margin: 0 auto;
 }
 
 .glf-button2c {
@@ -1365,11 +1374,15 @@ p {
 	color: white;
 	font-weight: bold;
 	font-size: 25px;
+	padding-top: 8px;
 	text-align: center;
-	width: 100%;
-	border-radius: 20px;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+	width: 75%;
+	height: 40px;
+	border-radius: 28px;
+	box-shadow: 0px 15px 26px 0px rgba(0,0,0,1.5);
 	grid-area: boton2;
+	justify-self: center;
+	margin: 0 auto;
 }
 
 .ordenar1 {
