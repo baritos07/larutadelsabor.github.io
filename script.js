@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
 	birria.onmouseover = function() {
 		th2.innerHTML = "La Birrieria<br>!!! Birria, Tacos y Quesabirrias !!!"
-		textoCambiante.innerHTML = "Domingo, Lunes, Miercoles y Jueves 8 a.m. a 9 p.m.<br><br>Martes 2 p.m. a 9 p.m., Viernes y Sabado 8 a.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago";
+		textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 9 a.m. a 10 p.m.<br><br>Martes 1 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
 		textoCambiante.style.fontStyle = "italic";
 		cambiarImagen("Pizzas","./ComidaOpt/Birria 1.png","500px","500px");
 		cambiarImagen("Enchi","./ComidaOpt/Birria 2.png","200px","200px");
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
 		birria.addEventListener("touchstart", function(){
 			th2.innerHTML = "La Birrieria<br><br>!!! Birria, Tacos y Quesabirrias !!!"
-			textoCambiante.innerHTML = "Domingo, Lunes, Miercoles y Jueves 8 a.m. a 9 p.m.<br><br>Martes 2 p.m. a 9 p.m., Viernes y Sabado 8 a.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
+			textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 9 a.m. a 10 p.m.<br><br>Martes 1 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
 			textoCambiante.style.fontStyle = "italic";
 			textoCambiante.style.fontSize = "15px";
 			gridPizzas.style.display = "none";
@@ -195,7 +195,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
 	hija.onmouseover = function() {
 		th2.innerHTML = "La Hija de la Tostada<br>!!! Quesadillas, Huaraches y Pambazos !!!"
-		textoCambiante.innerHTML = "Domingo, Lunes, Miercoles y Jueves 8 a.m. a 9 p.m.<br><br>Martes 2 p.m. a 9 p.m., Viernes y Sabado 8 a.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
+		textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 9 a.m. a 10 p.m.<br><br>Martes 1 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
 		textoCambiante.style.fontStyle = "italic";
 		cambiarImagen("Pizzas","./ComidaOpt/Hija 1.png","500px","500px");
 		cambiarImagen("Birria","./ComidaOpt/Hija 2.png","500px","500px");
@@ -217,7 +217,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
 		hija.addEventListener("touchstart", function(){
 			th2.innerHTML = "La Hija de la Tostada<br><br>!!! Quesadillas, Huaraches y Pambazos !!!"
-			textoCambiante.innerHTML = "Domingo, Lunes, Miercoles y Jueves 8 a.m. a 9 p.m.<br><br>Martes 2 p.m. a 9 p.m., Viernes y Sabado 8 a.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
+			textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 9 a.m. a 10 p.m.<br><br>Martes 1 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
 			textoCambiante.style.fontStyle = "italic";
 			textoCambiante.style.fontSize = "15px";
 			gridPizzas.style.display = "none";
