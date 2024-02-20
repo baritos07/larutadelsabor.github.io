@@ -103,6 +103,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		textoCambiante.style.fontStyle = "italic";
 		cambiarImagen("Pizzas","./ComidaOpt/Birria 1.png","500px","500px");
 		cambiarImagen("Enchi","./ComidaOpt/Birria 2.png","200px","200px");
+		cambiarImagen("Hija","./ComidaOpt/Birria 3.png","200px","200px");
 		}
 
 	birria.onmouseout = function() {
@@ -110,6 +111,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		textoCambiante.innerHTML = miTexto;
 		cambiarImagen("Pizzas","./LogosOpt/Pizzas.png");
 		cambiarImagen("Enchi","./LogosOpt/Enchilandia.png");
+		cambiarImagen("Hija","./LogosOpt/Hija.png");
 	}
 	}
 	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
@@ -161,6 +163,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 10 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
 		textoCambiante.style.fontStyle = "italic";
 		cambiarImagen("Pizzas","./ComidaOpt/Enchilandia 1.png","500px","500px");
+		cambiarImagen("Birria","./ComidaOpt/Enchilandia 2.png","500px","500px");
 		
 		}
 
@@ -168,6 +171,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		th2.innerHTML = th2org;
 		textoCambiante.innerHTML = miTexto;
 		cambiarImagen("Pizzas","./LogosOpt/Pizzas.png");
+		cambiarImagen("Birria","./LogosOpt/Birrieria.png");
 	}
 	}
 	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
@@ -202,6 +206,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		cambiarImagen("Enchi","./ComidaOpt/Hija 3.png","500px","500px");
 		cambiarImagen("Rock","./ComidaOpt/Hija 4.png","500px","500px");
 		cambiarImagen("Pulpo","./ComidaOpt/Hija 5.png","500px","500px");
+		cambiarImagen("Sushi","./ComidaOpt/Hija 6.png","500px","500px");
+		cambiarImagen("Sabores","./ComidaOpt/Hija 7.png","500px","500px");
+		cambiarImagen("Chapatas","./ComidaOpt/Hija 8.png","500px","500px");
 		}
 
 	hija.onmouseout = function() {
@@ -212,6 +219,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		cambiarImagen("Birria","./LogosOpt/Birrieria.png");
 		cambiarImagen("Rock","./LogosOpt/Rock.png");
 		cambiarImagen("Pulpo","./LogosOpt/Pulpo.png");
+		cambiarImagen("Sushi","./LogosOpt/Sushi.png");
+		cambiarImagen("Sabores","./LogosOpt/Sabores.png");
+		cambiarImagen("Chapatas","./LogosOpt/Chapatas.png");
 	}
 	}
 	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
