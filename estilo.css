@@ -640,7 +640,7 @@ p {
 .grid-bandas {
 	background: #77e;
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: 50px 1fr;
 	justify-items: center;
 	align-items: center;
@@ -656,7 +656,7 @@ p {
 .banda-jueves {
 	display: grid;
 	width: 100%;
-	max-height: 500px;
+	max-height: 375px;
 	height: 100%;
 	object-fit: scale-down;
 	overflow: hidden;
@@ -665,7 +665,7 @@ p {
 .banda-viernes {
 	display: grid;
 	width: 100%;
-	max-height: 500px;
+	max-height: 375px;
 	height: 100%;
 	object-fit: scale-down;
 	overflow: hidden;
@@ -674,12 +674,20 @@ p {
 .banda-sabado {
 	display: grid;
 	width: 100%;
-	max-height: 500px;
+	max-height: 375px;
 	height: 100%;
 	object-fit: scale-down;
 	overflow: hidden;
 }
 
+.banda-domingo {
+	display: grid;
+	width: 100%;
+	max-height: 375px;
+	height: 100%;
+	object-fit: scale-down;
+	overflow: hidden;
+}
 .footer-contacts {
 	background: #567;
 	position: sticky;
@@ -1844,11 +1852,12 @@ p {
 	grid-template-areas:  
 	"jueves"
 	"bandaj"
-	"vierens"
+	"viernes"
 	"bandav"
 	"sabado"
-	"bandas";
-	
+	"bandas"
+	"domingo"
+	"bandad";	
 }
 
 .banda-jueves {
@@ -1876,6 +1885,15 @@ p {
 	object-fit: scale-down;
 	overflow: hidden;
 	grid-area: bandas;
+}
+
+.banda-domingo {
+	display: grid;
+	width: 100%;
+	height: auto;
+	object-fit: scale-down;
+	overflow: hidden;
+	grid-area: bandad;
 }
 
 .foot {
