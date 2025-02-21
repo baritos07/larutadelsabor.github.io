@@ -1211,7 +1211,7 @@ p {
 	background: #77e;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: 50px 2fr;
+	grid-template-rows: 100px 1fr;
 	justify-items: center;
 	align-items: center;
 	font-size: 40px;
