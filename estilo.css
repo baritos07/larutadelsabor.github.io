@@ -237,8 +237,8 @@ p {
 
 	grid-auto-flow: dense;
 	grid-template-areas: 
-	"pizzas texto texto texto texto texto texto cafe" 
-	"birria texto texto texto texto texto texto cochi"
+	"pizzas texto texto texto texto texto texto cochi" 
+	"birria texto texto texto texto texto texto cafe"
 	"enchi texto texto texto texto texto texto cabana"
 	"hija rock pulpo pozolitos sabores sushi chapatas papi";
 	
@@ -443,20 +443,7 @@ p {
 	
 }
 
-.img-right-cochi {
-	display: grid;
-	max-width: 110px;
-	max-height: 110px;
-	min-width: 85px;
-	width: 100%;
-	height: auto;
-	overflow: hidden;
-	object-fit: contain;
-	align-self: center;
-	justify-self: center;
-	grid-area: cochi;
-	
-}
+
 
 
 .img-left-birria {
@@ -819,8 +806,8 @@ p {
 	min-width: 300px;
 	grid-auto-flow: dense;
 	grid-template-areas: 
-	"pizzas texto texto texto texto texto texto cafe" 
-	"birria texto texto texto texto texto texto cochi"
+	"pizzas texto texto texto texto texto texto cochi" 
+	"birria texto texto texto texto texto texto cafe"
 	"enchi texto texto texto texto texto texto cabana"
 	"hija rock pulpo pozolitos sabores sushi chapatas papi";
 }
@@ -972,9 +959,7 @@ p {
 	transform: scale(1.2);
 }
 
-.img-right-cochi:hover {
-	transform: scale(1.2);
-}
+
 
 .img-right-cabana:hover {
 	transform: scale(1.2);
