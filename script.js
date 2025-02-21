@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	const rock = document.getElementById("Rock");
 	const cafe = document.getElementById("Cafe");
 	const enchi = document.getElementById("Enchi");
-	const cochi = document.getElementById("Cochi");
 	const cabana = document.getElementById("Cabana");
 	const hija = document.getElementById("Hija");
 	const papi = document.getElementById("Papi");
@@ -19,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	const gridRock = document.getElementById("gridRock");
 	const gridCafe = document.getElementById("gridCafe");
 	const gridSushi = document.getElementById("gridSushi");
-	const gridCochi = document.getElementById("gridCochi");
 	const gridPulpo = document.getElementById("gridPulpo");
 	const gridTextoHid = document.getElementById("gridTextoHid");
 	const gridHija = document.getElementById("gridHija");
@@ -53,7 +51,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		cambiarImagen("Chapatas","./ComidaOpt/Pizzas 10.png");
 		cambiarImagen("Papi","./ComidaOpt/Pizzas 11.png");
 		cambiarImagen("Cabana","./ComidaOpt/Pizzas 12.png");
-		cambiarImagen("Cochi","./ComidaOpt/Pizzas 13.png");
 		}
 
 	pizzas.onmouseout = function() {
@@ -69,8 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		cambiarImagen("Sabores","./LogosOpt/Sabores.png");
 		cambiarImagen("Sushi","./LogosOpt/Sushi.png");
 		cambiarImagen("Chapatas","./LogosOpt/Chapatas.png");
-		cambiarImagen("Papi","./LogosOpt/Papidrinks_2.png	");
-		cambiarImagen("Cochi","./LogosOpt/Cochinita_2.png");
+		cambiarImagen("Papi","./LogosOpt/Papidrinks_2.png");
 		cambiarImagen("Cabana","./LogosOpt/Cabana.png");
 	}
 	}
@@ -83,7 +79,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			gridPizzas.style.display = "grid";
 			gridRock.style.display = "none";
 			gridSushi.style.display = "none";
-			gridCochi.style.display = "none";
 			gridPulpo.style.display = "none";
 			gridHija.style.display = "none";
 			gridCabana.style.display = "none";
@@ -123,7 +118,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			gridPizzas.style.display = "none";
 			gridRock.style.display = "none";
 			gridSushi.style.display = "none";
-			gridCochi.style.display = "none";
 			gridPulpo.style.display = "none";
 			gridHija.style.display = "none";
 			gridCabana.style.display = "none";
@@ -143,7 +137,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			gridPizzas.style.display = "none";
 			gridRock.style.display = "none";
 			gridSushi.style.display = "none";
-			gridCochi.style.display = "none";
 			gridPulpo.style.display = "none";
 			gridHija.style.display = "none";
 			gridCabana.style.display = "none";
@@ -183,7 +176,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			gridPizzas.style.display = "none";
 			gridRock.style.display = "none";
 			gridSushi.style.display = "none";
-			gridCochi.style.display = "none";
 			gridPulpo.style.display = "none";
 			gridHija.style.display = "none";
 			gridCabana.style.display = "none";
@@ -233,7 +225,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			gridPizzas.style.display = "none";
 			gridRock.style.display = "none";
 			gridSushi.style.display = "none";
-			gridCochi.style.display = "none";
 			gridPulpo.style.display = "none";
 			gridHija.style.display = "grid";
 			gridCabana.style.display = "none";
@@ -263,7 +254,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		cambiarImagen("Chapatas","./ComidaOpt/Alitas.png","200px","200px");
 		cambiarImagen("Papi","./ComidaOpt/HotDogSencillo.png","200px","200px");
 		cambiarImagen("Cabana","./ComidaOpt/PapasPeperoni.png","200px","200px");
-		cambiarImagen("Cochi","./ComidaOpt/Platanos.png","200px","200px");
 		}
 
 	rock.onmouseout = function() {
@@ -279,8 +269,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		cambiarImagen("Sabores","./LogosOpt/Sabores.png");
 		cambiarImagen("Sushi","./LogosOpt/Sushi.png");
 		cambiarImagen("Chapatas","./LogosOpt/Chapatas.png");
-		cambiarImagen("Papi","./LogosOpt/Papidrinks_2.png	");
-		cambiarImagen("Cochi","./LogosOpt/Cochinita_2.png");
+		cambiarImagen("Papi","./LogosOpt/Papidrinks_2.png");
 		cambiarImagen("Cabana","./LogosOpt/Cabana.png");
 	}
 	}
@@ -293,7 +282,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			gridPizzas.style.display = "none";
 			gridRock.style.display = "grid";
 			gridSushi.style.display = "none";
-			gridCochi.style.display = "none";
 			gridPulpo.style.display = "none";
 			gridHija.style.display = "none";
 			gridCabana.style.display = "none";
@@ -340,7 +328,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			gridPizzas.style.display = "none";
 			gridRock.style.display = "none";
 			gridSushi.style.display = "none";
-			gridCochi.style.display = "none";
 			gridPulpo.style.display = "grid";
 			gridHija.style.display = "none";
 			gridCabana.style.display = "none";
@@ -376,7 +363,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			gridPizzas.style.display = "none";
 			gridRock.style.display = "none";
 			gridSushi.style.display = "none";
-			gridCochi.style.display = "none";
 			gridPulpo.style.display = "none";
 			gridHija.style.display = "none";
 			gridCabana.style.display = "none";
@@ -430,7 +416,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			gridPizzas.style.display = "none";
 			gridRock.style.display = "none";
 			gridSushi.style.display = "none";
-			gridCochi.style.display = "none";
 			gridPulpo.style.display = "none";
 			gridHija.style.display = "none";
 			gridCabana.style.display = "none";
@@ -466,7 +451,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			gridPizzas.style.display = "none";
 			gridRock.style.display = "none";
 			gridSushi.style.display = "none";
-			gridCochi.style.display = "none";
 			gridPulpo.style.display = "none";
 			gridHija.style.display = "none";
 			gridCabana.style.display = "none";
@@ -521,7 +505,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			gridPizzas.style.display = "none";
 			gridRock.style.display = "none";
 			gridSushi.style.display = "grid";
-			gridCochi.style.display = "none";
 			gridPulpo.style.display = "none";
 			gridHija.style.display = "none";
 			gridCabana.style.display = "none";
@@ -557,7 +540,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			gridPizzas.style.display = "none";
 			gridRock.style.display = "none";
 			gridSushi.style.display = "none";
-			gridCochi.style.display = "none";
 			gridPulpo.style.display = "none";
 			gridHija.style.display = "none";
 			gridCabana.style.display = "grid";
@@ -587,7 +569,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		cambiarImagen("Chapatas","./ComidaOpt/Papidrinks 10.png");
 		cambiarImagen("Pizzas","./ComidaOpt/Papidrinks 11.png");
 		cambiarImagen("Cabana","./ComidaOpt/Papidrinks 12.png");
-		cambiarImagen("Cochi","./ComidaOpt/Papidrinks 13.png");
 		}
 
 	papi.onmouseout = function() {
@@ -604,7 +585,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		cambiarImagen("Sushi","./LogosOpt/Sushi.png");
 		cambiarImagen("Chapatas","./LogosOpt/Chapatas.png");
 		cambiarImagen("Pizzas","./LogosOpt/Pizzas.png	");
-		cambiarImagen("Cochi","./LogosOpt/Cochinita_2.png");
 		cambiarImagen("Cabana","./LogosOpt/Cabana.png");
 		}
 	}
@@ -617,7 +597,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			gridPizzas.style.display = "none";
 			gridRock.style.display = "none";
 			gridSushi.style.display = "none";
-			gridCochi.style.display = "none";
 			gridPulpo.style.display = "none";
 			gridHija.style.display = "none";
 			gridCabana.style.display = "none";
@@ -631,48 +610,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		});
 	}
 
-	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
-	cochi.onmouseover = function() {
-		th2.innerHTML = "Hijos de la... Cochinta Ahogada<br>!!! Tacos y Tortas !!!"
-		textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 9 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
-		textoCambiante.style.fontStyle = "italic";
-		cambiarImagen("Birria","./ComidaOpt/Cochinita 1.png","50px","50px");
-		cambiarImagen("Pizzas","./ComidaOpt/Cochinita 2.png","500px","500px");
-		cambiarImagen("Enchi","./ComidaOpt/Cochinita 3.png","200px","200px");
-		cambiarImagen("Hija","./ComidaOpt/Cochinita 4.png","200px","200px");
-		}
-
-	cochi.onmouseout = function() {
-		th2.innerHTML = th2org;
-		textoCambiante.innerHTML = miTexto;
-		cambiarImagen("Pizzas","./LogosOpt/Pizzas.png");
-		cambiarImagen("Enchi","./LogosOpt/Enchilandia.png");
-		cambiarImagen("Birria","./LogosOpt/Birrieria.png");
-		cambiarImagen("Hija","./LogosOpt/Hija.png");
-		
-	}
-	}
-	else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)){
-		cochi.addEventListener("touchstart", function(){
-			th2.innerHTML = "Hijos de la... Cochinta Ahogada<br><br>!!! Tacos y Tortas !!!"
-			textoCambiante.innerHTML = "Lunes, Miercoles, Jueves, Viernes, Sabado y Domingo 9 a.m. a 10 p.m.<br><br>Martes 2 p.m. a 10 p.m.<br><br>Servicio a domicilio<br><br>Rio Lerma 24, Colinas del Lago"
-			textoCambiante.style.fontStyle = "italic";
-			textoCambiante.style.fontSize = "15px";
-			gridPizzas.style.display = "none";
-			gridRock.style.display = "none";
-			gridSushi.style.display = "none";
-			gridCochi.style.display = "grid";
-			gridPulpo.style.display = "none";
-			gridHija.style.display = "none";
-			gridCabana.style.display = "none";
-			gridSabores.style.display = "none";
-			gridBirria.style.display = "none";
-			gridEnchi.style.display = "none";
-			gridPozolitos.style.display = "none";
-			gridCafe.style.display = "none";
-			gridPapi.style.display = "none";
-		});
-	}
+	
 
 	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
 	cafe.onmouseover = function() {
@@ -691,7 +629,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		cambiarImagen("Chapatas","./ComidaOpt/Cafe 10.png","200px","200px");
 		cambiarImagen("Papi","./ComidaOpt/Cafe 11.png","200px","200px");
 		cambiarImagen("Cabana","./ComidaOpt/Cafe 12.png","200px","200px");
-		cambiarImagen("Cochi","./ComidaOpt/Cafe 13.png","200px","200px");
 		}
 
 	cafe.onmouseout = function() {
@@ -707,8 +644,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		cambiarImagen("Sabores","./LogosOpt/Sabores.png");
 		cambiarImagen("Sushi","./LogosOpt/Sushi.png");
 		cambiarImagen("Chapatas","./LogosOpt/Chapatas.png");
-		cambiarImagen("Papi","./LogosOpt/Papidrinks_2.png	");
-		cambiarImagen("Cochi","./LogosOpt/Cochinita_2.png");
+		cambiarImagen("Papi","./LogosOpt/Papidrinks_2.png");
 		cambiarImagen("Cabana","./LogosOpt/Cabana.png");
 	}
 	}
@@ -721,7 +657,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			gridPizzas.style.display = "none";
 			gridRock.style.display = "none";
 			gridSushi.style.display = "none";
-			gridCochi.style.display = "none";
 			gridPulpo.style.display = "none";
 			gridHija.style.display = "none";
 			gridCabana.style.display = "none";
