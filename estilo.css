@@ -1887,15 +1887,6 @@ p {
 	grid-area: bandas;
 }
 
-.banda-domingo {
-	display: grid;
-	width: 100%;
-	height: auto;
-	object-fit: scale-down;
-	overflow: hidden;
-	grid-area: bandad;
-}
-
 .foot {
 	font-size: 15px;
 }
