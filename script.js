@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		cambiarImagen("Sabores","./LogosOpt/Sabores.png");
 		cambiarImagen("Sushi","./LogosOpt/Sushi.png");
 		cambiarImagen("Chapatas","./LogosOpt/Chapatas.png");
-		cambiarImagen("Papi","./LogosOpt/Papidrinks_2.png");
+		cambiarImagen("Papi","./LogosOpt/Papidrinks_2.png	");
 		cambiarImagen("Cabana","./LogosOpt/Cabana.png");
 	}
 	}
@@ -269,7 +269,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		cambiarImagen("Sabores","./LogosOpt/Sabores.png");
 		cambiarImagen("Sushi","./LogosOpt/Sushi.png");
 		cambiarImagen("Chapatas","./LogosOpt/Chapatas.png");
-		cambiarImagen("Papi","./LogosOpt/Papidrinks_2.png");
+		cambiarImagen("Papi","./LogosOpt/Papidrinks_2.png	");
 		cambiarImagen("Cabana","./LogosOpt/Cabana.png");
 	}
 	}
@@ -610,7 +610,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		});
 	}
 
-	
+
 
 	if (resolucion > 500 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent))) {
 	cafe.onmouseover = function() {
