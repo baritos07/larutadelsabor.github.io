@@ -200,7 +200,7 @@ p {
 .ordenar1 {
 	width: 100%;
 	background: darkorange;
-	max-width: 160px;
+	max-width: 300px;
 	min-width: 75px;
 	padding-left: 5px;
 	padding-top: 5px;
@@ -237,7 +237,7 @@ p {
 
 	grid-auto-flow: dense;
 	grid-template-areas: 
-	"pizzas texto texto texto texto texto texto cochi" 
+	"pizzas texto texto texto texto texto texto x" 
 	"birria texto texto texto texto texto texto cafe"
 	"enchi texto texto texto texto texto texto cabana"
 	"hija rock pulpo pozolitos sabores sushi chapatas papi";
@@ -302,9 +302,7 @@ p {
 	display: none;
 }
 
-.grid-imagenes-cochi {
-	display: none;
-}
+
 
 .grid-imagenes-sushi {
 	display: none;
@@ -388,9 +386,7 @@ p {
 	transform: scale(1.2);
 }
 
-.img-right-cochi:hover {
-	transform: scale(1.2);
-}
+
 
 .img-right-cabana:hover {
 	transform: scale(1.2);
@@ -608,6 +604,8 @@ p {
 	height: 400px;
 	max-width: 100%;
 	width: 100%;
+	align-self: center;
+	justify-self: center;
 	grid-area: ruta;
 
 }
@@ -616,7 +614,7 @@ p {
 	background: #9ee;
 	display: grid;
 	margin-top: 10px;
-	grid-template-columns: 45% 55%;
+	grid-template-columns: 55% 45%;
 	border: 3px solid #000;
 	
 	grid-auto-flow: dense;
@@ -627,7 +625,7 @@ p {
 .grid-bandas {
 	background: #77e;
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: 50px 1fr;
 	justify-items: center;
 	align-items: center;
@@ -667,14 +665,7 @@ p {
 	overflow: hidden;
 }
 
-.banda-domingo {
-	display: grid;
-	width: 100%;
-	max-height: 375px;
-	height: 100%;
-	object-fit: scale-down;
-	overflow: hidden;
-}
+
 .footer-contacts {
 	background: #567;
 	position: sticky;
@@ -806,7 +797,7 @@ p {
 	min-width: 300px;
 	grid-auto-flow: dense;
 	grid-template-areas: 
-	"pizzas texto texto texto texto texto texto cochi" 
+	"pizzas texto texto texto texto texto texto x" 
 	"birria texto texto texto texto texto texto cafe"
 	"enchi texto texto texto texto texto texto cabana"
 	"hija rock pulpo pozolitos sabores sushi chapatas papi";
@@ -840,9 +831,6 @@ p {
 	display: none;
 }
 
-.grid-imagenes-cochi {
-	display: none;
-}
 
 .grid-imagenes-papi {
 	display: none;
@@ -960,7 +948,6 @@ p {
 }
 
 
-
 .img-right-cabana:hover {
 	transform: scale(1.2);
 }
@@ -1012,20 +999,6 @@ p {
 	
 }
 
-.img-right-cochi {
-	display: grid;
-	max-width: 80px;
-	max-height: 80px;
-	min-width: 65px;
-	width: 100%;
-	height: auto;
-	overflow: hidden;
-	object-fit: contain;
-	align-self: center;
-	justify-self: center;
-	grid-area: cochi;
-	
-}
 
 
 .img-left-birria {
@@ -1207,7 +1180,49 @@ p {
 	"mapa ruta"
 }
 
+.grid-bandas {
+	background: #77e;
+	display: grid;
+	grid-template-columns: repeat(3, 150px);
+	grid-template-rows: 50px,500px, 1fr;
+	justify-items: center;
+	align-items: center;
+	font-size: 40px;
+	margin-top: 10px;
+	font-family: fantasy;
+	gap: 10px;
+	padding: 10px;
+	border: 3px solid #000;
+	
+}
 
+.banda-jueves {
+	display: grid;
+	width: 100%;
+	max-height: 500px;
+	height: 100%;
+	object-fit: scale-down;
+	overflow: hidden;
+}
+
+.banda-viernes {
+	display: grid;
+	width: 100%;
+	max-height: 500px;
+	height: 100%;
+	object-fit: scale-down;
+	overflow: hidden;
+}
+
+.banda-sabado {
+	display: grid;
+	width: 100%;
+	max-height: 500px;
+	height: 100%;
+	object-fit: scale-down;
+	overflow: hidden;
+}
+	
 }
 
 
@@ -1379,7 +1394,7 @@ p {
 	"pulpo texto texto texto texto"
 	"cafe img img img img"
 	"pozolitos img img img img"
-	"cochi img img img img"
+	"x img img img img"
 	"cabana papi rock sabores chapatas";
 
 }
@@ -1549,20 +1564,6 @@ p {
 	align-items: center;
 }
 
-.grid-imagenes-cochi {
-	display: none;
-	background: lightblue;
-	grid-template-columns: repeat(5, 1fr);
-	grid-template-rows: repeat(3, 50px);
-	border-left: 3px solid darkgoldenrod;
-	border-right: 3px solid darkgoldenrod;
-	border-bottom: 3px solid darkgoldenrod;
-	grid-area: img;
-	justify-content: center;
-	align-content: center;
-	justify-items: center;
-	align-items: center;
-}
 
 .grid-imagenes-pulpo {
 	display: none;
@@ -1631,17 +1632,6 @@ p {
 	align-self: center;
 	justify-self: center;
 	grid-area: enchi;
-	
-}
-
-.img-right-cochi {
-	display: grid;
-	width: 50px;
-	height: 50px;
-	margin: 5px auto;
-	align-self: center;
-	justify-self: center;
-	grid-area: cochi;
 	
 }
 
@@ -1781,6 +1771,52 @@ p {
 	
 }
 
+.grid-bandas {
+	background: #77e;
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	font-size: 40px;
+	margin-top: 10px;
+	font-family: fantasy;
+	gap: 10px;
+	padding: 10px;
+	border: 3px solid darkgoldenrod;
+	grid-template-areas:  
+	"jueves"
+	"bandaj"
+	"viernes"
+	"bandav"
+	"sabado"
+	"bandas";	
+}
+
+.banda-jueves {
+	display: grid;
+	width: 100%;
+	height: auto;
+	object-fit: scale-down;
+	overflow: hidden;
+	grid-area: bandaj;
+}
+
+.banda-viernes {
+	display: grid;
+	width: 100%;
+	height: auto;
+	object-fit: scale-down;
+	overflow: hidden;
+	grid-area: bandav;
+}
+
+.banda-sabado {
+	display: grid;
+	width: 100%;
+	height: auto;
+	object-fit: scale-down;
+	overflow: hidden;
+	grid-area: bandas;
+}
 
 .foot {
 	font-size: 15px;
