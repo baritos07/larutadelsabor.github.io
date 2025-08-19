@@ -1,21 +1,1838 @@
-body{margin:0;font-family:Arial,sans-serif;line-height:1.5;background:#f5f5f7;color:#222}a{text-decoration:none;color:#0059b2}h1,h2,h3,h4,h5,p{margin:0;padding:0}img{display:block;max-width:100%}picture{display:inline-block}
-.site-header{display:flex;justify-content:space-between;align-items:center;padding:1rem;background:#fff;border-bottom:1px solid #ddd}
-.site-header h1{font-size:1.8rem;margin:0;color:#333}
-.header-actions{display:flex;gap:1rem}
-.btn{display:inline-block;padding:.5rem 1rem;border-radius:4px;font-weight:600;text-align:center}
-.btn-primary{background:#ff9900;color:#fff}
-.btn-secondary{background:#0033aa;color:#fff}
-.hero{padding:2rem 1rem;text-align:center;background:#e1ecf4;margin-bottom:1rem}
-.hero h2{font-size:1.6rem;color:#003366;margin-bottom:.5rem}
-.contact-info{padding:1rem 1rem;border-top:1px solid #ddd;border-bottom:1px solid #ddd;background:#fff}
-.contact-info p{margin-bottom:.3rem;font-size:1rem}
-.galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:1rem;padding:1rem 1rem;background:#fff;border-bottom:1px solid #ddd}
-.mapa{padding:1rem 1rem;background:#f0f4f7;text-align:center}
-.mapa button{margin-top:1rem}
-.site-footer{padding:1rem 1rem;background:#003366;color:#fff;text-align:center}
-.footer-nav{display:flex;justify-content:center;gap:1.5rem;margin-top:.5rem}
-.footer-nav a{color:#fff;font-weight:600}
-@media(max-width:600px){.site-header{flex-direction:column;align-items:flex-start}.header-actions{margin-top:.5rem}.hero h2{font-size:1.4rem}}
+body {
+	background: #567
+}
+
+@media screen and (min-width: 875px) {
+h1 {
+	font-size: 40px;
+	font-style: bold;
+	
+	display: none;
+	
+}
+
+h2 {
+	font-size: 30px;
+	margin-top: 20px;
+}
+
+h3 {
+	font-size: 25px;
+	font-weight: normal;
+	font-style: italic;	
+}
+
+h4 {
+	font-size: 25px;
+	font-weight: normal;
+	font-style: italic;
+}
+
+h5 {
+	font-size: 30px;
+	font-style: italic;
+	margin: 2px;
+}
+
+p {
+	font-size: 30px;
+}
+
+.contact {
+	display: flex;
+	font-size: 40px;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+}
+
+.foot {
+	font-size: 40px;
+}
+
+.footer-contacts {
+	margin-top: 10px;
+	display: grid;
+	grid-template-areas: 
+	"face whats"
+
+}
+
+.face {
+	justify-self: start;
+	align-self: start;
+	grid-area: face;
+}
+
+.whats {
+	justify-self: end;
+	align-self: end;
+	grid-area: whats;
+}
+
+.grid-container {
+	background: lightblue;
+	display: grid;
+	text-align:  center;
+	align-items: center;
+	justify-items: center;
+	
+	grid-template-rows: 120px;
+	grid-auto-flow: dense;
+	border-top: 3px solid #000;
+	border-left: 3px solid #000;
+	border-right: 3px solid #000;
+	grid-template-areas: 
+	"ordena1 logo1 letras logo2 ordena2";
+	}
+
+.sectionHs {
+	justify-items: center;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+}
+
+.grid-img-png {
+	width: 100%;
+	max-width: 500px;
+	min-width: 300px;
+	height: auto;
+	padding-left: 5px;
+	padding-top: 5px;
+	align-items: center;
+	justify-items: center;
+	grid-area: letras;
+}
+
+.grid-img-left {
+	width: 100%;
+	max-width: 110px;
+	min-width: 75px;
+	height: auto;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	align-items: center;
+	justify-self: right;
+	grid-area: logo1;
+}
+
+.grid-img-right {
+	width: 100%;
+	max-width: 110px;
+	min-width: 75px;
+	height: auto;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	align-items: center;
+	justify-self: left;
+	grid-area: logo2;
+}
+
+.footer2 {
+	display:none;
+}
+
+.glf-button1 {
+	display: grid;
+	word-wrap: break-word;
+	grid-template-columns: 200px;
+	grid-template-rows: 70px;
+	background-color: #FF9900;
+	color: white;
+	font-weight: bold;
+	font-size: 25px;
+	padding-top: 8px;
+	max-width: 225px;
+	border-radius: 40px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+}
+
+.glf-button1:hover {
+	display: grid;
+	word-wrap: break-word;
+	grid-template-columns: 200px;
+	grid-template-rows: 70px;
+	background-color: #FFFFFF;
+	color: black;
+	font-weight: bold;
+	font-size: 25px;
+	padding-top: 8px;
+	max-width: 225px;
+	border-radius: 40px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+}
+
+.glf-button2 {
+	display: grid;
+	word-wrap: break-word;
+	grid-template-columns: 200px;
+	grid-template-rows: 50px;
+	background-color: #0000BB;
+	color: white;
+	font-weight: bold;
+	font-size: 25px;
+	padding-top: 15px;
+	max-width: 225px;
+	border-radius: 40px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+}
+
+.glf-button2:hover {
+	display: grid;
+	word-wrap: break-word;
+	grid-template-columns: 200px;
+	grid-template-rows: 50px;
+	background-color: #FFFFFF;
+	color: black;
+	font-weight: bold;
+	font-size: 25px;
+	padding-top: 15px;
+	max-width: 225px;
+	border-radius: 40px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+
+
+.ordenar1 {
+	width: 100%;
+	background: darkorange;
+	max-width: 300px;
+	min-width: 75px;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	align-items: center;
+	justify-self: center;
+	grid-area: ordena1;
+
+}
+
+.ordenar2 {
+	display: none;
+	width: 100%;
+	background: darkorange;
+	max-width: 160px;
+	min-width: 75px;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	align-items: center;
+	justify-self: center;
+	grid-area: ordena2;
+
+}
+
+.imagenes-izquierda {
+	background: lightblue;
+	text-align: center;
+	text-justify: initial;
+	display: grid;
+	border-left: 3px solid #000;
+	border-right: 3px solid #000;
+	border-bottom: 3px solid #000;
+
+	grid-auto-flow: dense;
+	grid-template-areas: 
+	"pizzas texto texto texto texto texto texto x" 
+	"birria texto texto texto texto texto texto cafe"
+	"enchi texto texto texto texto texto texto cabana"
+	"hija rock pulpo pozolitos sabores sushi chapatas papi";
+	
+
+}
+
+.parrafo-hid {
+	display: none;
+}
+
+.gridtextohid {
+	display: none;
+	background: lightyellow;
+	border-left: 3px solid darkgoldenrod;
+	
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.grid-imagenes {
+	display:none;
+}
+
+.grid-imagenes-pizzas {
+	display: none;
+}
+
+.grid-imagenes-pozolitos {
+	display: none;
+}
+
+.grid-imagenes-sabores {
+	display: none;
+}
+
+.grid-imagenes-hija {
+	display: none;
+}
+
+.grid-imagenes-papi {
+	display: none;
+}
+
+.grid-imagenes-birria {
+	display: none;
+}
+
+.grid-imagenes-cabana {
+	display: none;
+}
+
+.grid-imagenes-enchi {
+	display: none;
+}
+
+.grid-imagenes-rock {
+	display: none;
+}
+
+
+
+.grid-imagenes-sushi {
+	display: none;
+}
+
+.grid-imagenes-pulpo {
+	display: none;
+}
+
+.grid-imagenes-cafe {
+	display: none;
+}	
+
+.grid-item {	
+	width: 100%;
+	max-width: 1200px;
+	max-height: 60vw;
+	display: grid;
+	grid-area: texto;
+	margin-top: 5px;
+	font-size: 25px;
+	background: lightyellow;
+	border: 3px solid #000;
+	padding-bottom: 25px;
+	
+
+}
+
+.img-left-pizzas {
+	display: grid;
+	max-width: 110px;
+	max-height: 110px;
+	min-width: 85px;
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	overflow: hidden;
+	align-self: center;
+	justify-self: center;
+	grid-area: pizzas;
+	transition: transform 0.3s ease;
+}
+
+.ordenar1:hover {
+	transform: scale(1.2);
+}
+
+.ordenar2:hover {
+	transform: scale(1.2);
+}
+
+.img-left-pizzas:hover {
+	transform: scale(1.2);
+}
+
+.img-left-rock:hover {
+	transform: scale(1.1);
+}
+
+.img-left-hija:hover {
+	transform: scale(1.2);
+}
+
+.img-left-enchi:hover {
+	transform: scale(1.2);
+}
+
+.img-left-pulpo:hover {
+	transform: scale(1.2);
+}
+
+.img-left-birria:hover {
+	transform: scale(1.2);
+}
+
+.img-left-pozolitos:hover {
+	transform: scale(1.2);
+}
+
+.img-right-papi:hover {
+	transform: scale(1.2);
+}
+
+
+
+.img-right-cabana:hover {
+	transform: scale(1.2);
+}
+
+.img-right-sushi:hover {
+	transform: scale(1.2);
+}
+
+.img-right-sabores:hover {
+	transform: scale(1.2);
+}
+
+.img-right-chapatas:hover {
+	transform: scale(1.2);
+}
+
+.img-right-cafe:hover {
+	transform: scale(1.2);
+}
+
+
+.img-right-cafe {
+	display: grid;
+	max-width: 110px;
+	max-height: 110px;
+	min-width: 85px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	object-fit: contain;
+	align-self: center;
+	justify-self: center;
+	grid-area: cafe;
+	
+}
+
+.img-left-enchi {
+	display: grid;
+	max-width: 110px;
+	max-height: 110px;
+	min-width: 85px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	object-fit: contain;
+	align-self: center;
+	justify-self: center;
+	grid-area: enchi;
+	
+}
+
+
+
+
+.img-left-birria {
+	display: grid;
+	max-width: 110px;
+	max-height: 110px;
+	min-width: 85px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	object-fit: contain;
+	align-self: center;
+	justify-self: center;
+	grid-area: birria;
+	
+}
+
+.img-right-cabana {
+	display: grid;
+	max-width: 110px;
+	max-height: 110px;
+	min-width: 85px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	object-fit: contain;
+	align-self: center;
+	justify-self: center;
+	grid-area: cabana;
+	
+}
+
+.img-left-hija {
+	display: grid;
+	max-width: 110px;
+	max-height: 110px;
+	min-width: 85px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	object-fit: contain;
+	align-self: center;
+	justify-self: center;
+	grid-area: hija;
+	
+}
+
+.img-right-papi {
+	display: grid;
+	max-width: 110px;
+	max-height: 110px;
+	min-width: 85px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	object-fit: contain;
+	align-self: center;
+	justify-self: center;
+	grid-area: papi;
+	
+}
+
+.img-left-rock {
+	display: grid;
+	max-width: 110px;
+	max-height: 110px;
+	min-width: 85px;
+	width: 90%;
+	height: auto;
+	overflow: hidden;
+	object-fit: contain;
+	align-self: center;
+	justify-self: center;
+	grid-area: rock;
+	
+}
+
+.img-right-sabores {
+	display: grid;
+	max-width: 110px;
+	max-height: 110px;
+	min-width: 85px;
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	overflow: hidden;
+	grid-area: sabores;
+	align-self: center;
+	justify-self: center;
+}
+
+
+.img-left-pulpo {
+	display: grid;
+	max-width: 110px;
+	max-height: 110px;
+	min-width: 85px;
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	overflow: hidden;
+	grid-area: pulpo;
+	align-self: center;
+	justify-self: center;
+	
+}
+
+.img-right-sushi {
+	display: grid;
+	max-width: 110px;
+	max-height: 110px;
+	min-width: 85px;
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	overflow: hidden;
+	grid-area: sushi;
+	align-self: center;
+	justify-self: center;
+	
+}
+
+.img-left-pozolitos {
+	display: grid;
+	max-width: 110px;
+	max-height: 110px;
+	min-width: 85px;
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	overflow: hidden;
+	grid-area: pozolitos;
+	align-self: center;
+	justify-self: center;
+	
+}
+.img-right-chapatas {
+	display: grid;
+	max-width: 110px;
+	max-height: 110px;
+	min-width: 85px;
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	overflow: hidden;
+	grid-area: chapatas;
+	align-self: center;
+	justify-self: center;
+
+}
+
+.mapa {
+	display: grid;
+	border-right: 3px solid #000;
+	max-width: 100%;
+	width: 100%;
+	grid-area: mapa;
+}
+
+.img-ruta {
+	display: grid;
+	height: 400px;
+	max-width: 100%;
+	width: 100%;
+	align-self: center;
+	justify-self: center;
+	grid-area: ruta;
+
+}
+
+.mapa-ruta{
+	background: #9ee;
+	display: grid;
+	margin-top: 10px;
+	grid-template-columns: 55% 45%;
+	border: 3px solid #000;
+	
+	grid-auto-flow: dense;
+	grid-template-areas: 
+	"mapa ruta"
+}
+
+.grid-bandas {
+	background: #77e;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 50px 1fr;
+	justify-items: center;
+	align-items: center;
+	font-size: 40px;
+	margin-top: 10px;
+	font-family: fantasy;
+	gap: 10px;
+	padding: 10px;
+	border: 3px solid #000;
+	
+}
+
+.banda-jueves {
+	display: grid;
+	width: 100%;
+	max-height: 375px;
+	height: 100%;
+	object-fit: scale-down;
+	overflow: hidden;
+}
+
+.banda-viernes {
+	display: grid;
+	width: 100%;
+	max-height: 375px;
+	height: 100%;
+	object-fit: scale-down;
+	overflow: hidden;
+}
+
+.banda-sabado {
+	display: grid;
+	width: 100%;
+	max-height: 375px;
+	height: 100%;
+	object-fit: scale-down;
+	overflow: hidden;
+}
+
+
+.footer-contacts {
+	background: #567;
+	position: sticky;
+	bottom: 0;
+}
+	
+}
+
+@media screen and (min-width: 575px) and (max-width: 874px) {
+h1 {
+	font-size: 30px;
+	display: none;
+}
+
+h2 {
+	font-size: 15px;
+}
+
+h3 {
+	font-size: 15px;
+}
+
+h4 {
+	font-size: 15px;
+}
+
+h5 {
+	font-size: 15px;
+}
+
+p {
+	font-size: 15px;
+}
+
+.foot {
+	font-size: 20px;
+}
+
+.grid-container {
+	background: lightblue;
+	display: grid;
+	text-align:  center;
+	align-items: center;
+	justify-items: center;
+	
+	
+	grid-auto-flow: dense;
+	border-top: 3px solid #000;
+	border-left: 3px solid #000;
+	border-right: 3px solid #000;
+	grid-template-areas: 
+	"ordena1 logo1 letras logo2 ordena2";
+	}
+
+
+.grid-img-png {
+	width: 100%;
+	max-width: 500px;
+	min-width: 100px;
+	height: auto;
+	padding-left: 5px;
+	padding-top: 5px;
+	align-items: center;
+	justify-items: center;
+	grid-area: letras;
+}
+
+.grid-img-left {
+	width: 100%;
+	max-width: 90px;
+	min-width: 40px;
+	height: auto;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	align-items: center;
+	justify-self: center	;
+	grid-area: logo1;
+}
+
+.grid-img-right {
+	width: 100%;
+	max-width: 90px;
+	min-width: 40px;
+	height: auto;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	align-items: center;
+	justify-self: center;
+	grid-area: logo2;
+}
+
+.ordenar1 {
+	width: 100%;
+	max-width: 120px;
+	min-width: 45px;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	align-items: center;
+	justify-self: center;
+	grid-area: ordena1;
+
+}
+
+.ordenar2 {
+	width: 100%;
+	max-width: 120px;
+	min-width: 45px;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	align-items: center;
+	justify-self: center;
+	grid-area: ordena2;
+
+}
+
+.imagenes-izquierda {
+	background: lightblue;
+	text-align: center;
+	text-justify: initial;
+	display: grid;
+	border-left: 3px solid #000;
+	border-right: 3px solid #000;
+	border-bottom: 3px solid #000;
+	max-width: 875px;
+	min-width: 300px;
+	grid-auto-flow: dense;
+	grid-template-areas: 
+	"pizzas texto texto texto texto texto texto x" 
+	"birria texto texto texto texto texto texto cafe"
+	"enchi texto texto texto texto texto texto cabana"
+	"hija rock pulpo pozolitos sabores sushi chapatas papi";
+}
+
+.grid-imagenes-pizzas {
+	display: none;
+}
+
+.grid-imagenes-sabores {
+	display: none;
+}
+
+.grid-imagenes-hija {
+	display: none;
+}
+
+.grid-imagenes-birria {
+	display: none;
+}
+
+.grid-imagenes-pozolitos {
+	display: none;
+}
+
+.grid-imagenes-cabana {
+	display: none;
+}
+
+.grid-imagenes-rock {
+	display: none;
+}
+
+
+.grid-imagenes-papi {
+	display: none;
+}
+
+.grid-imagenes-enchi {
+	display: none;
+}
+
+.grid-imagenes-sushi {
+	display: none;
+}
+
+.grid-imagenes-pulpo {
+	display: none;
+}
+
+.grid-imagenes-cafe {
+	display: none;
+}
+
+.grid-imagenes {
+	display:none;
+}
+
+.grid-item {	
+	width: 100%;
+	max-width: 700px;
+	
+	display: grid;
+	grid-area: texto;
+	
+	background: lightyellow;
+	border: 3px solid #000;
+	
+}
+
+.parrafo-hid {
+	display: none;
+}
+
+.sectionHs {
+	justify-items: center;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+}
+
+.gridtextohid {
+	display: none;
+	background: lightyellow;
+	border-left: 3px solid darkgoldenrod;
+	
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+
+.img-left-pizzas {
+	display: grid;
+	max-width: 80px;
+	max-height: 80px;
+	min-width: 65px;
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	overflow: hidden;
+	align-self: center;
+	justify-self: center;
+	grid-area: pizzas;
+}
+
+.ordenar1:hover {
+	transform: scale(1.2);
+}
+
+.ordenar2:hover {
+	transform: scale(1.2);
+}
+
+.img-left-pizzas:hover {
+	transform: scale(1.2);
+}
+
+.img-left-rock:hover {
+	transform: scale(1.2);
+}
+
+.img-left-hija:hover {
+	transform: scale(1.2);
+}
+
+.img-left-enchi:hover {
+	transform: scale(1.2);
+}
+
+.img-left-pulpo:hover {
+	transform: scale(1.2);
+}
+
+.img-left-birria:hover {
+	transform: scale(1.2);
+}
+
+.img-left-pozolitos:hover {
+	transform: scale(1.2);
+}
+
+.img-right-papi:hover {
+	transform: scale(1.2);
+}
+
+
+.img-right-cabana:hover {
+	transform: scale(1.2);
+}
+
+.img-right-sushi:hover {
+	transform: scale(1.2);
+}
+
+.img-right-sabores:hover {
+	transform: scale(1.2);
+}
+
+.img-right-chapatas:hover {
+	transform: scale(1.2);
+}
+
+.img-right-cafe:hover {
+	transform: scale(1.2);
+}
+
+
+.img-right-cafe {
+	display: grid;
+	max-width: 80px;
+	max-height: 80px;
+	min-width: 65px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	object-fit: contain;
+	align-self: center;
+	justify-self: center;
+	grid-area: cafe;
+	
+}
+
+.img-left-enchi {
+	display: grid;
+	max-width: 80px;
+	max-height: 80px;
+	min-width: 65px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	object-fit: contain;
+	align-self: center;
+	justify-self: center;
+	grid-area: enchi;
+	
+}
+
+
+
+.img-left-birria {
+	display: grid;
+	max-width: 80px;
+	max-height: 80px;
+	min-width: 65px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	object-fit: contain;
+	align-self: center;
+	justify-self: center;
+	grid-area: birria;
+	
+}
+
+.img-right-cabana {
+	display: grid;
+	max-width: 80px;
+	max-height: 80px;
+	min-width: 65px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	object-fit: contain;
+	align-self: center;
+	justify-self: center;
+	grid-area: cabana;
+	
+}
+
+.img-left-hija {
+	display: grid;
+	max-width: 80px;
+	max-height: 80px;
+	min-width: 65px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	object-fit: contain;
+	align-self: center;
+	justify-self: center;
+	grid-area: hija;
+	
+}
+
+.img-right-papi {
+	display: grid;
+	max-width: 80px;
+	max-height: 80px;
+	min-width: 65px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	object-fit: contain;
+	align-self: center;
+	justify-self: center;
+	grid-area: papi;
+	
+}
+
+.img-left-rock {
+	display: grid;
+	max-width: 80px;
+	max-height: 80px;
+	min-width: 65px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	object-fit: contain;
+	align-self: center;
+	justify-self: center;
+	grid-area: rock;
+	
+}
+
+.img-right-sabores {
+	display: grid;
+	max-width: 80px;
+	max-height: 80px;
+	min-width: 65px;
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	overflow: hidden;
+	grid-area: sabores;
+	align-self: center;
+	justify-self: center;
+}
+
+
+.img-left-pulpo {
+	display: grid;
+	max-width: 80px;
+	max-height: 80px;
+	min-width: 65px;
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	overflow: hidden;
+	grid-area: pulpo;
+	align-self: center;
+	justify-self: center;
+	
+}
+
+.img-right-sushi {
+	display: grid;
+	max-width: 80px;
+	max-height: 80px;
+	min-width: 65px;
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	overflow: hidden;
+	grid-area: sushi;
+	align-self: center;
+	justify-self: center;
+	
+}
+
+.img-left-pozolitos {
+	display: grid;
+	max-width: 80px;
+	max-height: 80px;
+	min-width: 65px;
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	overflow: hidden;
+	grid-area: pozolitos;
+	align-self: center;
+	justify-self: center;
+	
+}
+.img-right-chapatas {
+	display: grid;
+	max-width: 80px;
+	max-height: 80px;
+	min-width: 65px;
+	width: 100%;
+	
+	height: auto;
+	object-fit: contain;
+	overflow: hidden;
+	grid-area: chapatas;
+	align-self: center;
+	justify-self: center;
+
+}
+
+.mapa {
+	display: grid;
+	border-right: 3px solid #000;
+	max-width: 100%;
+	width: 100%;
+	grid-area: mapa;
+}
+
+.img-ruta {
+	display: grid;
+	height: 300px;
+	max-width: 100%;
+	width: 100%;
+	grid-area: ruta;
+
+}
+
+.mapa-ruta{
+	background: #9ee;
+	display: grid;
+	margin-top: 10px;
+	grid-template-columns: 45% 55%;
+	border: 3px solid #000;
+	
+	grid-auto-flow: dense;
+	grid-template-areas: 
+	"mapa ruta"
+}
+
+.grid-bandas {
+	background: #77e;
+	display: grid;
+	grid-template-columns: repeat(3, 150px);
+	grid-template-rows: 50px,500px, 1fr;
+	justify-items: center;
+	align-items: center;
+	font-size: 40px;
+	margin-top: 10px;
+	font-family: fantasy;
+	gap: 10px;
+	padding: 10px;
+	border: 3px solid #000;
+	
+}
+
+.banda-jueves {
+	display: grid;
+	width: 100%;
+	max-height: 500px;
+	height: 100%;
+	object-fit: scale-down;
+	overflow: hidden;
+}
+
+.banda-viernes {
+	display: grid;
+	width: 100%;
+	max-height: 500px;
+	height: 100%;
+	object-fit: scale-down;
+	overflow: hidden;
+}
+
+.banda-sabado {
+	display: grid;
+	width: 100%;
+	max-height: 500px;
+	height: 100%;
+	object-fit: scale-down;
+	overflow: hidden;
+}
+	
+}
+
+
+@media screen and (max-width: 574px) {
+
+h1 {
+	font-size: 22px;
+	display: none;
+}
+
+h2 {
+	font-size: 20px;
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
+
+h3 {
+	font-size: 12px;
+	font-weight: normal;
+	font-style: italic;
+}
+
+h4 {
+	font-size: 12px;
+	font-weight: normal;
+	font-style: italic;
+}
+
+h5 {
+	font-size: 12px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+p {
+	font-size: 13px;
+}
+	.grid-container {
+		background: lightblue;
+		display: grid;
+		grid-template-columns: 1fr 3fr 1fr;
+		grid-template-rows: 60px;
+		grid-auto-flow: dense;
+		border-right: 3px solid darkgoldenrod;
+		border-top: 3px solid darkgoldenrod;	
+		border-left: 3px solid darkgoldenrod;
+	}
+
+	.grid-img-png { 
+	max-width: 215px;
+	height: auto;
+	padding-top: 5px;
+	justify-self: center;
+	align-self: center;
+
+}
+
+.grid-img-left {
+	display: inline-grid;
+	width: 50px;
+	height: 50px;
+	min-width: 50px;
+	margin-left: 10px;
+	justify-self: center;
+	align-self: center;
+}
+
+.grid-img-right {
+	display: none;
+}
+
+.glf-button1 {
+	display: none;
+}
+.glf-button2 {
+	display: none;
+}
+.footer2 {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 70px;
+	grid-template-areas: 
+	"boton1 boton2";
+	position: sticky;
+	bottom: 0;
+	border-radius: 20px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+	justify-content: center;
+
+	
+	
+}
+.glf-button1c {
+	display: grid;
+	word-wrap: break-word;
+	background-color: darkgreen;
+	justify-self: center;
+	color: white;
+	font-weight: bold;
+	font-size: 22px;
+	text-align: center;
+	padding-top: 8px;
+	width: 80%;
+	height: 55px;
+	border-radius: 28px;
+	box-shadow: 0px 15px 26px 0px rgba(0,0,0,1.5);
+	grid-area: boton1;
+	justify-self: center;
+	margin: 0 auto;
+}
+
+.glf-button2c {
+	display: grid;
+	word-wrap: break-word;
+	background-color: #0000BB;
+	color: white;
+	font-weight: bold;
+	font-size: 22px;
+	padding-top: 8px;
+	text-align: center;
+	width: 80%;
+	height: 55px;
+	border-radius: 28px;
+	box-shadow: 0px 15px 26px 0px rgba(0,0,0,1.5);
+	grid-area: boton2;
+	justify-self: center;
+	margin: 0 auto;
+}
+
+.ordenar1 {
+	display: none;
+}
+
+.ordenar2 {
+	width: 70px;
+	justify-self: center;
+	align-self: center;
+}
+
+.gridtextohid {
+	display: grid;
+	background: lightyellow;
+	border-left: 3px solid darkgoldenrod;
+	
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.imagenes-izquierda {
+	background: lightblue;
+	text-align: center;
+	display: grid;
+	
+	border-left: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	border-right: 3px solid darkgoldenrod;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 50px;
+	grid-template-areas: 
+	"pizzas texto texto texto texto" 
+	"birria texto texto texto texto"
+	"enchi texto texto texto texto"
+	"sushi texto texto texto texto"
+	"hija texto texto texto texto" 
+	"pulpo texto texto texto texto"
+	"cafe img img img img"
+	"pozolitos img img img img"
+	"x img img img img"
+	"cabana papi rock sabores chapatas";
+
+}
+
+.grid-imagenes-pizzas {
+	display: none;
+	background: lightblue;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 50px);
+	border-left: 3px solid darkgoldenrod;
+	border-right: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.grid-imagenes-hija {
+	display: none;
+	background: lightblue;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 50px);
+	border-left: 3px solid darkgoldenrod;
+	border-right: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.grid-imagenes-cabana {
+	display: none;
+	background: lightblue;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 50px);
+	border-left: 3px solid darkgoldenrod;
+	border-right: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.grid-imagenes-enchi {
+	display: none;
+	background: lightblue;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 50px);
+	border-left: 3px solid darkgoldenrod;
+	border-right: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.grid-imagenes-papi {
+	display: none;
+	background: lightblue;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 50px);
+	border-left: 3px solid darkgoldenrod;
+	border-right: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.grid-imagenes-birria {
+	display: none;
+	background: lightblue;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 50px);
+	border-left: 3px solid darkgoldenrod;
+	border-right: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.grid-imagenes-sabores {
+	display: none;
+	background: lightblue;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 50px);
+	border-left: 3px solid darkgoldenrod;
+	border-right: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.grid-imagenes-pozolitos {
+	display: none;
+	background: lightblue;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 50px);
+	border-left: 3px solid darkgoldenrod;
+	border-right: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.grid-imagenes-rock {
+	display: none;
+	background: lightblue;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 50px);
+	border-left: 3px solid darkgoldenrod;
+	border-right: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.grid-imagenes-cafe {
+	display: none;
+	background: lightblue;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 50px);
+	border-left: 3px solid darkgoldenrod;
+	border-right: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.grid-imagenes-sushi {
+	display: none;
+	background: lightblue;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 50px);
+	border-left: 3px solid darkgoldenrod;
+	border-right: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+
+.grid-imagenes-pulpo {
+	display: none;
+	background: lightblue;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 50px);
+	border-left: 3px solid darkgoldenrod;
+	border-right: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	grid-area: img;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.grid-item {
+	display: grid;
+	grid-area: texto;
+	font-size: 5px;
+	background: lightyellow;
+	margin-top: 10px;
+	padding: 20px;
+	border-left: 3px solid darkgoldenrod;
+	border-bottom: 3px solid darkgoldenrod;
+	border-top: 3px solid darkgoldenrod;
+	text-align: center;
+	text-justify: center;
+}
+
+.sectionHs {
+	justify-items: center;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+}
+
+.img-left-pizzas {
+	display: grid;
+	width: 50px;
+	height: 50px;
+	margin: 5px auto;
+	align-self: center;
+	justify-self: center;
+	grid-area: pizzas;
+}
+
+
+
+.img-right-cafe {
+	display: grid;
+	width: 50px;
+	height: 50px;
+	margin: 5px auto;
+	align-self: center;
+	justify-self: center;
+	grid-area: cafe;
+	
+}
+
+.img-left-enchi {
+	display: grid;
+	width: 50px;
+	height: 50px;
+	
+	align-self: center;
+	justify-self: center;
+	grid-area: enchi;
+	
+}
+
+
+.img-left-birria {
+	display: grid;
+	width: 50px;
+	height: 50px;
+	margin: 5px auto;
+	align-self: center;
+	justify-self: center;
+	grid-area: birria;
+	
+}
+
+.img-right-cabana {
+	display: grid;
+	width: 50px;
+	height: 50px;
+	margin: 5px auto;
+	align-self: center;
+	justify-self: center;
+	grid-area: cabana;
+	
+}
+
+.img-left-hija {
+	display: grid;
+	width: 50px;
+	height: 50px;
+	margin: 5px auto;
+	align-self: center;
+	justify-self: center;
+	grid-area: hija;
+	
+}
+
+.img-right-papi {
+	display: grid;
+	width: 50px;
+	height: 50px;
+	align-self: center;
+	justify-self: center;
+	grid-area: papi;
+	
+}
+
+.img-left-rock {
+	display: grid;
+	width: 50px;
+	height: 50px;
+	align-self: center;
+	justify-self: center;
+	grid-area: rock;
+	
+}
+
+.img-right-sabores {
+	display: grid;
+	width: 50px;
+	height: 50px;
+	align-self: center;
+	justify-self: center;
+	grid-area: sabores;
+	
+}
+
+
+.img-left-pulpo {
+	display: grid;
+	width: 50px;
+	height: 50px;
+	margin: 5px auto;
+	align-self: center;
+	justify-self: center;
+	grid-area: pulpo;
+	
+}
+
+.img-right-sushi {
+	display: grid;
+	width: 50px;
+	height: 50px;
+	margin: 5px auto;
+	align-self: center;
+	justify-self: center;
+	grid-area: sushi;
+	
+}
+
+.img-left-pozolitos {
+	display: grid;
+	width: 50px;
+	height: 50px;
+	margin: 5px auto;
+	align-self: center;
+	justify-self: center;
+	grid-area: pozolitos;
+	
+}
+.img-right-chapatas {
+	display: grid;
+	width: 50px;
+	height: 50px;
+	align-self: center;
+	justify-self: center;
+	grid-area: chapatas;
+
+}
+
+.mapa {
+	display: grid;
+	width: 100%;
+	max-height: 197px;
+	grid-area: mapa;
+	
+}
+
+.img-ruta {
+	display: grid;
+	width: 100%;
+	max-height: 197px;
+	grid-area: ruta;
+	border-top: 3px solid darkgoldenrod;
+
+}
+
+.mapa-ruta{
+	background: #9ee;
+	display: grid;
+	border: 3px solid darkgoldenrod;
+	grid-template-rows: 200px 200px;
+	margin-top: 10px;
+	grid-template-areas: 
+	"mapa" 
+	"ruta";
+	
+}
+
+.grid-bandas {
+	background: #77e;
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	font-size: 40px;
+	margin-top: 10px;
+	font-family: fantasy;
+	gap: 10px;
+	padding: 10px;
+	border: 3px solid darkgoldenrod;
+	grid-template-areas:  
+	"jueves"
+	"bandaj"
+	"viernes"
+	"bandav"
+	"sabado"
+	"bandas";	
+}
+
+.banda-jueves {
+	display: grid;
+	width: 100%;
+	height: auto;
+	object-fit: scale-down;
+	overflow: hidden;
+	grid-area: bandaj;
+}
+
+.banda-viernes {
+	display: grid;
+	width: 100%;
+	height: auto;
+	object-fit: scale-down;
+	overflow: hidden;
+	grid-area: bandav;
+}
+
+.banda-sabado {
+	display: grid;
+	width: 100%;
+	height: auto;
+	object-fit: scale-down;
+	overflow: hidden;
+	grid-area: bandas;
+}
+
+.foot {
+	font-size: 15px;
+}
+
+.contact {
+	
+	font-size: 14px;
+	font-weight: bold;
+	color: white;
+	
+}
+
+.parrafo-hid {
+	display: none;
+}
 
 
 .footer-contacts {
@@ -40,4 +1857,9 @@ body{margin:0;font-family:Arial,sans-serif;line-height:1.5;background:#f5f5f7;co
 
 
 }
+
+
+
+}
+
 
