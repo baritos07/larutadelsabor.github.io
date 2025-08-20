@@ -5,31 +5,66 @@
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 			<title>La Ruta del Sabor - Desayunos, comidas y Cenas.</title>
 			<meta name="description" content="Ven a disfrutar de nuestra gran variedad de desayunos, comidas y cenas con servicio a domicilio en Cuautitlán Izcalli.">
-			<link rel="stylesheet" type="text/css" href="estilo.css">
-			<script src="script.js" defer></script>
+            <link rel="stylesheet" type="text/css" href="estilo.css">
+            <!-- canonical URL ensures a single authoritative address for this page -->
+            <link rel="canonical" href="https://baritos07.github.io/larutadelsabor.github.io/" />
+            <!-- Open Graph metadata for social sharing -->
+            <meta property="og:title" content="La Ruta del Sabor – Desayunos, comidas y cenas" />
+            <meta property="og:description" content="Ven a disfrutar de nuestra gran variedad de desayunos, comidas y cenas con servicio a domicilio en Cuautitlán Izcalli." />
+            <meta property="og:type" content="website" />
+            <meta property="og:image" content="./LogosOpt/LogoRuta.png" />
+            <meta property="og:url" content="https://baritos07.github.io/larutadelsabor.github.io/" />
+            <!-- Structured data describing the restaurant -->
+            <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "Restaurant",
+              "name": "La Ruta del Sabor",
+              "description": "Desayunos, comidas y cenas con servicio a domicilio en Cuautitlán Izcalli",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Rio Lerma 24",
+                "addressLocality": "Colinas del Lago",
+                "addressRegion": "México",
+                "addressCountry": "MX"
+              },
+              "telephone": "+52-55-10-11-86-62",
+              "url": "https://baritos07.github.io/larutadelsabor.github.io/",
+              "openingHours": ["Mo-Su 08:00-22:00"],
+              "image": "./LogosOpt/LogoRuta.png"
+            }
+            </script>
+            <script src="script.js" defer></script>
 		</head>
 		<body>
 
-				<div class="grid-container">
-					<span class="glf-button1" data-glf-cuid="c952fed7-124e-448a-9b3a-411d43ed02fc" data-glf-ruid="5392bca9-87f3-4a0e-b604-f89f45f5b3a3" >Servicio a domicilio</span>
-					<span class="glf-button2" data-glf-cuid="c952fed7-124e-448a-9b3a-411d43ed02fc" data-glf-ruid="5392bca9-87f3-4a0e-b604-f89f45f5b3a3" data-glf-reservation="true" >Reservar Mesa</span>
-					<script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async ></script>
+                <div class="grid-container">
+                    <!-- Use semantic buttons instead of spans for better accessibility -->
+                    <button type="button" class="glf-button1" data-glf-cuid="c952fed7-124e-448a-9b3a-411d43ed02fc" data-glf-ruid="5392bca9-87f3-4a0e-b604-f89f45f5b3a3" aria-label="Servicio a domicilio">
+                        Servicio a domicilio
+                    </button>
+                    <button type="button" class="glf-button2" data-glf-cuid="c952fed7-124e-448a-9b3a-411d43ed02fc" data-glf-ruid="5392bca9-87f3-4a0e-b604-f89f45f5b3a3" data-glf-reservation="true" aria-label="Reservar mesa">
+                        Reservar Mesa
+                    </button>
+                    <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async ></script>
 					
-					<img src="./LogosOpt/LogoRuta.png" class="grid-img-left" id="ruta1" alt="Ruta1">
+                    <img src="./LogosOpt/LogoRuta.png" class="grid-img-left" id="ruta1" alt="Logotipo La Ruta del Sabor">
 					<img src="./LogosOpt/Letras_Ruta.png" class="grid-img-png" alt="Letras_Ruta"><h1 class="h1Hide">La Ruta del Sabor - Desayunos, Comidas y Cenas - Servicio a domicilio en Cuautitlán Izcalli</h1>
-					<img src="./LogosOpt/LogoRuta.png" class="grid-img-right" alt="Ruta2">
-					<img src="./LogosOpt/Ordena.png" class="ordenar2" id="pag_ord_2" alt="Ordena2">
+                    <img src="./LogosOpt/LogoRuta.png" class="grid-img-right" alt="Logotipo La Ruta del Sabor 2">
+                    <img src="./LogosOpt/Ordena.png" class="ordenar2" id="pag_ord_2" alt="Botón para ordenar">
 
 				</div>
 				<div class="imagenes-izquierda">
-					<img src="./LogosOpt/Pizzas.png" class="img-left-pizzas" id="Pizzas" alt="Pizzas1">
+                    <img src="./LogosOpt/Pizzas.png" class="img-left-pizzas" id="Pizzas" alt="Pizzas1" role="button" tabindex="0">
 					<div class="grid-item" id="grid-item">
 					<h2 id="textoH2">!!! Desayunos, Comidas y Cenas !!!</h2>
-					<section class="sectionHs" id="textoCambiante"> 
+                    <!-- This section is updated via JavaScript. Add aria-live so screen readers announce changes. -->
+                    <section class="sectionHs" id="textoCambiante" aria-live="polite" role="region"> 
 						<h3>Estamos ubicados en <a href="https://maps.app.goo.gl/Jqvj3gyErxoB9acXA" target="_blank">Rio Lerma 24, Colinas del Lago</a></h3>
 						<h3>Horario a partir de las 8 de la mañana hasta las 10 noche<h3>
 						<h4>Música en vivo todos los viernes y sabados de 8 a 10 de la noche</h4>
-						<h5>Servicio a domicilio al 55-10-11-86-62 / 55-31-53-46-85</h5>
+                        <!-- Telephone numbers wrapped in clickable tel: links for mobile users -->
+                        <h5>Servicio a domicilio al <a href="tel:+525510118662">55‑10‑11‑86‑62</a> / <a href="tel:+525531534685">55‑31‑53‑46‑85</a></h5>
 					</section>
 
 					</div>
@@ -190,18 +225,18 @@
 
 				
 
-					 <img src="./LogosOpt/Cafe.png" class="img-right-cafe" id="Cafe" alt="Cafe">
-					 <img src="./LogosOpt/Birrieria.png" class="img-left-birria" id="Birria" alt="Birria">
-					 <img src="./LogosOpt/Enchilandia.png" class="img-left-enchi" id="Enchi" alt="Enchilandia">
-					 <img src="./LogosOpt/Cabana.png" class="img-right-cabana" id="Cabana" alt="Cabana">
-					 <img src="./LogosOpt/Hija.png" class="img-left-hija" id="Hija" alt="Hija">
-					 <img src="./LogosOpt/Papidrinks_2.png" class="img-right-papi" id="Papi" alt="Papidrinks">
-					 <img src="./LogosOpt/Rock.png" class="img-left-rock" id="Rock" alt="Rock">
-					 <img src="./LogosOpt/Sabores.png" class="img-right-sabores" id="Sabores" alt="Sabores">
-					 <img src="./LogosOpt/Pulpo.png" class="img-left-pulpo" id="Pulpo" alt="Pulpo">
-					 <img src="./LogosOpt/Sushi.png" class="img-right-sushi" id="Sushi" alt="Sushi">
-					 <img src="./LogosOpt/Pozolitos.png" class="img-left-pozolitos" id="Pozolitos" alt="Pozolitos">
-					 <img src="./LogosOpt/Chapatas.png" class="img-right-chapatas" id="Chapatas" alt="Chapatas">
+                     <img src="./LogosOpt/Cafe.png" class="img-right-cafe" id="Cafe" alt="Cafe" role="button" tabindex="0">
+                     <img src="./LogosOpt/Birrieria.png" class="img-left-birria" id="Birria" alt="Birria" role="button" tabindex="0">
+                     <img src="./LogosOpt/Enchilandia.png" class="img-left-enchi" id="Enchi" alt="Enchilandia" role="button" tabindex="0">
+                     <img src="./LogosOpt/Cabana.png" class="img-right-cabana" id="Cabana" alt="Cabana" role="button" tabindex="0">
+                     <img src="./LogosOpt/Hija.png" class="img-left-hija" id="Hija" alt="Hija" role="button" tabindex="0">
+                     <img src="./LogosOpt/Papidrinks_2.png" class="img-right-papi" id="Papi" alt="Papidrinks" role="button" tabindex="0">
+                     <img src="./LogosOpt/Rock.png" class="img-left-rock" id="Rock" alt="Rock" role="button" tabindex="0">
+                     <img src="./LogosOpt/Sabores.png" class="img-right-sabores" id="Sabores" alt="Sabores" role="button" tabindex="0">
+                     <img src="./LogosOpt/Pulpo.png" class="img-left-pulpo" id="Pulpo" alt="Pulpo" role="button" tabindex="0">
+                     <img src="./LogosOpt/Sushi.png" class="img-right-sushi" id="Sushi" alt="Sushi" role="button" tabindex="0">
+                     <img src="./LogosOpt/Pozolitos.png" class="img-left-pozolitos" id="Pozolitos" alt="Pozolitos" role="button" tabindex="0">
+                     <img src="./LogosOpt/Chapatas.png" class="img-right-chapatas" id="Chapatas" alt="Chapatas" role="button" tabindex="0">
 				</div>
 				<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaRg6FKLhEruBhxNqjiMpf73SWV-0Jpsg&callback=initMap" async defer></script>
 				<script>
@@ -247,9 +282,12 @@
 
 				</footer>
 				<footer class="footer2">
-				<span class="glf-button1c" data-glf-cuid="c952fed7-124e-448a-9b3a-411d43ed02fc" data-glf-ruid="5392bca9-87f3-4a0e-b604-f89f45f5b3a3" >Ver Menú y Ordenar</span>
-					<span class="glf-button2c" data-glf-cuid="c952fed7-124e-448a-9b3a-411d43ed02fc" data-glf-ruid="5392bca9-87f3-4a0e-b604-f89f45f5b3a3" data-glf-reservation="true" >! Reservar     Mesa !</span>
-					<script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async ></script>
+                <button type="button" class="glf-button1c" data-glf-cuid="c952fed7-124e-448a-9b3a-411d43ed02fc" data-glf-ruid="5392bca9-87f3-4a0e-b604-f89f45f5b3a3" aria-label="Ver menú y ordenar">
+                    Ver Menú y Ordenar
+                </button>
+                    <button type="button" class="glf-button2c" data-glf-cuid="c952fed7-124e-448a-9b3a-411d43ed02fc" data-glf-ruid="5392bca9-87f3-4a0e-b604-f89f45f5b3a3" data-glf-reservation="true" aria-label="Reservar mesa">
+                        ¡Reservar Mesa!
+                    </button>
 				</footer>
 					
 
