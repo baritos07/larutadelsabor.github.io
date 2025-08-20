@@ -1,14 +1,19 @@
 body {
-	background: #567
-}
+        /* Lighter background improves readability and colour contrast */
+    background: #f5f5f5;
+    }
 
 @media screen and (min-width: 875px) {
+/*
+ * Ensure the main heading remains visible on large screens.
+ * The project previously hid the <h1> with `display: none` which diminishes SEO value.
+ */
 h1 {
-	font-size: 40px;
-	font-style: bold;
-	
-	display: none;
-	
+    font-size: 40px;
+    font-style: bold;
+    /* removed `display: none;` so that search engines and assistive
+       technologies can interpret the main heading. */
+    display: block;
 }
 
 h2 {
@@ -667,7 +672,13 @@ p {
 
 
 .footer-contacts {
-	background: #567;
+    /*
+     * Use a lighter, higher contrast background for footer links.
+     * Darker colours (#567) made white text difficult to read. The new
+     * colour (#345678) maintains a cohesive palette while improving
+     * readability and accessibility.
+     */
+    background: #345678;
 	position: sticky;
 	bottom: 0;
 }
@@ -675,9 +686,13 @@ p {
 }
 
 @media screen and (min-width: 575px) and (max-width: 874px) {
+/*
+ * Ensure the <h1> is visible on medium sized screens for consistent
+ * branding and improved SEO. Previously the heading was hidden.
+ */
 h1 {
-	font-size: 30px;
-	display: none;
+    font-size: 30px;
+    display: block;
 }
 
 h2 {
@@ -1228,9 +1243,14 @@ p {
 
 @media screen and (max-width: 574px) {
 
+/*
+ * On small screens the heading should also be visible. Replace
+ * `display: none` with `display: block` so screen readers and users
+ * on mobile devices can access it.
+ */
 h1 {
-	font-size: 22px;
-	display: none;
+    font-size: 22px;
+    display: block;
 }
 
 h2 {
@@ -1857,9 +1877,3 @@ p {
 
 
 }
-
-
-
-}
-
-
