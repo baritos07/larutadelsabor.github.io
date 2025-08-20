@@ -1,3 +1,6 @@
+// Enable strict mode to catch common JavaScript mistakes and improve performance.
+'use strict';
+
 document.addEventListener("DOMContentLoaded", function() {
 	const pizzas = document.getElementById("Pizzas");
 	const rock = document.getElementById("Rock");
@@ -669,20 +672,59 @@ document.addEventListener("DOMContentLoaded", function() {
 		});
 	}
 
-	function cambiarImagen(idImagen, nuevaImagen, nuevoAncho, nuevoAlto) {
-		document.getElementById(idImagen).src = nuevaImagen;
-		nuevaImagen.width = nuevoAncho;
-		nuevaImagen.height = nuevoAlto;
-	}
+/**
+ * Cambia la imagen mostrada en un elemento img especificado y, de forma opcional,
+ * ajusta su tamaño. El código original intentaba asignar propiedades
+ * `width` y `height` sobre la cadena `nuevaImagen`, lo cual no tiene efecto.
+ * Esta versión localiza el elemento DOM y modifica sus propiedades en su lugar.
+ *
+ * @param {string} idImagen - ID del elemento <img> a modificar.
+ * @param {string} nuevaImagen - Ruta de la nueva imagen a mostrar.
+ * @param {string} [nuevoAncho] - Nuevo ancho opcional (con unidades como "200px").
+ * @param {string} [nuevoAlto] - Nueva altura opcional (con unidades como "200px").
+ */
+function cambiarImagen(idImagen, nuevaImagen, nuevoAncho, nuevoAlto) {
+    const imgEl = document.getElementById(idImagen);
+    if (imgEl) {
+        imgEl.src = nuevaImagen;
+        // Si se especifica un tamaño, actualizar las dimensiones del elemento
+        if (nuevoAncho && nuevoAlto) {
+            imgEl.style.width = nuevoAncho;
+            imgEl.style.height = nuevoAlto;
+        }
+    }
+}
 
-	document.getElementById("pag_ord_1").addEventListener("click", function() {
-		window.open("https://www.foodbooking.com/api/fb/jb_v_q5","_blank");
-	});
+    // Protege el código contra un error si el elemento no existe. La página
+    // original hacía referencia a "pag_ord_1" pero sólo existe "pag_ord_2".
+    const pagOrd1 = document.getElementById("pag_ord_1");
+    if (pagOrd1) {
+        pagOrd1.addEventListener("click", function() {
+            window.open("https://www.foodbooking.com/api/fb/jb_v_q5", "_blank");
+        });
+    }
 
-	document.getElementById("pag_ord_2").addEventListener("click", function() {
-		window.open("https://www.foodbooking.com/api/fb/jb_v_q5","_blank");
-	});
+    document.getElementById("pag_ord_2").addEventListener("click", function() {
+        window.open("https://www.foodbooking.com/api/fb/jb_v_q5", "_blank");
+    });
+
+    // --------------------------------------------------------------
+    // Accesibilidad: proporcionar soporte de teclado duplicando los
+    // eventos onmouseover/onmouseout en onfocus/onblur. Esto permite
+    // que las personas que navegan con el teclado experimenten la misma
+    // retroalimentación visual al enfocarse en las imágenes.
+    const interactiveEls = [pizzas, birria, enchi, hija, rock, pulpo,
+                            pozolitos, sabores, chapatas, sushi,
+                            cabana, papi, cafe];
+    interactiveEls.forEach(function(el) {
+        if (el) {
+            if (typeof el.onmouseover === 'function') {
+                el.onfocus = el.onmouseover;
+            }
+            if (typeof el.onmouseout === 'function') {
+                el.onblur = el.onmouseout;
+            }
+        }
+    });
 
 });
-
-
